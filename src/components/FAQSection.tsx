@@ -20,14 +20,14 @@ const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="section-padding bg-brand-warmGray">
+    <section className="section-padding bg-brand-garden">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-        <h2 className="text-3xl md:text-4xl text-brand-darkBlue mb-12 text-center font-serif">Domande Frequenti</h2>
+        <h2 className="text-3xl md:text-4xl text-brand-midnight mb-12 text-center font-serif">Domande Frequenti</h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div key={i} className="bg-card rounded-lg shadow-sm">
               <button
-                className="flex justify-between items-center w-full p-6 cursor-pointer font-semibold text-brand-darkBlue text-left"
+                className="flex justify-between items-center w-full p-6 cursor-pointer font-semibold text-brand-midnight text-left"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 {faq.q}
@@ -36,7 +36,7 @@ const FAQSection = () => {
                 />
               </button>
               {open === i && (
-                <div className="px-6 pb-6 text-brand-blue">{faq.a}</div>
+                <div className="px-6 pb-6 text-brand-smoke">{faq.a}</div>
               )}
             </div>
           ))}

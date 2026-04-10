@@ -1,7 +1,7 @@
 import donatellaImg from "@/assets/donatella.jpg";
 
 const AboutSection = () => (
-  <section className="section-padding bg-brand-warmGray" id="chi-sono">
+  <section className="section-padding bg-brand-garden" id="chi-sono">
     <div className="container mx-auto px-4 md:px-8">
       <div className="flex flex-col lg:flex-row items-center gap-16">
         <div className="w-full lg:w-1/2 relative">
@@ -13,17 +13,17 @@ const AboutSection = () => (
             />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-lg shadow-lg hidden md:block">
-            <p className="text-brand-darkBlue font-serif italic text-lg">
+            <p className="text-brand-midnight font-serif italic text-lg">
               "Ogni famiglia ha una storia che merita rispetto."
             </p>
           </div>
         </div>
         <div className="w-full lg:w-1/2">
-          <span className="text-brand-soft font-semibold tracking-widest uppercase text-sm">Chi Sono</span>
-          <h2 className="text-3xl md:text-5xl text-brand-darkBlue mt-4 mb-6 leading-tight font-serif">
+          <span className="text-brand-smoke font-semibold tracking-widest uppercase text-sm">Chi Sono</span>
+          <h2 className="text-3xl md:text-5xl text-brand-midnight mt-4 mb-6 leading-tight font-serif">
             Avv. Donatella Di Vietro
           </h2>
-          <div className="space-y-4 text-brand-blue text-lg">
+          <div className="space-y-4 text-brand-smoke text-lg">
             <p>
               Mi sono laureata presso l'Università Cattolica del Sacro Cuore di Milano, sviluppando da subito una profonda passione per il diritto di famiglia e delle persone.
             </p>
@@ -36,7 +36,7 @@ const AboutSection = () => (
           </div>
           <div className="mt-10">
             <a
-              className="inline-block border-b-2 border-brand-darkBlue pb-1 text-brand-darkBlue font-semibold hover:text-brand-soft hover:border-brand-soft transition"
+              className="inline-block border-b-2 border-brand-midnight pb-1 text-brand-midnight font-semibold hover:text-brand-smoke hover:border-brand-smoke transition"
               href="#contatti"
             >
               Approfondisci il mio percorso
