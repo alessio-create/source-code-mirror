@@ -1,15 +1,15 @@
 const Header = () => (
   <header className="fixed top-0 left-0 w-full z-50 glass-effect border-b border-border">
     <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-      <a className="text-xl md:text-2xl font-serif font-semibold text-brand-darkBlue tracking-tight" href="/">
+      <a className="text-xl md:text-2xl font-serif font-semibold text-brand-midnight tracking-tight" href="/">
         Donatella Di Vietro
       </a>
       <nav className="hidden lg:flex items-center space-x-8">
-        <a className="text-sm font-medium hover:text-brand-soft transition" href="#separazioni">Separazioni</a>
-        <a className="text-sm font-medium hover:text-brand-soft transition" href="#divorzi">Divorzi</a>
-        <a className="text-sm font-medium hover:text-brand-soft transition" href="#affido">Affido Figli</a>
-        <a className="text-sm font-medium hover:text-brand-soft transition" href="#chi-sono">Chi Sono</a>
-        <a className="text-sm font-medium hover:text-brand-soft transition" href="#contatti">Contatti</a>
+        <a className="text-sm font-medium hover:text-brand-smoke transition" href="#separazioni">Separazioni</a>
+        <a className="text-sm font-medium hover:text-brand-smoke transition" href="#divorzi">Divorzi</a>
+        <a className="text-sm font-medium hover:text-brand-smoke transition" href="#affido">Affido Figli</a>
+        <a className="text-sm font-medium hover:text-brand-smoke transition" href="#chi-sono">Chi Sono</a>
+        <a className="text-sm font-medium hover:text-brand-smoke transition" href="#contatti">Contatti</a>
       </nav>
       <div className="flex items-center space-x-4">
         <a

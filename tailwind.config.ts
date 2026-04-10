@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
+        serif: ['Cormorant', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
@@ -52,11 +52,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          light: "hsl(var(--brand-light))",
-          blue: "hsl(var(--brand-blue))",
-          darkBlue: "hsl(var(--brand-dark-blue))",
-          soft: "hsl(var(--brand-soft))",
-          warmGray: "hsl(var(--brand-warm-gray))",
+          midnight: "hsl(var(--brand-midnight))",
+          ivory: "hsl(var(--brand-ivory))",
+          smoke: "hsl(var(--brand-smoke))",
+          garden: "hsl(var(--brand-garden))",
+          moss: "hsl(var(--brand-moss))",
         },
         whatsapp: "hsl(var(--whatsapp))",
         sidebar: {
