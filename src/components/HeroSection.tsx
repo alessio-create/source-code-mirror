@@ -1,36 +1,45 @@
 const HeroSection = () => (
-  <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-brand-garden overflow-hidden">
+  <section className="relative pt-36 pb-24 md:pt-52 md:pb-40 bg-brand-ivory overflow-hidden">
+    {/* Subtle decorative elements */}
+    <div className="absolute inset-0 opacity-[0.03]" style={{
+      backgroundImage: `radial-gradient(circle at 70% 30%, hsl(var(--brand-midnight)) 0%, transparent 50%)`
+    }} />
+
     <div className="container mx-auto px-4 md:px-8 relative z-10">
       <div className="max-w-3xl">
-        <h1 className="text-4xl md:text-6xl text-brand-midnight leading-tight mb-6">
-          Stai affrontando una separazione o un divorzio?{" "}
+        <p className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-6">
+          Studio Legale Di Vietro — Bovisio Masciago
+        </p>
+        <h1 className="text-5xl md:text-7xl leading-[1.05] mb-8">
+          Consulenze legali{" "}
           <br className="hidden md:block" />
-          <span className="italic font-normal">Non devi farlo da solo.</span>
+          per privati{" "}
+          <em className="font-medium italic">e famiglie</em>
         </h1>
-        <p className="text-lg md:text-xl text-brand-smoke mb-10 max-w-2xl leading-relaxed">
-          Ti accompagno con empatia e competenza legale per proteggere i tuoi diritti e la serenità dei tuoi figli. Oltre 20 anni di esperienza tra Milano e Bovisio-Masciago.
+        <p className="text-lg md:text-xl text-brand-smoke mb-12 max-w-2xl leading-relaxed">
+          Ci prendiamo cura di ogni singolo caso con la stessa dedizione. 
+          Competenza nel diritto di famiglia, dei minori e delle persone 
+          con oltre 20 anni di esperienza.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            className="bg-brand-midnight text-primary-foreground px-8 py-4 rounded-md text-lg font-medium text-center hover:opacity-90 transition btn-transition"
+            className="bg-brand-midnight text-primary-foreground px-10 py-4 rounded-md text-base font-medium text-center hover:opacity-90 transition btn-transition tracking-wide"
             href="#contatti"
           >
             Prenota un colloquio
           </a>
           <a
-            className="bg-card border border-brand-garden text-brand-midnight px-8 py-4 rounded-md text-lg font-medium text-center hover:bg-brand-ivory transition btn-transition"
+            className="border-2 border-brand-midnight text-brand-midnight px-10 py-4 rounded-md text-base font-medium text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
             href="#servizi"
           >
-            I miei servizi
+            I nostri servizi
           </a>
         </div>
       </div>
     </div>
-    <div className="absolute right-0 bottom-0 opacity-10 hidden lg:block pointer-events-none">
-      <svg fill="none" height="400" viewBox="0 0 200 200" width="400" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="150" cy="150" fill="hsl(var(--brand-smoke))" r="100" />
-      </svg>
-    </div>
+
+    {/* Decorative line */}
+    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-garden to-transparent" />
   </section>
 );
 

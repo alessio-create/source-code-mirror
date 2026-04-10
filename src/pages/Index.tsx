@@ -8,7 +8,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
-  <div className="bg-brand-light">
+  <div className="bg-brand-ivory">
     <Header />
     <HeroSection />
     <ServicesSection />
