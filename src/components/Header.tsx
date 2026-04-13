@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Users, CreditCard, Heart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const serviceItems = [
   {
@@ -22,6 +23,23 @@ const serviceItems = [
   },
 ];
 
+const megaMenuVariants = {
+  hidden: { opacity: 0, y: -8, scale: 0.96 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] as const, staggerChildren: 0.05 } },
+  exit: { opacity: 0, y: -8, scale: 0.96, transition: { duration: 0.15, ease: "easeIn" as const } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -10 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.2 } },
+};
+
+const mobileMenuVariants = {
+  hidden: { height: 0, opacity: 0 },
+  visible: { height: "auto" as const, opacity: 1, transition: { duration: 0.3, ease: "easeOut" as const } },
+  exit: { height: 0, opacity: 0, transition: { duration: 0.2, ease: "easeIn" as const } },
+};
+
 const Header = () => {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -43,36 +61,47 @@ const Header = () => {
           >
             <button className="flex items-center gap-1 text-sm font-medium hover:text-brand-smoke transition">
               Servizi
-              <ChevronDown className={`w-4 h-4 transition-transform ${megaOpen ? "rotate-180" : ""}`} />
+              <motion.span animate={{ rotate: megaOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                <ChevronDown className="w-4 h-4" />
+              </motion.span>
             </button>
 
-            {megaOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[480px]">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-brand-smoke mb-4">
-                    Aree di competenza
-                  </p>
-                  <div className="space-y-1">
-                    {serviceItems.map((item) => (
-                      <a
-                        key={item.title}
-                        href={item.href}
-                        className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-garden transition group"
-                        onClick={() => setMegaOpen(false)}
-                      >
-                        <div className="w-10 h-10 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition">
-                          <item.icon className="w-5 h-5 text-brand-midnight group-hover:text-primary-foreground transition" strokeWidth={1.5} />
-                        </div>
-                        <div>
-                          <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
-                          <p className="text-xs text-brand-smoke mt-0.5">{item.description}</p>
-                        </div>
-                      </a>
-                    ))}
+            <AnimatePresence>
+              {megaOpen && (
+                <motion.div
+                  className="absolute top-full left-1/2 -translate-x-1/2 pt-4"
+                  variants={megaMenuVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[480px]">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-brand-smoke mb-4">
+                      Aree di competenza
+                    </p>
+                    <div className="space-y-1">
+                      {serviceItems.map((item) => (
+                        <motion.a
+                          key={item.title}
+                          href={item.href}
+                          variants={itemVariants}
+                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-garden transition group"
+                          onClick={() => setMegaOpen(false)}
+                        >
+                          <div className="w-10 h-10 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition">
+                            <item.icon className="w-5 h-5 text-brand-midnight group-hover:text-primary-foreground transition" strokeWidth={1.5} />
+                          </div>
+                          <div>
+                            <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
+                            <p className="text-xs text-brand-smoke mt-0.5">{item.description}</p>
+                          </div>
+                        </motion.a>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </div>
-            )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           <a className="text-sm font-medium hover:text-brand-smoke transition" href="#chi-sono">Chi Sono</a>
@@ -105,39 +134,58 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border">
-          <div className="container mx-auto px-4 py-4 space-y-1">
-            <div>
-              <button
-                className="flex items-center justify-between w-full py-3 text-sm font-medium text-brand-midnight"
-                onClick={() => setMobileServizi(!mobileServizi)}
-              >
-                Servizi
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileServizi ? "rotate-180" : ""}`} />
-              </button>
-              {mobileServizi && (
-                <div className="pl-4 space-y-1 pb-2">
-                  {serviceItems.map((item) => (
-                    <a
-                      key={item.title}
-                      href={item.href}
-                      className="flex items-center gap-3 py-2 text-sm text-brand-smoke hover:text-brand-midnight transition"
-                      onClick={() => setMobileOpen(false)}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            className="lg:hidden bg-card border-t border-border overflow-hidden"
+            variants={mobileMenuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <div className="container mx-auto px-4 py-4 space-y-1">
+              <div>
+                <button
+                  className="flex items-center justify-between w-full py-3 text-sm font-medium text-brand-midnight"
+                  onClick={() => setMobileServizi(!mobileServizi)}
+                >
+                  Servizi
+                  <motion.span animate={{ rotate: mobileServizi ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.span>
+                </button>
+                <AnimatePresence>
+                  {mobileServizi && (
+                    <motion.div
+                      className="pl-4 space-y-1 pb-2 overflow-hidden"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1, transition: { duration: 0.25 } }}
+                      exit={{ height: 0, opacity: 0, transition: { duration: 0.15 } }}
                     >
-                      <item.icon className="w-4 h-4" strokeWidth={1.5} />
-                      {item.title}
-                    </a>
-                  ))}
-                </div>
-              )}
+                      {serviceItems.map((item, i) => (
+                        <motion.a
+                          key={item.title}
+                          href={item.href}
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0, transition: { delay: i * 0.05 } }}
+                          className="flex items-center gap-3 py-2 text-sm text-brand-smoke hover:text-brand-midnight transition"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4" strokeWidth={1.5} />
+                          {item.title}
+                        </motion.a>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</a>
+              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#blog" onClick={() => setMobileOpen(false)}>Blog</a>
+              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#contatti" onClick={() => setMobileOpen(false)}>Contatti</a>
             </div>
-            <a className="block py-3 text-sm font-medium text-brand-midnight" href="#chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</a>
-            <a className="block py-3 text-sm font-medium text-brand-midnight" href="#blog" onClick={() => setMobileOpen(false)}>Blog</a>
-            <a className="block py-3 text-sm font-medium text-brand-midnight" href="#contatti" onClick={() => setMobileOpen(false)}>Contatti</a>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
