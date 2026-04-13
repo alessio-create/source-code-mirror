@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => (
@@ -29,23 +30,25 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 shrink-0" strokeWidth={1.5} />
-              <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition">info@studiolegaledivietro.it</a>
+              <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
             </div>
           </div>
         </div>
         <div>
           <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Link Rapidi</h4>
           <nav className="space-y-3 text-brand-smoke">
-            <a className="block hover:text-primary-foreground transition" href="#servizi">Servizi</a>
-            <a className="block hover:text-primary-foreground transition" href="#chi-sono">Chi Sono</a>
-            <a className="block hover:text-primary-foreground transition" href="#blog">Blog</a>
-            <a className="block hover:text-primary-foreground transition" href="#contatti">Contatti</a>
+            <Link className="block hover:text-primary-foreground transition" to="/separazioni">Separazioni</Link>
+            <Link className="block hover:text-primary-foreground transition" to="/divorzi">Divorzi</Link>
+            <Link className="block hover:text-primary-foreground transition" to="/affido-figli">Affido Figli</Link>
+            <Link className="block hover:text-primary-foreground transition" to="/chi-sono">Chi Sono</Link>
+            <Link className="block hover:text-primary-foreground transition" to="/blog">Blog</Link>
+            <Link className="block hover:text-primary-foreground transition" to="/contatti">Contatti</Link>
           </nav>
         </div>
       </div>
-      <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-smoke">
+      <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-smoke gap-4">
         <p>© {new Date().getFullYear()} Studio Legale Di Vietro. Tutti i diritti riservati.</p>
-        <div className="flex gap-6 mt-4 md:mt-0">
+        <div className="flex gap-6">
           <a className="hover:text-primary-foreground transition" href="#">Privacy Policy</a>
           <a className="hover:text-primary-foreground transition" href="#">Cookie Policy</a>
         </div>

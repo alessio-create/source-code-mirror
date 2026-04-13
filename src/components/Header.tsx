@@ -125,7 +125,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <Link
             to="/contatti"
-            className="flex items-center gap-2 bg-brand-accent-red text-card px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition btn-transition"
+            className="hidden sm:flex items-center gap-2 bg-brand-accent-red text-card px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition btn-transition"
           >
             Consulenza Gratuita
           </Link>

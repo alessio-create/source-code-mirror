@@ -76,7 +76,7 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
           >
             <div className="bg-card border border-border rounded-2xl p-8 premium-shadow-lg relative">
               {/* Quote icon */}
-              <div className="absolute -top-4 -left-4 w-10 h-10 bg-brand-accent-red rounded-full flex items-center justify-center">
+              <div className="absolute -top-4 left-2 sm:-left-4 w-10 h-10 bg-brand-accent-red rounded-full flex items-center justify-center">
                 <Quote className="w-5 h-5 text-card" fill="currentColor" />
               </div>
 
@@ -103,7 +103,7 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
 
               {/* Efficiency badge */}
               <motion.div
-                className="absolute -bottom-3 -right-3 bg-brand-midnight text-primary-foreground rounded-xl px-4 py-2 text-xs font-semibold flex items-center gap-2 premium-shadow"
+                className="absolute -bottom-3 right-2 sm:-right-3 bg-brand-midnight text-primary-foreground rounded-xl px-4 py-2 text-xs font-semibold flex items-center gap-2 premium-shadow"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
