@@ -24,7 +24,7 @@ const HeroSection = () => (
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -104,8 +104,8 @@ const HeroSection = () => (
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
             >
-              <p className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground">{s.value}</p>
-              <p className="text-primary-foreground/60 text-sm mt-1">{s.label}</p>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary-foreground">{s.value}</p>
+              <p className="text-primary-foreground/60 text-xs sm:text-sm mt-1">{s.label}</p>
             </motion.div>
           ))}
         </div>
