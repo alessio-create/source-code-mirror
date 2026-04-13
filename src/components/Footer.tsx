@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
+import logoDDV from "@/assets/logo-ddv.png";
 
 const Footer = () => (
   <footer className="bg-brand-midnight pt-20 pb-8" id="contatti">
     <div className="container mx-auto px-4 md:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         <div>
-          <h3 className="text-2xl font-serif font-bold text-primary-foreground mb-6">
-            Studio Legale<br />Di Vietro
-          </h3>
+          <div className="flex items-center gap-3 mb-6">
+            <img src={logoDDV} alt="DDV" className="h-10 w-10 brightness-0 invert" width={40} height={40} loading="lazy" />
+            <h3 className="text-xl font-serif font-bold text-primary-foreground leading-tight">
+              Studio Legale<br />Di Vietro
+            </h3>
+          </div>
           <p className="text-brand-smoke mb-6 leading-relaxed">
             Consulenze legali per privati e famiglie nel settore del diritto civile con particolare attenzione verso il diritto di famiglia.
           </p>
