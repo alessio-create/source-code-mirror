@@ -1,26 +1,38 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Users, CreditCard, Heart } from "lucide-react";
+import { ChevronDown, Users, CreditCard, Heart, Scale, ShieldCheck, Briefcase } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const serviceItems = [
   {
     icon: Users,
-    title: "Separazioni",
-    description: "Soluzioni consensuali per ridurre lo stress emotivo",
+    title: "Separazioni e Divorzi",
+    description: "Procedure consensuali e giudiziali, negoziazione assistita",
     href: "/separazioni",
   },
   {
-    icon: CreditCard,
-    title: "Divorzi",
-    description: "Definizione dei rapporti patrimoniali e personali",
+    icon: Heart,
+    title: "Diritto dei Minori",
+    description: "Affidamento, collocamento e tutela dei figli",
+    href: "/affido-figli",
+  },
+  {
+    icon: Scale,
+    title: "Diritto di Famiglia",
+    description: "Consulenza completa sui rapporti familiari",
     href: "/divorzi",
   },
   {
-    icon: Heart,
-    title: "Affido Figli",
-    description: "Tutela dei minori e interesse del bambino",
-    href: "/affido-figli",
+    icon: ShieldCheck,
+    title: "Diritto delle Persone",
+    description: "Amministrazione di sostegno e tutela dei diritti",
+    href: "/contatti",
+  },
+  {
+    icon: Briefcase,
+    title: "Diritto Civile",
+    description: "Questioni patrimoniali e successorie",
+    href: "/contatti",
   },
 ];
 
@@ -76,7 +88,7 @@ const Header = () => {
                   animate="visible"
                   exit="exit"
                 >
-                  <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[480px]">
+                  <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[520px]">
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-smoke mb-4">
                       Aree di competenza
                     </p>
