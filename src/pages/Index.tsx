@@ -8,6 +8,7 @@ import SolutionSection from "@/components/SolutionSection";
 import MethodSection from "@/components/MethodSection";
 import AboutSection from "@/components/AboutSection";
 import TrustSection from "@/components/TrustSection";
+import BlogSection from "@/components/BlogSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
