@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, Users, CreditCard, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -7,19 +8,19 @@ const serviceItems = [
     icon: Users,
     title: "Separazioni",
     description: "Soluzioni consensuali per ridurre lo stress emotivo",
-    href: "#separazioni",
+    href: "/separazioni",
   },
   {
     icon: CreditCard,
     title: "Divorzi",
     description: "Definizione dei rapporti patrimoniali e personali",
-    href: "#divorzi",
+    href: "/divorzi",
   },
   {
     icon: Heart,
     title: "Affido Figli",
     description: "Tutela dei minori e interesse del bambino",
-    href: "#affido",
+    href: "/affido-figli",
   },
 ];
 
@@ -48,9 +49,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 glass-effect border-b border-border">
       <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-        <a className="text-xl md:text-2xl font-serif font-semibold text-brand-midnight tracking-tight" href="/">
+        <Link className="text-xl md:text-2xl font-serif font-semibold text-brand-midnight tracking-tight" to="/">
           Donatella Di Vietro
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center space-x-8">
@@ -81,21 +82,21 @@ const Header = () => {
                     </p>
                     <div className="space-y-1">
                       {serviceItems.map((item) => (
-                        <motion.a
-                          key={item.title}
-                          href={item.href}
-                          variants={itemVariants}
-                          className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-garden transition group"
-                          onClick={() => setMegaOpen(false)}
-                        >
-                          <div className="w-10 h-10 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition">
-                            <item.icon className="w-5 h-5 text-brand-midnight group-hover:text-primary-foreground transition" strokeWidth={1.5} />
-                          </div>
-                          <div>
-                            <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
-                            <p className="text-xs text-brand-smoke mt-0.5">{item.description}</p>
-                          </div>
-                        </motion.a>
+                        <motion.div key={item.title} variants={itemVariants}>
+                          <Link
+                            to={item.href}
+                            className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-garden transition group"
+                            onClick={() => setMegaOpen(false)}
+                          >
+                            <div className="w-10 h-10 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition">
+                              <item.icon className="w-5 h-5 text-brand-midnight group-hover:text-primary-foreground transition" strokeWidth={1.5} />
+                            </div>
+                            <div>
+                              <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
+                              <p className="text-xs text-brand-smoke mt-0.5">{item.description}</p>
+                            </div>
+                          </Link>
+                        </motion.div>
                       ))}
                     </div>
                   </div>
@@ -104,9 +105,9 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
-          <a className="text-sm font-medium hover:text-brand-smoke transition" href="#chi-sono">Chi Sono</a>
-          <a className="text-sm font-medium hover:text-brand-smoke transition" href="#blog">Blog</a>
-          <a className="text-sm font-medium hover:text-brand-smoke transition" href="#contatti">Contatti</a>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/chi-sono">Chi Sono</Link>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/blog">Blog</Link>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/contatti">Contatti</Link>
         </nav>
 
         <div className="flex items-center space-x-4">
@@ -163,25 +164,28 @@ const Header = () => {
                       exit={{ height: 0, opacity: 0, transition: { duration: 0.15 } }}
                     >
                       {serviceItems.map((item, i) => (
-                        <motion.a
+                        <motion.div
                           key={item.title}
-                          href={item.href}
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0, transition: { delay: i * 0.05 } }}
-                          className="flex items-center gap-3 py-2 text-sm text-brand-smoke hover:text-brand-midnight transition"
-                          onClick={() => setMobileOpen(false)}
                         >
-                          <item.icon className="w-4 h-4" strokeWidth={1.5} />
-                          {item.title}
-                        </motion.a>
+                          <Link
+                            to={item.href}
+                            className="flex items-center gap-3 py-2 text-sm text-brand-smoke hover:text-brand-midnight transition"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            <item.icon className="w-4 h-4" strokeWidth={1.5} />
+                            {item.title}
+                          </Link>
+                        </motion.div>
                       ))}
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
-              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</a>
-              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#blog" onClick={() => setMobileOpen(false)}>Blog</a>
-              <a className="block py-3 text-sm font-medium text-brand-midnight" href="#contatti" onClick={() => setMobileOpen(false)}>Contatti</a>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</Link>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
             </div>
           </motion.div>
         )}
