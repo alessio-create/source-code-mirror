@@ -25,8 +25,8 @@ const serviceItems = [
 
 const megaMenuVariants = {
   hidden: { opacity: 0, y: -8, scale: 0.96 },
-  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94], staggerChildren: 0.05 } },
-  exit: { opacity: 0, y: -8, scale: 0.96, transition: { duration: 0.15, ease: "easeIn" } },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] as const, staggerChildren: 0.05 } },
+  exit: { opacity: 0, y: -8, scale: 0.96, transition: { duration: 0.15, ease: "easeIn" as const } },
 };
 
 const itemVariants = {
@@ -36,8 +36,8 @@ const itemVariants = {
 
 const mobileMenuVariants = {
   hidden: { height: 0, opacity: 0 },
-  visible: { height: "auto", opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
-  exit: { height: 0, opacity: 0, transition: { duration: 0.2, ease: "easeIn" } },
+  visible: { height: "auto" as const, opacity: 1, transition: { duration: 0.3, ease: "easeOut" as const } },
+  exit: { height: 0, opacity: 0, transition: { duration: 0.2, ease: "easeIn" as const } },
 };
 
 const Header = () => {
