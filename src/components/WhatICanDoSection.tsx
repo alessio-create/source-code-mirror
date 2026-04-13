@@ -27,7 +27,7 @@ const itemVariants = {
 };
 
 const WhatICanDoSection = () => (
-  <section className="section-padding bg-card">
+  <section className="section-padding bg-brand-ivory">
     <div className="container mx-auto px-4 md:px-8">
       <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
         <motion.div
@@ -37,11 +37,18 @@ const WhatICanDoSection = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-4">Cosa posso fare per te</p>
-          <h2 className="text-4xl md:text-5xl mb-6">Un supporto legale completo per ogni fase della tua vita familiare</h2>
-          <p className="text-brand-smoke text-lg leading-relaxed">
+          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Cosa posso fare per te</p>
+          <h2 className="text-4xl md:text-5xl mb-6">Un supporto legale completo per la tua famiglia</h2>
+          <p className="text-brand-smoke text-lg leading-relaxed mb-8">
             Ogni situazione è unica. Ti offro un'assistenza personalizzata, dalla prima consulenza fino alla risoluzione definitiva del tuo caso.
           </p>
+          <a
+            href="#contatti"
+            className="inline-flex items-center gap-2 bg-brand-accent-red text-card px-6 py-3 rounded-md text-sm font-semibold hover:opacity-90 transition btn-transition"
+          >
+            Consulenza Gratuita
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
         </motion.div>
 
         <motion.div
@@ -51,15 +58,15 @@ const WhatICanDoSection = () => (
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {capabilities.map((cap) => (
               <motion.div
                 key={cap}
                 variants={itemVariants}
-                className="flex items-start gap-3 p-4 rounded-xl border border-border hover:border-brand-midnight/20 hover:premium-shadow transition-all duration-300 bg-card group"
+                className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:premium-shadow transition-all duration-300 group"
               >
-                <div className="w-6 h-6 bg-brand-midnight rounded-full flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
-                  <Check className="w-3.5 h-3.5 text-primary-foreground" strokeWidth={2.5} />
+                <div className="w-6 h-6 bg-brand-accent-red rounded-full flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
+                  <Check className="w-3.5 h-3.5 text-card" strokeWidth={2.5} />
                 </div>
                 <span className="text-foreground font-medium text-[15px] leading-snug">{cap}</span>
               </motion.div>

@@ -39,8 +39,8 @@ const TrustSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-4">Perché sceglierci</p>
-        <h2 className="text-4xl md:text-5xl mb-6">Garanzie di fiducia</h2>
+        <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Fiducia e competenza</p>
+        <h2 className="text-4xl md:text-5xl mb-4">Garanzie di fiducia</h2>
       </motion.div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-24">
@@ -53,7 +53,7 @@ const TrustSection = () => (
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
           >
-            <div className="w-12 h-12 bg-brand-midnight/5 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-midnight group-hover:scale-110 transition-all duration-300">
+            <div className="w-14 h-14 bg-brand-warm rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-midnight group-hover:scale-110 transition-all duration-300">
               <t.icon className="w-6 h-6 text-brand-midnight group-hover:text-primary-foreground transition-colors duration-300" strokeWidth={1.5} />
             </div>
             <h4 className="font-semibold text-foreground mb-1">{t.title}</h4>
@@ -70,7 +70,7 @@ const TrustSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-4">Testimonianze</p>
+        <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Testimonianze</p>
         <h2 className="text-4xl md:text-5xl">Storie di chi si è affidato a noi</h2>
       </motion.div>
 
@@ -84,12 +84,12 @@ const TrustSection = () => (
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: i * 0.12 }}
           >
-            <svg className="w-8 h-8 text-brand-garden mb-4" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-8 h-8 text-brand-accent-red/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z"/>
             </svg>
             <p className="text-foreground text-lg leading-relaxed mb-6 italic font-serif">{t.text}</p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-brand-midnight rounded-full flex items-center justify-center text-primary-foreground font-semibold text-sm">
+              <div className="w-10 h-10 bg-brand-accent-red rounded-full flex items-center justify-center text-card font-semibold text-sm">
                 {t.name[0]}
               </div>
               <div>

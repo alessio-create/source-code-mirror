@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 
+const benefits = [
+  "Ascolto autentico e comprensione della tua situazione",
+  "Strategia legale personalizzata e trasparente",
+  "Tutela dei tuoi diritti e di quelli dei tuoi figli",
+  "Accompagnamento costante fino alla risoluzione",
+];
+
 const SolutionSection = () => (
   <section className="section-padding bg-brand-midnight relative overflow-hidden">
     <div className="absolute inset-0 opacity-5" style={{
@@ -18,22 +25,17 @@ const SolutionSection = () => (
           transition={{ duration: 0.7 }}
         >
           <div className="inline-flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full mb-6">
-            <Sparkles className="w-4 h-4 text-primary-foreground" />
+            <Sparkles className="w-4 h-4 text-brand-accent-red" />
             <span className="text-primary-foreground text-sm font-medium">La soluzione esiste</span>
           </div>
           <h2 className="text-4xl md:text-5xl text-primary-foreground mb-8 leading-tight">
             Un avvocato che capisce davvero la tua situazione
           </h2>
           <p className="text-brand-smoke text-lg leading-relaxed mb-8">
-            Non sei solo un numero di pratica. Con oltre 20 anni di esperienza esclusivamente nel diritto di famiglia, ti offro un percorso legale pensato intorno a te, alla tua storia e ai tuoi bisogni reali.
+            Non sei solo un numero di pratica. Con oltre 20 anni di esperienza esclusivamente nel diritto di famiglia, ti offro un percorso legale pensato intorno a te.
           </p>
-          <div className="space-y-4">
-            {[
-              "Ascolto autentico e comprensione della tua situazione",
-              "Strategia legale personalizzata e trasparente",
-              "Tutela dei tuoi diritti e di quelli dei tuoi figli",
-              "Accompagnamento costante fino alla risoluzione",
-            ].map((item, i) => (
+          <div className="space-y-4 mb-10">
+            {benefits.map((item, i) => (
               <motion.div
                 key={item}
                 className="flex items-center gap-3"
@@ -42,11 +44,18 @@ const SolutionSection = () => (
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
               >
-                <ArrowRight className="w-4 h-4 text-primary-foreground shrink-0" />
+                <ArrowRight className="w-4 h-4 text-brand-accent-red shrink-0" />
                 <span className="text-primary-foreground/90 font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
+          <a
+            href="#contatti"
+            className="inline-flex items-center gap-2 bg-brand-accent-red text-card px-8 py-4 rounded-md text-base font-semibold hover:opacity-90 transition btn-transition"
+          >
+            Consulenza Gratuita
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
         </motion.div>
 
         <motion.div
@@ -57,11 +66,11 @@ const SolutionSection = () => (
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-10">
-            <p className="text-primary-foreground/80 text-lg italic leading-relaxed mb-6 font-serif">
+            <p className="text-primary-foreground/80 text-xl italic leading-relaxed mb-8 font-serif">
               "Ogni famiglia ha una storia che merita rispetto e tutela. Il mio compito è guidarti attraverso la complessità legale con competenza e umanità, proteggendo ciò che conta di più."
             </p>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary-foreground/20 rounded-full flex items-center justify-center text-primary-foreground font-serif font-bold text-lg">
+              <div className="w-12 h-12 bg-brand-accent-red rounded-full flex items-center justify-center text-card font-serif font-bold text-lg">
                 D
               </div>
               <div>

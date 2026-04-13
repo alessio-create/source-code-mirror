@@ -57,6 +57,8 @@ export default {
           smoke: "hsl(var(--brand-smoke))",
           garden: "hsl(var(--brand-garden))",
           moss: "hsl(var(--brand-moss))",
+          warm: "hsl(var(--brand-warm))",
+          "accent-red": "hsl(var(--brand-accent-red))",
         },
         whatsapp: "hsl(var(--whatsapp))",
         sidebar: {

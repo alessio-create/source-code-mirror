@@ -1,65 +1,116 @@
 import { motion } from "framer-motion";
+import donatellaImg from "@/assets/donatella.jpg";
+
+const stats = [
+  { value: "20+", label: "Anni di Esperienza" },
+  { value: "500+", label: "Famiglie Assistite" },
+  { value: "5", label: "Aree di Competenza" },
+];
 
 const HeroSection = () => (
-  <section className="relative pt-36 pb-24 md:pt-52 md:pb-40 bg-brand-ivory overflow-hidden">
-    <div className="absolute inset-0 opacity-[0.03]" style={{
-      backgroundImage: `radial-gradient(circle at 70% 30%, hsl(var(--brand-midnight)) 0%, transparent 50%)`
-    }} />
+  <section className="relative bg-brand-ivory overflow-hidden">
+    <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-40 pb-0">
+      <div className="flex flex-col lg:flex-row items-end gap-12 lg:gap-0">
+        {/* Text */}
+        <div className="lg:w-1/2 pb-16 md:pb-24 lg:pb-32">
+          <motion.div
+            className="inline-flex items-center gap-2 border border-brand-midnight/20 px-4 py-1.5 rounded-full mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="w-2 h-2 bg-brand-accent-red rounded-full" />
+            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-midnight">Avvocato Divorzista</span>
+          </motion.div>
 
-    <div className="container mx-auto px-4 md:px-8 relative z-10">
-      <div className="max-w-3xl">
-        <motion.p
-          className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Studio Legale Di Vietro — Bovisio Masciago
-        </motion.p>
-        <motion.h1
-          className="text-5xl md:text-7xl leading-[1.05] mb-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        >
-          Consulenze legali{" "}
-          <br className="hidden md:block" />
-          per privati{" "}
-          <em className="font-medium italic">e famiglie</em>
-        </motion.h1>
-        <motion.p
-          className="text-lg md:text-xl text-brand-smoke mb-12 max-w-2xl leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          Ci prendiamo cura di ogni singolo caso con la stessa dedizione. 
-          Competenza nel diritto di famiglia, dei minori e delle persone 
-          con oltre 20 anni di esperienza.
-        </motion.p>
+          <motion.h1
+            className="text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            Dalla tua parte.{" "}
+            <em className="italic">Sempre.</em>
+          </motion.h1>
+
+          <motion.p
+            className="text-lg md:text-xl text-brand-smoke mb-10 max-w-lg leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Studio Legale Di Vietro — specializzato in diritto di famiglia, 
+            separazioni e tutela dei minori. Ci prendiamo cura di ogni caso 
+            con competenza e umanità.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <a
+              className="bg-brand-accent-red text-card px-8 py-4 rounded-md text-base font-semibold text-center hover:opacity-90 transition btn-transition tracking-wide inline-flex items-center justify-center gap-2"
+              href="#contatti"
+            >
+              Consulenza Gratuita
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+            <a
+              className="border-2 border-brand-midnight text-brand-midnight px-8 py-4 rounded-md text-base font-semibold text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
+              href="#servizi"
+            >
+              I nostri servizi
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Photo */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          className="lg:w-1/2 relative flex justify-center lg:justify-end"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <a
-            className="bg-brand-midnight text-primary-foreground px-10 py-4 rounded-md text-base font-medium text-center hover:opacity-90 transition btn-transition tracking-wide"
-            href="#contatti"
-          >
-            Prenota un colloquio
-          </a>
-          <a
-            className="border-2 border-brand-midnight text-brand-midnight px-10 py-4 rounded-md text-base font-medium text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
-            href="#servizi"
-          >
-            I nostri servizi
-          </a>
+          <div className="relative w-full max-w-md lg:max-w-lg">
+            <div className="aspect-[3/4] rounded-t-[2rem] overflow-hidden">
+              <img
+                alt="Avv. Donatella Di Vietro"
+                className="w-full h-full object-cover"
+                src={donatellaImg}
+              />
+            </div>
+            {/* Floating badge */}
+            <div className="absolute -left-4 bottom-24 bg-card p-4 rounded-xl premium-shadow hidden md:block">
+              <p className="text-brand-midnight font-serif italic text-lg leading-snug max-w-[200px]">
+                "Ogni famiglia merita rispetto e tutela."
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>
 
-    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-garden to-transparent" />
+    {/* Stats bar */}
+    <div className="bg-brand-midnight">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-3 divide-x divide-primary-foreground/10">
+          {stats.map((s, i) => (
+            <motion.div
+              key={s.label}
+              className="py-6 md:py-8 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+            >
+              <p className="text-3xl md:text-4xl font-serif font-bold text-primary-foreground">{s.value}</p>
+              <p className="text-primary-foreground/60 text-sm mt-1">{s.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
   </section>
 );
 

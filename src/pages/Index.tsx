@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
 import SocialProofBar from "@/components/SocialProofBar";
 import WhatICanDoSection from "@/components/WhatICanDoSection";
 import ProblemsSection from "@/components/ProblemsSection";
@@ -15,6 +16,7 @@ const Index = () => (
   <div className="bg-brand-ivory">
     <Header />
     <HeroSection />
+    <ServicesSection />
     <SocialProofBar />
     <WhatICanDoSection />
     <ProblemsSection />
