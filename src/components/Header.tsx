@@ -88,7 +88,7 @@ const Header = () => {
                   animate="visible"
                   exit="exit"
                 >
-                  <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[480px]">
+                  <div className="bg-card border border-border rounded-xl shadow-2xl p-6 w-[520px]">
                     <p className="text-xs font-semibold uppercase tracking-widest text-brand-smoke mb-4">
                       Aree di competenza
                     </p>
