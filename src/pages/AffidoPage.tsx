@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { CheckCircle2, Heart, Shield, Users, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import PageHero from "@/components/PageHero";
 
 const features = [
   "Affidamento condiviso e esclusivo",
@@ -26,22 +26,18 @@ const principles = [
 const AffidoPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <Header />
-
-    <section className="pt-32 pb-20 bg-brand-midnight text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `radial-gradient(circle at 50% 30%, hsl(var(--brand-smoke)) 0%, transparent 70%)` }} />
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-8 text-sm font-medium">
-            ← Torna alla home
-          </Link>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Servizi</p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6">Affido Figli</h1>
-          <p className="text-brand-smoke text-lg md:text-xl max-w-2xl leading-relaxed">
-            Tutela dei minori e interesse del bambino al centro di ogni scelta. Assistenza specializzata per garantire il benessere dei tuoi figli.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+    <PageHero
+      label="Servizi"
+      title="Affido Figli"
+      description="Tutela dei minori e interesse del bambino al centro di ogni scelta. Assistenza specializzata per garantire il benessere dei tuoi figli."
+      stat={{ value: "100%", label: "Dedizione alla\ntutela dei minori" }}
+      testimonial={{
+        text: "Grazie all'Avv. Di Vietro, i miei figli hanno potuto mantenere un rapporto sereno con entrambi i genitori. Un'avvocata che mette i bambini al primo posto.",
+        author: "Francesca M.",
+        role: "Affidamento condiviso — Seregno",
+        rating: 5,
+      }}
+    />
 
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-8">
@@ -54,7 +50,6 @@ const AffidoPage = () => (
               <p>Ti assisto nella definizione di accordi che tutelino i tuoi figli e il tuo rapporto con loro, cercando sempre soluzioni equilibrate che favoriscano la serenità di tutta la famiglia.</p>
             </div>
           </motion.div>
-
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <h3 className="text-2xl mb-6">Servizi di tutela minorile</h3>
             <div className="space-y-4">
@@ -70,7 +65,6 @@ const AffidoPage = () => (
       </div>
     </section>
 
-    {/* Principles */}
     <section className="section-padding bg-card">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>

@@ -4,26 +4,23 @@ import { ArrowRight, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const BlogPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <Header />
-
-    <section className="pt-32 pb-20 bg-brand-midnight text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `radial-gradient(circle at 60% 40%, hsl(var(--brand-smoke)) 0%, transparent 70%)` }} />
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-8 text-sm font-medium">
-            ← Torna alla home
-          </Link>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Approfondimenti</p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6">Blog</h1>
-          <p className="text-brand-smoke text-lg md:text-xl max-w-2xl leading-relaxed">
-            Articoli e guide per orientarti nel diritto di famiglia con consapevolezza e informazione.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+    <PageHero
+      label="Approfondimenti"
+      title="Blog"
+      description="Articoli e guide per orientarti nel diritto di famiglia con consapevolezza e informazione."
+      stat={{ value: `${blogPosts.length}`, label: "Articoli\npubblicati" }}
+      testimonial={{
+        text: "Gli articoli dell'Avv. Di Vietro mi hanno aiutato a capire i miei diritti prima ancora della prima consulenza. Informazione chiara e accessibile.",
+        author: "Andrea B.",
+        role: "Lettore — Milano",
+        rating: 5,
+      }}
+    />
 
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-8">
