@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { CheckCircle2, FileText, Users, Shield, Scale } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import PageHero from "@/components/PageHero";
 
 const features = [
   "Divorzio consensuale e congiunto",
@@ -19,22 +19,18 @@ const features = [
 const DivorziPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <Header />
-
-    <section className="pt-32 pb-20 bg-brand-midnight text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `radial-gradient(circle at 70% 50%, hsl(var(--brand-smoke)) 0%, transparent 70%)` }} />
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-8 text-sm font-medium">
-            ← Torna alla home
-          </Link>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Servizi</p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6">Divorzi</h1>
-          <p className="text-brand-smoke text-lg md:text-xl max-w-2xl leading-relaxed">
-            Definizione dei rapporti patrimoniali e personali tra coniugi con competenza, riservatezza e attenzione alla tutela dei diritti di ciascuno.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+    <PageHero
+      label="Servizi"
+      title="Divorzi"
+      description="Definizione dei rapporti patrimoniali e personali tra coniugi con competenza, riservatezza e attenzione alla tutela dei diritti di ciascuno."
+      stat={{ value: "500+", label: "Famiglie assistite\ncon successo" }}
+      testimonial={{
+        text: "Dopo anni di conflitto, l'Avv. Di Vietro ha trovato una soluzione equa in tempi rapidissimi. Non avrei potuto chiedere di meglio.",
+        author: "Laura S.",
+        role: "Divorzio consensuale — Desio",
+        rating: 5,
+      }}
+    />
 
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-8">
@@ -47,7 +43,6 @@ const DivorziPage = () => (
               <p>L'obiettivo è raggiungere una definizione equa dei rapporti patrimoniali, garantendo la tutela dei figli e il rispetto dei diritti di entrambe le parti.</p>
             </div>
           </motion.div>
-
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <h3 className="text-2xl mb-6">I miei servizi per il divorzio</h3>
             <div className="space-y-4">

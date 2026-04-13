@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { CheckCircle2, ArrowRight, Users, FileText, Shield, Scale } from "lucide-react";
+import { CheckCircle2, FileText, Users, Shield, Scale } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import PageHero from "@/components/PageHero";
 
 const features = [
   "Separazione consensuale con negoziazione assistita",
@@ -24,23 +24,18 @@ const steps = [
 const SeparazioniPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <Header />
-
-    {/* Hero */}
-    <section className="pt-32 pb-20 bg-brand-midnight text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `radial-gradient(circle at 30% 50%, hsl(var(--brand-smoke)) 0%, transparent 70%)` }} />
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-8 text-sm font-medium">
-            ← Torna alla home
-          </Link>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Servizi</p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6">Separazioni</h1>
-          <p className="text-brand-smoke text-lg md:text-xl max-w-2xl leading-relaxed">
-            Assistenza legale completa per affrontare la separazione con consapevolezza, proteggendo i tuoi diritti e il benessere della tua famiglia.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+    <PageHero
+      label="Servizi"
+      title="Separazioni"
+      description="Assistenza legale completa per affrontare la separazione con consapevolezza, proteggendo i tuoi diritti e il benessere della tua famiglia."
+      stat={{ value: "85%", label: "Risolte in via\nconsensuale" }}
+      testimonial={{
+        text: "La Dott.ssa Di Vietro ci ha guidato in una separazione consensuale in soli 3 mesi. Professionalità e umanità straordinarie.",
+        author: "Marco R.",
+        role: "Separazione consensuale — Monza",
+        rating: 5,
+      }}
+    />
 
     {/* Content */}
     <section className="section-padding">
@@ -54,7 +49,6 @@ const SeparazioniPage = () => (
               <p>Ogni situazione è unica e merita un approccio personalizzato. Durante il primo colloquio, analizzeremo insieme la tua situazione per individuare la strategia più efficace.</p>
             </div>
           </motion.div>
-
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <h3 className="text-2xl mb-6">Cosa posso fare per te</h3>
             <div className="space-y-4">

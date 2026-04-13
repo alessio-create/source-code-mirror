@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 const contactInfo = [
   { icon: Phone, label: "Telefono", value: "0362 590859", href: "tel:+390362590859" },
@@ -14,22 +14,18 @@ const contactInfo = [
 const ContattiPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <Header />
-
-    <section className="pt-32 pb-20 bg-brand-midnight text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `radial-gradient(circle at 50% 50%, hsl(var(--brand-smoke)) 0%, transparent 70%)` }} />
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-          <Link to="/" className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-8 text-sm font-medium">
-            ← Torna alla home
-          </Link>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Contattaci</p>
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6">Contatti</h1>
-          <p className="text-brand-smoke text-lg md:text-xl max-w-2xl leading-relaxed">
-            Prenota una consulenza gratuita e riservata. Il primo passo verso la soluzione è una semplice conversazione.
-          </p>
-        </motion.div>
-      </div>
-    </section>
+    <PageHero
+      label="Contattaci"
+      title="Contatti"
+      description="Prenota una consulenza gratuita e riservata. Il primo passo verso la soluzione è una semplice conversazione."
+      stat={{ value: "24h", label: "Tempo medio\ndi risposta" }}
+      testimonial={{
+        text: "Ho chiamato di lunedì e il mercoledì ero già in studio per la consulenza. Efficienza e disponibilità che non mi aspettavo da un avvocato.",
+        author: "Paolo T.",
+        role: "Primo contatto — Cesano Maderno",
+        rating: 5,
+      }}
+    />
 
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-8">
@@ -62,7 +58,6 @@ const ContattiPage = () => (
               ))}
             </div>
 
-            {/* WhatsApp CTA */}
             <motion.a
               href="https://wa.me/390000000000"
               className="mt-10 inline-flex items-center gap-3 bg-whatsapp text-primary-foreground px-8 py-4 rounded-md text-base font-semibold hover:opacity-90 transition btn-transition"
@@ -78,7 +73,7 @@ const ContattiPage = () => (
             </motion.a>
           </motion.div>
 
-          {/* Map / Office visual */}
+          {/* Office card */}
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <div className="bg-card border border-border rounded-2xl overflow-hidden h-full min-h-[400px] flex flex-col">
               <div className="p-8 flex-1 flex flex-col justify-center text-center">
