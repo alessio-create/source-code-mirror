@@ -195,6 +195,13 @@ const Header = () => {
               <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</Link>
               <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
               <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
+              <Link
+                to="/contatti"
+                className="block mt-3 bg-brand-accent-red text-card text-center px-6 py-3 rounded-md text-sm font-semibold"
+                onClick={() => setMobileOpen(false)}
+              >
+                Consulenza Gratuita
+              </Link>
             </div>
           </motion.div>
         )}
