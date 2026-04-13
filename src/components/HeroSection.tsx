@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import donatellaImg from "@/assets/donatella.jpg";
+import brandPattern from "@/assets/brand-pattern.png";
 
 const stats = [
   { value: "20+", label: "Anni di Esperienza" },
@@ -9,6 +10,11 @@ const stats = [
 
 const HeroSection = () => (
   <section className="relative bg-brand-ivory overflow-hidden">
+    {/* Brand pattern overlay */}
+    <div
+      className="absolute inset-0 opacity-[0.07] pointer-events-none"
+      style={{ backgroundImage: `url(${brandPattern})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
+    />
     <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-40 pb-0">
       <div className="flex flex-col lg:flex-row items-end gap-12 lg:gap-0">
         {/* Text */}
