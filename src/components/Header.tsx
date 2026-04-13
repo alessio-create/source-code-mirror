@@ -26,13 +26,13 @@ const serviceItems = [
     icon: ShieldCheck,
     title: "Diritto delle Persone",
     description: "Amministrazione di sostegno e tutela dei diritti",
-    href: "/contatti",
+    href: "/diritto-persone",
   },
   {
     icon: Briefcase,
     title: "Diritto Civile",
     description: "Questioni patrimoniali e successorie",
-    href: "/contatti",
+    href: "/diritto-civile",
   },
 ];
 

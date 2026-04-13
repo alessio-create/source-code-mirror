@@ -6,8 +6,8 @@ const services = [
   { icon: Users, title: "Separazioni e Divorzi", description: "Assistenza legale nelle procedure di separazione consensuale e giudiziale, divorzio e negoziazione assistita.", href: "/separazioni" },
   { icon: Heart, title: "Diritto dei Minori", description: "Affidamento, collocamento e regolamentazione dei rapporti genitori-figli nel superiore interesse del bambino.", href: "/affido-figli" },
   { icon: Scale, title: "Diritto di Famiglia", description: "Consulenza completa per le questioni legate ai rapporti familiari fra coniugi e fra genitori e figli.", href: "/divorzi" },
-  { icon: ShieldCheck, title: "Diritto delle Persone", description: "Amministrazione di sostegno, interdizione, inabilitazione e tutela dei diritti fondamentali.", href: "/contatti" },
-  { icon: Briefcase, title: "Diritto Civile", description: "Controversie civilistiche con attenzione alle questioni patrimoniali e successorie connesse alla famiglia.", href: "/contatti" },
+  { icon: ShieldCheck, title: "Diritto delle Persone", description: "Amministrazione di sostegno, interdizione, inabilitazione e tutela dei diritti fondamentali.", href: "/diritto-persone" },
+  { icon: Briefcase, title: "Diritto Civile", description: "Controversie civilistiche con attenzione alle questioni patrimoniali e successorie connesse alla famiglia.", href: "/diritto-civile" },
 ];
 
 const ServicesSection = () => (

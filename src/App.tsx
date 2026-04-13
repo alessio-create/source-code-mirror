@@ -11,6 +11,8 @@ import DivorziPage from "./pages/DivorziPage.tsx";
 import AffidoPage from "./pages/AffidoPage.tsx";
 import ChiSonoPage from "./pages/ChiSonoPage.tsx";
 import ContattiPage from "./pages/ContattiPage.tsx";
+import DirittoPersonePage from "./pages/DirittoPersonePage.tsx";
+import DirittoCivilePage from "./pages/DirittoCivilePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/separazioni" element={<SeparazioniPage />} />
           <Route path="/divorzi" element={<DivorziPage />} />
           <Route path="/affido-figli" element={<AffidoPage />} />
+          <Route path="/diritto-persone" element={<DirittoPersonePage />} />
+          <Route path="/diritto-civile" element={<DirittoCivilePage />} />
           <Route path="/chi-sono" element={<ChiSonoPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
