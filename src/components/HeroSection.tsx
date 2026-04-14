@@ -35,8 +35,7 @@ const HeroSection = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Dalla tua parte.<br />
-            <em className="italic"><span className="font-bold">Sempre.</span></em>
+            Dalla tua parte.
           </motion.h1>
 
           <motion.p
