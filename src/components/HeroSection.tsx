@@ -36,7 +36,7 @@ const HeroSection = () => (
             transition={{ duration: 0.7, delay: 0.1 }}
           >
             Dalla tua parte.<br />
-            <em className="italic">Sempre.</em>
+            <em className="italic"><span className="font-medium">Sempre.</span></em>
           </motion.h1>
 
           <motion.p
