@@ -37,7 +37,7 @@ const HeroSection = () => (
           >
             La tua famiglia merita<br />
             un avvocato che<br />
-            <em className="italic">ascolta davvero.</em>
+            <em className="italic text-brand-accent-red">ascolta davvero.</em>
           </motion.h1>
 
           <motion.p
