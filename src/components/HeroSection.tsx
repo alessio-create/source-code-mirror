@@ -35,7 +35,9 @@ const HeroSection = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            Dalla tua parte.
+            La tua famiglia merita<br />
+            un avvocato che<br />
+            <em className="italic">ascolta davvero.</em>
           </motion.h1>
 
           <motion.p
