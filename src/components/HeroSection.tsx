@@ -37,7 +37,14 @@ const HeroSection = () => (
           >
             La tua famiglia merita<br />
             un avvocato che<br />
-            <em className="italic text-brand-accent-red">ascolta davvero.</em>
+            <motion.em 
+              className="italic text-brand-accent-red inline-block"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            >
+              ascolta davvero.
+            </motion.em>
           </motion.h1>
 
           <motion.p
