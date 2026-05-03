@@ -15,10 +15,16 @@ const HeroSection = () => (
       className="absolute inset-0 opacity-[0.07] pointer-events-none"
       style={{ backgroundImage: `url(${brandPattern})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
     />
-    <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-40 pb-0">
-      <div className="flex flex-col lg:flex-row items-end gap-12 lg:gap-0">
+    <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-0">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
         {/* Text */}
-        <div className="lg:w-1/2 pb-16 md:pb-24 lg:pb-32">
+        <div className="lg:w-1/2 pb-8 md:pb-12 lg:pb-16">
+          <motion.div
+            className="inline-flex items-center gap-2 border border-brand-midnight/20 px-4 py-1.5 rounded-full mb-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
           <motion.div
             className="inline-flex items-center gap-2 border border-brand-midnight/20 px-4 py-1.5 rounded-full mb-8"
             initial={{ opacity: 0, y: 20 }}
