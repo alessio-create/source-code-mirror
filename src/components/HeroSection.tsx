@@ -91,7 +91,7 @@ const HeroSection = () => (
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-brand-warm">
               <img
                 alt="Avv. Donatella Di Vietro"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
                 src={donatellaImg}
               />
             </div>
