@@ -88,10 +88,10 @@ const HeroSection = () => (
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <div className="relative w-full max-w-xs lg:max-w-sm mx-auto">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-brand-warm flex items-end justify-center">
+            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-brand-warm">
               <img
                 alt="Avv. Donatella Di Vietro"
-                className="w-[95%] h-[100%] object-contain object-bottom"
+                className="w-full h-full object-cover object-top"
                 src={donatellaImg}
               />
             </div>
