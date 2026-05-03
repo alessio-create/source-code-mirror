@@ -25,12 +25,6 @@ const HeroSection = () => (
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-          <motion.div
-            className="inline-flex items-center gap-2 border border-brand-midnight/20 px-4 py-1.5 rounded-full mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
             <span className="w-2 h-2 bg-brand-accent-red rounded-full" />
             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-midnight">Avvocato Divorzista</span>
           </motion.div>
