@@ -16,7 +16,7 @@ const HeroSection = () => (
       style={{ backgroundImage: `url(${brandPattern})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
     />
     <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-0">
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {/* Text */}
         <div className="lg:w-1/2 pb-8 md:pb-12 lg:pb-16">
           <motion.div
@@ -82,16 +82,16 @@ const HeroSection = () => (
 
         {/* Photo */}
         <motion.div
-          className="lg:w-1/2 relative flex justify-center lg:justify-end"
+          className="lg:w-1/2 relative flex justify-center"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative w-full max-w-xs lg:max-w-sm">
-            <div className="aspect-[3/4] flex items-end justify-center bg-brand-ivory">
+          <div className="relative w-full max-w-xs lg:max-w-sm mx-auto">
+            <div className="aspect-square rounded-full overflow-hidden bg-brand-midnight flex items-end justify-center">
               <img
                 alt="Avv. Donatella Di Vietro"
-                className="w-full h-full object-contain object-bottom bg-brand-ivory"
+                className="w-[92%] h-[98%] object-contain object-bottom"
                 src={donatellaImg}
               />
             </div>
