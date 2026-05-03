@@ -87,7 +87,7 @@ const HeroSection = () => (
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="relative w-full max-w-md lg:max-w-lg">
+          <div className="relative w-full max-w-xs lg:max-w-sm">
             <div className="aspect-[3/4] flex items-end justify-center bg-brand-ivory">
               <img
                 alt="Avv. Donatella Di Vietro"
