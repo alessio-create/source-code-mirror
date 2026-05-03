@@ -16,7 +16,7 @@ const HeroSection = () => (
       style={{ backgroundImage: `url(${brandPattern})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
     />
     <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-0">
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {/* Text */}
         <div className="lg:w-1/2 pb-8 md:pb-12 lg:pb-16">
           <motion.div
