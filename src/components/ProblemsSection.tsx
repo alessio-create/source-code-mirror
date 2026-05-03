@@ -35,8 +35,8 @@ const ProblemsSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Ti riconosci?</p>
-        <h2 className="text-4xl md:text-5xl mb-6">I problemi che stai affrontando</h2>
-        <p className="text-brand-smoke text-lg max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl mb-6">I problemi che stai affrontando</h2>
+        <p className="text-brand-smoke text-base max-w-2xl mx-auto">
           Se ti trovi in una di queste situazioni, sappi che non sei solo. Esiste un percorso chiaro per uscirne.
         </p>
       </motion.div>
@@ -55,7 +55,7 @@ const ProblemsSection = () => (
             <div className="w-12 h-12 bg-brand-accent-red/10 rounded-xl flex items-center justify-center mb-5">
               <p.icon className="w-6 h-6 text-brand-accent-red" strokeWidth={1.5} />
             </div>
-            <h3 className="text-xl md:text-2xl mb-3">{p.title}</h3>
+            <h3 className="text-lg md:text-xl mb-3">{p.title}</h3>
             <p className="text-brand-smoke leading-relaxed">{p.description}</p>
           </motion.div>
         ))}

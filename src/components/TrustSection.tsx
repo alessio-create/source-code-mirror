@@ -40,7 +40,7 @@ const TrustSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Fiducia e competenza</p>
-        <h2 className="text-4xl md:text-5xl mb-4">Garanzie di fiducia</h2>
+        <h2 className="text-3xl md:text-4xl mb-4">Garanzie di fiducia</h2>
       </motion.div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-24">
@@ -71,7 +71,7 @@ const TrustSection = () => (
         transition={{ duration: 0.5 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Testimonianze</p>
-        <h2 className="text-4xl md:text-5xl">Storie di chi si è affidato a noi</h2>
+        <h2 className="text-3xl md:text-4xl">Storie di chi si è affidato a noi</h2>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -87,7 +87,7 @@ const TrustSection = () => (
             <svg className="w-8 h-8 text-brand-accent-red/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609L9.978 5.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z"/>
             </svg>
-            <p className="text-foreground text-lg leading-relaxed mb-6 italic font-serif">{t.text}</p>
+            <p className="text-foreground text-base leading-relaxed mb-6 italic font-serif">{t.text}</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-brand-accent-red rounded-full flex items-center justify-center text-card font-semibold text-sm">
                 {t.name[0]}

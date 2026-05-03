@@ -29,8 +29,8 @@ const MethodSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Come Funziona</p>
-        <h2 className="text-4xl md:text-5xl mb-4">Inizia Adesso</h2>
-        <p className="text-brand-smoke text-lg max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl mb-4">Inizia Adesso</h2>
+        <p className="text-brand-smoke text-base max-w-2xl mx-auto">
           Un percorso semplice e chiaro in tre passaggi per risolvere la tua situazione legale.
         </p>
       </motion.div>
@@ -48,7 +48,7 @@ const MethodSection = () => (
             <div className="w-16 h-16 bg-brand-accent-red rounded-full flex items-center justify-center mx-auto mb-6 text-card font-serif font-bold text-2xl">
               {step.number}
             </div>
-            <h3 className="text-xl md:text-2xl mb-3">{step.title}</h3>
+            <h3 className="text-lg md:text-xl mb-3">{step.title}</h3>
             <p className="text-brand-smoke leading-relaxed">{step.description}</p>
             {i < steps.length - 1 && (
               <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px border-t-2 border-dashed border-brand-smoke/30" />

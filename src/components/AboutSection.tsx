@@ -31,7 +31,7 @@ const AboutSection = () => (
           transition={{ duration: 0.7, delay: 0.15 }}
         >
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Chi Sono</p>
-          <h2 className="text-4xl md:text-5xl mt-2 mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl mt-2 mb-4 leading-tight">
             Avv. Donatella Di Vietro
           </h2>
           <div className="flex items-center gap-4 mb-8">
@@ -39,7 +39,7 @@ const AboutSection = () => (
             <span className="text-brand-smoke text-sm font-medium uppercase tracking-wider">CEO & Managing Attorney</span>
             <div className="h-px flex-1 bg-border" />
           </div>
-          <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+          <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
             <p>
               Laureata presso l'Università Cattolica del Sacro Cuore di Milano, ho sviluppato da subito una profonda passione per il diritto di famiglia e delle persone.
             </p>

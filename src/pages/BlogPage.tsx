@@ -47,7 +47,7 @@ const BlogPage = () => (
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
+                <h3 className="text-lg md:text-xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
                 <p className="text-brand-smoke leading-relaxed mb-6">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-brand-smoke text-sm">{post.date}</span>

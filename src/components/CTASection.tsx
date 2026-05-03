@@ -13,12 +13,12 @@ const CTASection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Contattaci</p>
-        <h2 className="text-4xl md:text-5xl text-primary-foreground mb-6">
+        <h2 className="text-3xl md:text-4xl text-primary-foreground mb-6">
           Proteggi la tua famiglia.{" "}
           <br className="hidden md:block" />
           Preserva il tuo futuro.
         </h2>
-        <p className="text-brand-smoke text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+        <p className="text-brand-smoke text-base mb-12 max-w-xl mx-auto leading-relaxed">
           Prenota una consulenza gratuita e riservata per valutare insieme la tua situazione con la massima professionalità.
         </p>
         <a

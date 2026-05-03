@@ -45,8 +45,8 @@ const SocialProofBar = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Perché sceglierci</p>
-        <h2 className="text-4xl md:text-5xl mb-4">Perché lo Studio Legale Di Vietro?</h2>
-        <p className="text-brand-smoke text-lg max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl mb-4">Perché lo Studio Legale Di Vietro?</h2>
+        <p className="text-brand-smoke text-base max-w-2xl mx-auto">
           Non sei un semplice numero di pratica. Ogni cliente riceve attenzione personalizzata, 
           competenza specifica e un supporto costante fino alla risoluzione.
         </p>

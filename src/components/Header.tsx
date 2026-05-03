@@ -64,7 +64,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
         <Link className="flex items-center gap-2.5" to="/">
           <img src={logoDDV} alt="DDV" className="h-8 w-8" width={32} height={32} />
-          <span className="text-lg md:text-xl font-serif font-semibold text-brand-midnight tracking-tight">Donatella Di Vietro</span>
+          <span className="text-base md:text-lg font-serif font-semibold text-brand-midnight tracking-tight">Donatella Di Vietro</span>
         </Link>
 
         {/* Desktop Nav */}

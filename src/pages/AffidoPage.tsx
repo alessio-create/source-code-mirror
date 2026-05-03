@@ -44,19 +44,19 @@ const AffidoPage = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-6">I tuoi figli al primo posto</h2>
-            <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+            <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>Nelle situazioni di separazione e divorzio, la questione dell'affidamento dei figli è quella che richiede la maggiore delicatezza e competenza. Il benessere dei minori deve essere sempre la priorità assoluta.</p>
               <p>L'affidamento condiviso è il regime ordinario previsto dalla legge: entrambi i genitori mantengono la responsabilità genitoriale e partecipano attivamente alla vita dei figli. Solo in casi eccezionali il giudice dispone l'affidamento esclusivo.</p>
               <p>Ti assisto nella definizione di accordi che tutelino i tuoi figli e il tuo rapporto con loro, cercando sempre soluzioni equilibrate che favoriscano la serenità di tutta la famiglia.</p>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <h3 className="text-2xl mb-6">Servizi di tutela minorile</h3>
+            <h3 className="text-xl mb-6">Servizi di tutela minorile</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                   <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-lg">{f}</span>
+                  <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
             </div>

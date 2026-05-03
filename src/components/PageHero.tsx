@@ -44,11 +44,11 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
             {label}
           </p>
 
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6 text-brand-midnight">
+          <h1 className="text-3xl md:text-5xl leading-tight mb-6 text-brand-midnight">
             {title}
           </h1>
 
-          <p className="text-brand-smoke text-lg md:text-xl max-w-xl leading-relaxed mb-8">
+          <p className="text-brand-smoke text-base md:text-xl max-w-xl leading-relaxed mb-8">
             {description}
           </p>
 
