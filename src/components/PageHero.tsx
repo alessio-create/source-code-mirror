@@ -48,7 +48,7 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
             {title}
           </h1>
 
-          <p className="text-brand-smoke text-lg md:text-xl max-w-xl leading-relaxed mb-8">
+          <p className="text-brand-smoke text-base md:text-xl max-w-xl leading-relaxed mb-8">
             {description}
           </p>
 

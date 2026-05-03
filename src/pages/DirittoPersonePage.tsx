@@ -44,19 +44,19 @@ const DirittoPersonePage = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-6">Proteggere chi non può proteggersi</h2>
-            <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+            <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>Il diritto delle persone si occupa della tutela giuridica di chi, a causa di infermità o menomazioni fisiche o psichiche, si trova nell'impossibilità di provvedere ai propri interessi.</p>
               <p>L'amministrazione di sostegno, introdotta dalla Legge 6/2004, è lo strumento più flessibile e meno invasivo per proteggere le persone fragili, limitando il meno possibile la loro autonomia e dignità.</p>
               <p>Ti assisto nella scelta della misura di protezione più adatta, dalla presentazione del ricorso fino alla nomina dell'amministratore, garantendo che ogni decisione sia presa nel rispetto della volontà e del benessere del beneficiario.</p>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <h3 className="text-2xl mb-6">I miei servizi</h3>
+            <h3 className="text-xl mb-6">I miei servizi</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                   <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-lg">{f}</span>
+                  <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
             </div>

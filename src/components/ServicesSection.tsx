@@ -50,7 +50,7 @@ const ServicesSection = () => (
               <div className="w-14 h-14 bg-brand-warm flex items-center justify-center rounded-xl mb-6 group-hover:bg-brand-midnight transition-colors duration-300">
                 <s.icon className="w-6 h-6 text-brand-midnight group-hover:text-primary-foreground transition-colors duration-300" strokeWidth={1.5} />
               </div>
-              <h3 className="text-2xl mb-3">{s.title}</h3>
+              <h3 className="text-xl mb-3">{s.title}</h3>
               <p className="text-brand-smoke leading-relaxed mb-4">{s.description}</p>
               <span className="inline-flex items-center gap-1 text-brand-accent-red text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Scopri di più <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

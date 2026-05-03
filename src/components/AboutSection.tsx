@@ -39,7 +39,7 @@ const AboutSection = () => (
             <span className="text-brand-smoke text-sm font-medium uppercase tracking-wider">CEO & Managing Attorney</span>
             <div className="h-px flex-1 bg-border" />
           </div>
-          <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+          <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
             <p>
               Laureata presso l'Università Cattolica del Sacro Cuore di Milano, ho sviluppato da subito una profonda passione per il diritto di famiglia e delle persone.
             </p>

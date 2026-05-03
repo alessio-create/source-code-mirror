@@ -18,7 +18,7 @@ const CTASection = () => (
           <br className="hidden md:block" />
           Preserva il tuo futuro.
         </h2>
-        <p className="text-brand-smoke text-lg mb-12 max-w-xl mx-auto leading-relaxed">
+        <p className="text-brand-smoke text-base mb-12 max-w-xl mx-auto leading-relaxed">
           Prenota una consulenza gratuita e riservata per valutare insieme la tua situazione con la massima professionalità.
         </p>
         <a

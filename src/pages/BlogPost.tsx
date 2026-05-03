@@ -61,7 +61,7 @@ const BlogPost = () => {
             {post.content.map((paragraph, i) => (
               <p
                 key={i}
-                className="text-brand-smoke text-lg leading-relaxed"
+                className="text-brand-smoke text-base leading-relaxed"
               >
                 {paragraph}
               </p>
@@ -74,7 +74,7 @@ const BlogPost = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h3 className="text-2xl mb-3">Hai bisogno di assistenza?</h3>
+            <h3 className="text-xl mb-3">Hai bisogno di assistenza?</h3>
             <p className="text-brand-smoke mb-6">
               Contattami per una consulenza riservata e personalizzata.
             </p>

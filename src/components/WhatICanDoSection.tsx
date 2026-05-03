@@ -39,7 +39,7 @@ const WhatICanDoSection = () => (
         >
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Cosa posso fare per te</p>
           <h2 className="text-3xl md:text-4xl mb-6">Un supporto legale completo per la tua famiglia</h2>
-          <p className="text-brand-smoke text-lg leading-relaxed mb-8">
+          <p className="text-brand-smoke text-base leading-relaxed mb-8">
             Ogni situazione è unica. Ti offro un'assistenza personalizzata, dalla prima consulenza fino alla risoluzione definitiva del tuo caso.
           </p>
           <a

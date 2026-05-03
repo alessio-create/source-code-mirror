@@ -44,19 +44,19 @@ const DirittoCivilePage = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-6">Tutela del patrimonio familiare</h2>
-            <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+            <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>Le questioni patrimoniali e successorie sono spesso strettamente legate al diritto di famiglia. La mia esperienza ventennale mi consente di affrontare queste problematiche con una visione d'insieme che integra gli aspetti familiari e civilistici.</p>
               <p>Che si tratti di una divisione ereditaria contestata, di un accordo prematrimoniale da redigere o di una controversia sulla proprietà dopo una separazione, il mio approccio privilegia sempre la ricerca di soluzioni negoziali prima di ricorrere al contenzioso.</p>
               <p>Quando il tribunale diventa inevitabile, ti garantisco un'assistenza rigorosa e determinata per la tutela dei tuoi diritti patrimoniali.</p>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <h3 className="text-2xl mb-6">I miei servizi</h3>
+            <h3 className="text-xl mb-6">I miei servizi</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                   <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-lg">{f}</span>
+                  <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
             </div>

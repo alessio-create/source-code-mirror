@@ -29,7 +29,7 @@ const FAQSection = () => {
         <div className="text-center mb-16">
           <p className="text-sm font-medium tracking-[0.2em] uppercase text-brand-smoke mb-4">Domande Frequenti</p>
           <h2 className="text-3xl md:text-4xl mb-6">Risposte ai tuoi dubbi</h2>
-          <p className="text-brand-smoke text-lg">Domande e risposte nel campo del diritto di famiglia</p>
+          <p className="text-brand-smoke text-base">Domande e risposte nel campo del diritto di famiglia</p>
         </div>
         <div className="space-y-3">
           {faqs.map((faq, i) => (

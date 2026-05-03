@@ -16,7 +16,7 @@ const BlogSection = () => (
         <div>
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Blog</p>
           <h2 className="text-3xl md:text-4xl">Approfondimenti legali</h2>
-          <p className="text-brand-smoke text-lg mt-3 max-w-lg">
+          <p className="text-brand-smoke text-base mt-3 max-w-lg">
             Articoli e guide per orientarti nel diritto di famiglia con consapevolezza.
           </p>
         </div>
@@ -47,7 +47,7 @@ const BlogSection = () => (
                 </span>
               </div>
 
-              <h3 className="text-xl md:text-2xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
+              <h3 className="text-lg md:text-xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
               <p className="text-brand-smoke leading-relaxed mb-6">{post.excerpt}</p>
 
               <div className="flex items-center justify-between">

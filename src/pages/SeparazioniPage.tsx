@@ -43,19 +43,19 @@ const SeparazioniPage = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-6">Separazione consensuale o giudiziale?</h2>
-            <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+            <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>La separazione è un momento che segna un cambiamento profondo nella vita di una famiglia. Il mio obiettivo è guidarti attraverso questo percorso con chiarezza e determinazione, cercando sempre la soluzione migliore per te e per i tuoi figli.</p>
               <p>Quando possibile, privilegio la separazione consensuale e la negoziazione assistita: percorsi più rapidi, meno costosi e meno conflittuali. Quando il dialogo non è possibile, ti assisto con esperienza e competenza nella separazione giudiziale.</p>
               <p>Ogni situazione è unica e merita un approccio personalizzato. Durante il primo colloquio, analizzeremo insieme la tua situazione per individuare la strategia più efficace.</p>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <h3 className="text-2xl mb-6">Cosa posso fare per te</h3>
+            <h3 className="text-xl mb-6">Cosa posso fare per te</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                   <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-lg">{f}</span>
+                  <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
             </div>

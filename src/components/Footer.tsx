@@ -30,7 +30,7 @@ const Footer = () => (
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-10">
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-2">Recensioni</p>
-          <h3 className="text-xl md:text-2xl font-serif font-bold text-brand-midnight">Cosa Dicono i Nostri Clienti</h3>
+          <h3 className="text-lg md:text-xl font-serif font-bold text-brand-midnight">Cosa Dicono i Nostri Clienti</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {reviews.map((r) => (

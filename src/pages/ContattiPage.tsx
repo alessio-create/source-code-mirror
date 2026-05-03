@@ -33,7 +33,7 @@ const ContattiPage = () => (
           {/* Contact Info */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-8">Parliamo della tua situazione</h2>
-            <p className="text-brand-smoke text-lg leading-relaxed mb-10">
+            <p className="text-brand-smoke text-base leading-relaxed mb-10">
               Ogni caso merita attenzione e riservatezza. Contattami per fissare un primo colloquio informativo, senza impegno. Sono qui per ascoltarti e guidarti verso la soluzione migliore.
             </p>
             <div className="space-y-6">
@@ -80,7 +80,7 @@ const ContattiPage = () => (
                 <div className="w-20 h-20 bg-brand-accent-red/10 flex items-center justify-center rounded-full mx-auto mb-6">
                   <MapPin className="w-10 h-10 text-brand-accent-red" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl mb-3">Studio Legale Di Vietro</h3>
+                <h3 className="text-xl mb-3">Studio Legale Di Vietro</h3>
                 <p className="text-brand-smoke leading-relaxed mb-2">Bovisio Masciago (MB)</p>
                 <p className="text-brand-smoke text-sm">Provincia di Monza e Brianza</p>
                 <div className="mt-8 pt-8 border-t border-border">

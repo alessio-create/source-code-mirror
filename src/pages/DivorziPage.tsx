@@ -37,19 +37,19 @@ const DivorziPage = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <h2 className="text-3xl md:text-4xl mb-6">Verso un nuovo inizio</h2>
-            <div className="space-y-5 text-brand-smoke text-lg leading-relaxed">
+            <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>Il divorzio segna la fine del vincolo matrimoniale e l'inizio di una nuova fase di vita. Con la riforma del "Divorzio Breve", i tempi si sono notevolmente ridotti, rendendo possibile ottenere lo scioglimento del matrimonio in tempi ragionevoli.</p>
               <p>Ti assisto nella scelta del percorso più adatto alla tua situazione, che sia il divorzio congiunto davanti al tribunale, la negoziazione assistita o il divorzio in comune, valutando sempre tutte le implicazioni economiche e personali.</p>
               <p>L'obiettivo è raggiungere una definizione equa dei rapporti patrimoniali, garantendo la tutela dei figli e il rispetto dei diritti di entrambe le parti.</p>
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <h3 className="text-2xl mb-6">I miei servizi per il divorzio</h3>
+            <h3 className="text-xl mb-6">I miei servizi per il divorzio</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
                   <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-lg">{f}</span>
+                  <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
             </div>
