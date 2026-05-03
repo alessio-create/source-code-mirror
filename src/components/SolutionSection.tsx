@@ -28,7 +28,7 @@ const SolutionSection = () => (
             <Sparkles className="w-4 h-4 text-brand-accent-red" />
             <span className="text-primary-foreground text-sm font-medium">La soluzione esiste</span>
           </div>
-          <h2 className="text-4xl md:text-5xl text-primary-foreground mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl text-primary-foreground mb-8 leading-tight">
             Un avvocato che capisce davvero la tua situazione
           </h2>
           <p className="text-brand-smoke text-lg leading-relaxed mb-8">

@@ -40,7 +40,7 @@ const TrustSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Fiducia e competenza</p>
-        <h2 className="text-4xl md:text-5xl mb-4">Garanzie di fiducia</h2>
+        <h2 className="text-3xl md:text-4xl mb-4">Garanzie di fiducia</h2>
       </motion.div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-24">
@@ -71,7 +71,7 @@ const TrustSection = () => (
         transition={{ duration: 0.5 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Testimonianze</p>
-        <h2 className="text-4xl md:text-5xl">Storie di chi si è affidato a noi</h2>
+        <h2 className="text-3xl md:text-4xl">Storie di chi si è affidato a noi</h2>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

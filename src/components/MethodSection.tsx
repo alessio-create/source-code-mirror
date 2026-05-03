@@ -29,7 +29,7 @@ const MethodSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Come Funziona</p>
-        <h2 className="text-4xl md:text-5xl mb-4">Inizia Adesso</h2>
+        <h2 className="text-3xl md:text-4xl mb-4">Inizia Adesso</h2>
         <p className="text-brand-smoke text-lg max-w-2xl mx-auto">
           Un percorso semplice e chiaro in tre passaggi per risolvere la tua situazione legale.
         </p>

@@ -31,7 +31,7 @@ const AboutSection = () => (
           transition={{ duration: 0.7, delay: 0.15 }}
         >
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Chi Sono</p>
-          <h2 className="text-4xl md:text-5xl mt-2 mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl mt-2 mb-4 leading-tight">
             Avv. Donatella Di Vietro
           </h2>
           <div className="flex items-center gap-4 mb-8">

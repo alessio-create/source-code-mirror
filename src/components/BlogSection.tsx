@@ -15,7 +15,7 @@ const BlogSection = () => (
       >
         <div>
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Blog</p>
-          <h2 className="text-4xl md:text-5xl">Approfondimenti legali</h2>
+          <h2 className="text-3xl md:text-4xl">Approfondimenti legali</h2>
           <p className="text-brand-smoke text-lg mt-3 max-w-lg">
             Articoli e guide per orientarti nel diritto di famiglia con consapevolezza.
           </p>

@@ -35,7 +35,7 @@ const ProblemsSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Ti riconosci?</p>
-        <h2 className="text-4xl md:text-5xl mb-6">I problemi che stai affrontando</h2>
+        <h2 className="text-3xl md:text-4xl mb-6">I problemi che stai affrontando</h2>
         <p className="text-brand-smoke text-lg max-w-2xl mx-auto">
           Se ti trovi in una di queste situazioni, sappi che non sei solo. Esiste un percorso chiaro per uscirne.
         </p>

@@ -22,7 +22,7 @@ const ServicesSection = () => (
       >
         <div>
           <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Aree di competenza</p>
-          <h2 className="text-4xl md:text-5xl">I nostri servizi legali</h2>
+          <h2 className="text-3xl md:text-4xl">I nostri servizi legali</h2>
         </div>
         <Link
           to="/contatti"

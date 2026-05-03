@@ -44,7 +44,7 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
             {label}
           </p>
 
-          <h1 className="text-4xl md:text-6xl leading-tight mb-6 text-brand-midnight">
+          <h1 className="text-3xl md:text-5xl leading-tight mb-6 text-brand-midnight">
             {title}
           </h1>
 

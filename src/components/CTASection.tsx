@@ -13,7 +13,7 @@ const CTASection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-4">Contattaci</p>
-        <h2 className="text-4xl md:text-5xl text-primary-foreground mb-6">
+        <h2 className="text-3xl md:text-4xl text-primary-foreground mb-6">
           Proteggi la tua famiglia.{" "}
           <br className="hidden md:block" />
           Preserva il tuo futuro.
