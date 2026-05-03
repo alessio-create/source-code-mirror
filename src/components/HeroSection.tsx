@@ -65,14 +65,14 @@ const HeroSection = () => (
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <a
-              className="bg-brand-accent-red text-card px-8 py-4 rounded-md text-base font-semibold text-center hover:opacity-90 transition btn-transition tracking-wide inline-flex items-center justify-center gap-2"
+              className="bg-brand-accent-red text-card px-7 py-3 rounded-md text-base font-semibold text-center hover:opacity-90 transition btn-transition tracking-wide inline-flex items-center justify-center gap-2"
               href="#contatti"
             >
               Consulenza Gratuita
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
             <a
-              className="border-2 border-brand-midnight text-brand-midnight px-8 py-4 rounded-md text-base font-semibold text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
+              className="border-2 border-brand-midnight text-brand-midnight px-7 py-3 rounded-md text-base font-semibold text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
               href="#servizi"
             >
               I nostri servizi
