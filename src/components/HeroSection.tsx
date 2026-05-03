@@ -82,7 +82,7 @@ const HeroSection = () => (
 
         {/* Photo */}
         <motion.div
-          className="lg:w-1/2 relative flex justify-center lg:justify-end"
+          className="lg:w-1/2 relative flex justify-center"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
