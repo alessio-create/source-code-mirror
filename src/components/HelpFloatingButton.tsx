@@ -230,7 +230,9 @@ const HelpFloatingButton = () => {
             </AnimatePresence>
           </span>
         </button>
-      </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence>
         {open && (
