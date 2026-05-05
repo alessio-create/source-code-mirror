@@ -89,7 +89,7 @@ const Footer = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center text-brand-smoke hover:bg-brand-accent-red hover:border-brand-accent-red hover:text-primary-foreground transition-all duration-300"
+                  className="w-10 h-10 rounded-full border border-primary-foreground/20 flex items-center justify-center text-brand-smoke hover:bg-brand-midnight hover:border-brand-midnight hover:text-primary-foreground transition-all duration-300"
                 >
                   <Icon className="w-4 h-4" strokeWidth={1.5} />
                 </a>
@@ -102,18 +102,18 @@ const Footer = () => (
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Studio</h4>
             <div className="space-y-4 text-brand-smoke/80 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-brand-accent-red" strokeWidth={1.5} />
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-brand-midnight" strokeWidth={1.5} />
                 <div>
                   <p>Via Guglielmo Marconi, 70/C</p>
                   <p>20813 Bovisio Masciago (MB)</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 shrink-0 text-brand-accent-red" strokeWidth={1.5} />
+                <Phone className="w-4 h-4 shrink-0 text-brand-midnight" strokeWidth={1.5} />
                 <a href="tel:+390362590859" className="hover:text-primary-foreground transition">+39 0362 590859</a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 shrink-0 text-brand-accent-red" strokeWidth={1.5} />
+                <Mail className="w-4 h-4 shrink-0 text-brand-midnight" strokeWidth={1.5} />
                 <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
               </div>
             </div>
@@ -123,11 +123,11 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Servizi</h4>
             <nav className="space-y-3 text-brand-smoke/80 text-sm">
-              <Link className="block hover:text-brand-accent-red transition" to="/separazioni">Separazioni</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/divorzi">Divorzi</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/affido-figli">Affido Figli</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/diritto-persone">Diritto delle Persone</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/diritto-civile">Diritto Civile</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/separazioni">Separazioni</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/divorzi">Divorzi</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/affido-figli">Affido Figli</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/diritto-persone">Diritto delle Persone</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/diritto-civile">Diritto Civile</Link>
             </nav>
           </div>
 
@@ -135,9 +135,9 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Info</h4>
             <nav className="space-y-3 text-brand-smoke/80 text-sm">
-              <Link className="block hover:text-brand-accent-red transition" to="/chi-sono">Chi Sono</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/blog">Blog</Link>
-              <Link className="block hover:text-brand-accent-red transition" to="/contatti">Contatti</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/chi-sono">Chi Sono</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/blog">Blog</Link>
+              <Link className="block hover:text-brand-midnight transition" to="/contatti">Contatti</Link>
             </nav>
             <p className="text-brand-smoke/50 text-xs mt-6">P.IVA: 04755410968</p>
           </div>

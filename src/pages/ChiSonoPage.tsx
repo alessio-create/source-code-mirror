@@ -28,7 +28,7 @@ const ChiSonoPage = () => (
     <section className="section-padding bg-card">
       <div className="container mx-auto px-4 md:px-8 max-w-3xl">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Percorso</p>
+          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-midnight mb-3">Percorso</p>
           <h2 className="text-3xl md:text-4xl">La mia formazione</h2>
         </motion.div>
         <div className="space-y-8">
@@ -40,9 +40,9 @@ const ChiSonoPage = () => (
           ].map((item, i) => (
             <motion.div key={item.year} className="flex gap-6" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
               <div className="shrink-0 w-16 text-right">
-                <span className="text-brand-accent-red font-bold text-lg">{item.year}</span>
+                <span className="text-brand-midnight font-bold text-lg">{item.year}</span>
               </div>
-              <div className="border-l-2 border-brand-accent-red pl-6 pb-2">
+              <div className="border-l-2 border-brand-midnight pl-6 pb-2">
                 <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
                 <p className="text-brand-smoke leading-relaxed">{item.desc}</p>
               </div>
