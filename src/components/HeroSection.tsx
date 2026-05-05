@@ -183,25 +183,25 @@ const HeroSection = () => {
         }}
       />
       {/* Centered large D monogram mark */}
-      <motion.div
-        aria-hidden
-        className="absolute left-1/2 top-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.06] will-change-transform"
-        style={{
-          x: stripX,
-          y: stripY,
-          translateX: "-50%",
-          translateY: "-50%",
-          backgroundColor: "hsl(var(--brand-ivory))",
-          WebkitMaskImage: `url(${monogramMark})`,
-          maskImage: `url(${monogramMark})`,
-          WebkitMaskRepeat: "no-repeat",
-          maskRepeat: "no-repeat",
-          WebkitMaskSize: "contain",
-          maskSize: "contain",
-          WebkitMaskPosition: "center",
-          maskPosition: "center",
-        }}
-      />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <motion.div
+          aria-hidden
+          className="w-[420px] h-[420px] opacity-[0.06] will-change-transform"
+          style={{
+            x: stripX,
+            y: stripY,
+            backgroundColor: "hsl(var(--brand-ivory))",
+            WebkitMaskImage: `url(${monogramMark})`,
+            maskImage: `url(${monogramMark})`,
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
+          }}
+        />
+      </div>
       {/* Film grain overlay */}
       <div
         aria-hidden
