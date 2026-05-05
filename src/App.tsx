@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import SmoothScroll from "./components/SmoothScroll.tsx";
+import ScrollProgress from "./components/ScrollProgress.tsx";
 import Index from "./pages/Index.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import BlogPage from "./pages/BlogPage.tsx";
@@ -26,6 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <SmoothScroll />
+        <ScrollProgress />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

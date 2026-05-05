@@ -193,4 +193,69 @@
     display: none;
   }
   .text-balance { text-wrap: balance; }
+
+  /* Editorial drop cap — first letter oversized serif */
+  .drop-cap::first-letter {
+    font-family: 'Canela', 'Canela Deck', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 4.5em;
+    line-height: 0.85;
+    float: left;
+    padding: 0.05em 0.12em 0 0;
+    color: hsl(var(--brand-midnight));
+  }
+
+  /* Editorial link with animated underline */
+  .link-editorial {
+    @apply relative inline-block text-brand-midnight;
+    background-image: linear-gradient(hsl(var(--brand-midnight) / 0.6), hsl(var(--brand-midnight) / 0.6));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    transition: background-size 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .link-editorial:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+
+  /* Subtle lift on hover for cards/imagery */
+  .lift-hover {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .lift-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Slow ken-burns zoom for hero imagery */
+  @keyframes ken-burns {
+    0% { transform: scale(1) translate3d(0, 0, 0); }
+    100% { transform: scale(1.06) translate3d(0, -0.5%, 0); }
+  }
+  .ken-burns {
+    animation: ken-burns 18s ease-out forwards;
+    will-change: transform;
+  }
+
+  /* Soft fade-in-up for scroll reveals (CSS-only fallback) */
+  @keyframes soft-rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .soft-rise { animation: soft-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  /* Section divider — hairline with central serif ornament */
+  .ornament-rule {
+    @apply flex items-center gap-4 text-brand-midnight/40;
+  }
+  .ornament-rule::before,
+  .ornament-rule::after {
+    content: "";
+    @apply h-px flex-1 bg-brand-midnight/15;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ken-burns, .soft-rise { animation: none !important; }
+  }
 }
