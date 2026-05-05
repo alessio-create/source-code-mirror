@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Canela', 'Georgia', 'serif'],
-        sans: ['Inter', '"Neue Haas Grotesk"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        serif: ['Canela', '"Canela Deck"', '"Cormorant Garamond"', 'Georgia', '"Times New Roman"', 'serif'],
+        sans: ['"Neue Haas Grotesk Display Pro"', '"Neue Haas Grotesk"', 'Inter', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        display: ['Canela', '"Canela Deck"', '"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
