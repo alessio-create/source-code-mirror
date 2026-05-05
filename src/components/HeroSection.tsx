@@ -129,10 +129,10 @@ const HeroSection = () => {
           <div className="relative max-w-md mx-auto">
             {/* Hairline frame */}
             <div className="absolute -inset-4 border border-brand-midnight/15 hidden md:block" />
-            <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden bg-brand-garden relative">
+            <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden bg-brand-garden relative group">
               <img
                 alt="Ritratto dell'Avv. Donatella Di Vietro, avvocata specializzata in diritto di famiglia, minori e persone, presso il suo studio di Bovisio Masciago"
-                className="w-full h-full object-cover object-[center_20%]"
+                className="w-full h-full object-cover object-[center_20%] ken-burns transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                 src={donatellaImg}
                 loading="eager"
                 fetchPriority="high"
@@ -140,6 +140,8 @@ const HeroSection = () => {
                 width={800}
                 height={1000}
               />
+              {/* Subtle vignette on hover */}
+              <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-midnight/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             </div>
             {/* Editorial caption */}
             <div className="mt-5 flex items-baseline justify-between border-t border-brand-midnight/15 pt-3">
