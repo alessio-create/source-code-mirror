@@ -39,7 +39,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 w-full z-50 glass-effect border-b border-border">
       <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
         <Link className="flex items-center" to="/" aria-label="Studio Legale Avv. Donatella Di Vietro">
-          <img src={logoHorizontal} alt="Avv. Donatella Di Vietro" className="h-9 md:h-10 w-auto" />
+          <img src={logoHorizontal} alt="Avv. Donatella Di Vietro" className="h-12 md:h-14 lg:h-16 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
