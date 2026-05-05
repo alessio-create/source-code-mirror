@@ -54,8 +54,8 @@ const HelpFloatingButton = () => {
           break;
         }
         const rgb = parseRgb(cs.backgroundColor);
-        if (rgb) {
-          lum = luminance(rgb[0], rgb[1], rgb[2]);
+        if (rgb && rgb.a > 0.1) {
+          lum = luminance(rgb.r, rgb.g, rgb.b);
           break;
         }
       }
