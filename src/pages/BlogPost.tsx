@@ -80,7 +80,7 @@ const BlogPost = () => {
             </p>
             <a
               href="/#contatti"
-              className="inline-block bg-brand-midnight text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-midnight/90 transition-colors"
+              className="inline-block bg-brand-midnight text-brand-ivory px-8 py-3 rounded-full font-semibold hover:bg-brand-midnight/90 transition-colors"
             >
               Prenota una consulenza
             </a>
