@@ -31,7 +31,7 @@ const SolutionSection = () => (
           <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-ivory leading-[1.05] tracking-[-0.02em] mb-10 text-balance">
             Un avvocato che <em className="not-italic font-semibold text-brand-ivory">capisce</em> davvero la tua situazione.
           </h2>
-          <p className="text-brand-ivory/70 text-base md:text-lg leading-[1.8] mb-12 max-w-2xl">
+          <p className="drop-cap text-brand-ivory/75 text-base md:text-lg leading-[1.8] mb-12 max-w-2xl [&::first-letter]:!text-brand-ivory">
             Non sei un numero di pratica. Con oltre vent'anni di esperienza esclusiva nel diritto di famiglia, costruisco un percorso legale pensato intorno a te.
           </p>
           <ul className="space-y-0 mb-12 border-t border-brand-ivory/15">
