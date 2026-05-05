@@ -9,11 +9,13 @@ const SmoothScroll = () => {
     }
 
     const lenis = new Lenis({
-      duration: 1.25,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // gentle exponential out
+      duration: 1.8,
+      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -12 * t)), // long, silky exponential out
       smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 1.4,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 1.6,
+      lerp: 0.08,
+      syncTouch: true,
     });
 
     let rafId: number;
