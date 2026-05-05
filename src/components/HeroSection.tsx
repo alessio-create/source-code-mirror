@@ -162,17 +162,6 @@ const HeroSection = () => {
       onMouseMove={handleStripMove}
       className="bg-brand-midnight relative overflow-hidden"
     >
-      {/* Diagonal hairline grid pattern */}
-      <motion.div
-        aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-[0.07] will-change-transform"
-        style={{
-          x: gridX,
-          y: gridY,
-          backgroundImage:
-            "repeating-linear-gradient(45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px), repeating-linear-gradient(-45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px)",
-        }}
-      />
       {/* Soft radial glow */}
       <div
         aria-hidden
