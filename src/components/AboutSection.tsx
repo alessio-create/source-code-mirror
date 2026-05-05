@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import donatellaImg from "@/assets/donatella.jpg";
+import donatellaImg from "@/assets/donatella.png";
 
 const AboutSection = () => (
   <section className="section-padding bg-card" id="chi-sono">
