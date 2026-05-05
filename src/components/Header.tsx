@@ -94,9 +94,9 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
-          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/chi-sono">Chi Sono</Link>
-          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/blog">Blog</Link>
-          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/contatti">Contatti</Link>
+          <Link className="text-sm font-medium link-editorial" to="/chi-sono">Chi Sono</Link>
+          <Link className="text-sm font-medium link-editorial" to="/blog">Blog</Link>
+          <Link className="text-sm font-medium link-editorial" to="/contatti">Contatti</Link>
         </nav>
 
         <div className="flex items-center space-x-4">
