@@ -35,7 +35,7 @@ const BlogPage = () => (
             >
               <Link
                 to={`/blog/${post.slug}`}
-                className="group bg-card border border-border rounded-2xl p-8 hover:premium-shadow-lg transition-all duration-500 relative overflow-hidden block"
+                className="group bg-card border border-border rounded-2xl p-8 hover:premium-shadow-lg transition-all duration-500 relative overflow-hidden block lift-hover"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-brand-midnight scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 <div className="flex items-center gap-3 mb-4">
