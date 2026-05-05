@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import monogram from "@/assets/logo-monogram.svg";
 
 const benefits = [
   "Ascolto autentico e comprensione della tua situazione",
@@ -10,73 +10,68 @@ const benefits = [
 
 const SolutionSection = () => (
   <section className="section-padding bg-brand-midnight relative overflow-hidden">
-    <div className="absolute inset-0 opacity-5" style={{
-      backgroundImage: `radial-gradient(circle at 20% 80%, hsl(var(--brand-garden)) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, hsl(var(--brand-smoke)) 0%, transparent 50%)`
-    }} />
+    {/* Monogram watermark */}
+    <img
+      src={monogram}
+      alt=""
+      aria-hidden
+      className="absolute -right-32 top-10 w-[520px] opacity-[0.06] pointer-events-none select-none"
+    />
 
     <div className="container mx-auto px-4 md:px-8 relative z-10">
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <motion.div
-          className="lg:w-1/2"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="lg:col-span-7"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="inline-flex items-center gap-2 bg-primary-foreground/10 px-4 py-2 rounded-full mb-6">
-            <Sparkles className="w-4 h-4 text-brand-accent-red" />
-            <span className="text-primary-foreground text-sm font-medium">La soluzione esiste</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl text-primary-foreground mb-8 leading-tight">
-            Un avvocato che capisce davvero la tua situazione
+          <p className="eyebrow mb-8 text-brand-ivory/70 [&::before]:bg-brand-ivory/40">La Soluzione</p>
+          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-ivory leading-[1.05] tracking-[-0.02em] mb-10 text-balance">
+            Un avvocato che <em className="italic font-normal text-brand-ivory/70">capisce</em> davvero la tua situazione.
           </h2>
-          <p className="text-brand-smoke text-base leading-relaxed mb-8">
-            Non sei solo un numero di pratica. Con oltre 20 anni di esperienza esclusivamente nel diritto di famiglia, ti offro un percorso legale pensato intorno a te.
+          <p className="text-brand-ivory/70 text-base md:text-lg leading-[1.8] mb-12 max-w-2xl">
+            Non sei un numero di pratica. Con oltre vent'anni di esperienza esclusiva nel diritto di famiglia, costruisco un percorso legale pensato intorno a te.
           </p>
-          <div className="space-y-4 mb-10">
+          <ul className="space-y-0 mb-12 border-t border-brand-ivory/15">
             {benefits.map((item, i) => (
-              <motion.div
+              <motion.li
                 key={item}
-                className="flex items-center gap-3"
+                className="flex items-baseline gap-6 py-5 border-b border-brand-ivory/15"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
               >
-                <ArrowRight className="w-4 h-4 text-brand-accent-red shrink-0" />
-                <span className="text-primary-foreground/90 font-medium">{item}</span>
-              </motion.div>
+                <span className="display-numeral text-base text-brand-ivory/50 not-italic font-normal w-8 shrink-0 tracking-normal">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-brand-ivory/90 font-light text-base md:text-lg">{item}</span>
+              </motion.li>
             ))}
-          </div>
-          <a
-            href="#contatti"
-            className="inline-flex items-center gap-2 bg-brand-accent-red text-card px-8 py-4 rounded-md text-base font-semibold hover:opacity-90 transition btn-transition"
-          >
-            Consulenza Gratuita
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </ul>
+          <a href="#contatti" className="inline-flex items-center justify-center gap-3 bg-brand-ivory text-brand-midnight px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] hover:bg-brand-ivory/90 transition btn-transition">
+            Consulenza Riservata
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
         </motion.div>
 
         <motion.div
-          className="lg:w-1/2"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="lg:col-span-5"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-10">
-            <p className="text-primary-foreground/80 text-xl italic leading-relaxed mb-8 font-serif">
-              "Ogni famiglia ha una storia che merita rispetto e tutela. Il mio compito è guidarti attraverso la complessità legale con competenza e umanità, proteggendo ciò che conta di più."
+          <div className="border-l-2 border-brand-ivory/30 pl-8 md:pl-10 py-2">
+            <p className="display-numeral text-7xl text-brand-ivory/30 leading-none mb-4">"</p>
+            <p className="text-brand-ivory text-xl md:text-2xl italic leading-[1.5] mb-8 font-serif font-normal">
+              Ogni famiglia ha una storia che merita rispetto e tutela. Il mio compito è guidarti attraverso la complessità legale con competenza e umanità — proteggendo ciò che conta di più.
             </p>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-brand-accent-red rounded-full flex items-center justify-center text-card font-serif font-bold text-lg">
-                D
-              </div>
-              <div>
-                <p className="text-primary-foreground font-semibold">Avv. Donatella Di Vietro</p>
-                <p className="text-brand-smoke text-sm">Specializzata in Diritto di Famiglia</p>
-              </div>
+            <div className="border-t border-brand-ivory/15 pt-5">
+              <p className="text-brand-ivory font-medium text-sm uppercase tracking-[0.2em]">Avv. Donatella Di Vietro</p>
+              <p className="text-brand-ivory/60 text-xs mt-2 uppercase tracking-[0.2em]">Diritto di Famiglia</p>
             </div>
           </div>
         </motion.div>

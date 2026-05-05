@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
 
 const capabilities = [
   "Separazioni consensuali e giudiziali",
@@ -8,70 +7,68 @@ const capabilities = [
   "Regolamentazione dei rapporti genitori-figli",
   "Amministrazione di sostegno e tutela",
   "Riconoscimento e disconoscimento di paternità",
-  "Modifica delle condizioni di separazione e divorzio",
+  "Modifica delle condizioni di separazione",
   "Assegno di mantenimento e divisione patrimoniale",
   "Costituzione e tutela delle famiglie di fatto",
   "Interdizione e inabilitazione",
-  "Controversie successorie e patrimoniali familiari",
-  "Consulenza legale preventiva e stragiudiziale",
+  "Controversie successorie familiari",
+  "Consulenza preventiva e stragiudiziale",
 ];
 
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.06 } },
+  visible: { transition: { staggerChildren: 0.04 } },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, x: -20 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
 };
 
 const WhatICanDoSection = () => (
   <section className="section-padding bg-brand-ivory">
     <div className="container mx-auto px-4 md:px-8">
-      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <motion.div
-          className="lg:w-5/12 lg:sticky lg:top-32"
+          className="lg:col-span-5 lg:sticky lg:top-32"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Cosa posso fare per te</p>
-          <h2 className="text-3xl md:text-4xl mb-6">Un supporto legale completo per la tua famiglia</h2>
-          <p className="text-brand-smoke text-base leading-relaxed mb-8">
-            Ogni situazione è unica. Ti offro un'assistenza personalizzata, dalla prima consulenza fino alla risoluzione definitiva del tuo caso.
+          <p className="eyebrow mb-6">Cosa Posso Fare per Te</p>
+          <h2 className="font-serif font-medium text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.1] mb-8 text-balance">
+            Un supporto legale <em className="italic font-normal text-brand-midnight/70">completo</em> per la tua famiglia.
+          </h2>
+          <p className="text-brand-midnight/70 text-base leading-[1.8] mb-10 max-w-md">
+            Ogni situazione è unica. Ti seguo personalmente dalla prima consulenza fino alla risoluzione, senza deleghe e senza compromessi.
           </p>
-          <a
-            href="#contatti"
-            className="inline-flex items-center gap-2 bg-brand-accent-red text-card px-6 py-3 rounded-md text-sm font-semibold hover:opacity-90 transition btn-transition"
-          >
-            Consulenza Gratuita
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </a>
+          <a href="#contatti" className="btn-primary">Consulenza Riservata</a>
         </motion.div>
 
         <motion.div
-          className="lg:w-7/12"
+          className="lg:col-span-7"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {capabilities.map((cap) => (
-              <motion.div
+          <ul className="border-t border-brand-midnight/15">
+            {capabilities.map((cap, i) => (
+              <motion.li
                 key={cap}
                 variants={itemVariants}
-                className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:premium-shadow transition-all duration-300 group"
+                className="flex items-baseline gap-6 py-5 border-b border-brand-midnight/15 group"
               >
-                <div className="w-6 h-6 bg-brand-accent-red rounded-full flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-110 transition-transform">
-                  <Check className="w-3.5 h-3.5 text-card" strokeWidth={2.5} />
-                </div>
-                <span className="text-foreground font-medium text-[15px] leading-snug">{cap}</span>
-              </motion.div>
+                <span className="display-numeral text-base text-brand-midnight/40 group-hover:text-brand-midnight transition-colors duration-300 font-normal not-italic w-8 shrink-0 tracking-normal">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-brand-midnight text-base md:text-lg font-light leading-snug">
+                  {cap}
+                </span>
+              </motion.li>
             ))}
-          </div>
+          </ul>
         </motion.div>
       </div>
     </div>
