@@ -13,12 +13,65 @@ const INITIAL_MESSAGE: Msg = {
     "Buongiorno, sono l'assistente virtuale dello Studio Legale Di Vietro. Come posso aiutarla? Posso rispondere a domande su separazioni, divorzi, affidamento e altri ambiti del diritto di famiglia.",
 };
 
+const parseRgb = (s: string): [number, number, number] | null => {
+  const m = s.match(/rgba?\(([^)]+)\)/);
+  if (!m) return null;
+  const p = m[1].split(",").map((v) => parseFloat(v.trim()));
+  if (p.length < 3 || p.some((n) => Number.isNaN(n))) return null;
+  return [p[0], p[1], p[2]];
+};
+
+const luminance = (r: number, g: number, b: number) =>
+  (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
 const HelpFloatingButton = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([INITIAL_MESSAGE]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const detect = () => {
+      const btn = buttonRef.current;
+      if (!btn) return;
+      const rect = btn.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const prev = btn.style.pointerEvents;
+      btn.style.pointerEvents = "none";
+      const els = document.elementsFromPoint(cx, cy);
+      btn.style.pointerEvents = prev;
+      let lum = 1;
+      for (const el of els) {
+        if (el === btn || btn.contains(el)) continue;
+        const cs = getComputedStyle(el as Element);
+        const bgImg = cs.backgroundImage;
+        if (bgImg && bgImg !== "none") {
+          lum = 0.2;
+          break;
+        }
+        const rgb = parseRgb(cs.backgroundColor);
+        if (rgb) {
+          lum = luminance(rgb[0], rgb[1], rgb[2]);
+          break;
+        }
+      }
+      setIsDark(lum < 0.5);
+    };
+    detect();
+    const onScroll = () => detect();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    const id = window.setInterval(detect, 600);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      window.clearInterval(id);
+    };
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
