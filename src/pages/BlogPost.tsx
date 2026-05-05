@@ -78,10 +78,7 @@ const BlogPost = () => {
             <p className="text-brand-smoke mb-6">
               Contattami per una consulenza riservata e personalizzata.
             </p>
-            <a
-              href="/#contatti"
-              className="inline-block bg-brand-midnight text-brand-ivory px-8 py-3 rounded-full font-semibold hover:bg-brand-midnight/90 transition-colors"
-            >
+            <a href="/#contatti" className="btn-primary">
               Prenota una consulenza
             </a>
           </motion.div>

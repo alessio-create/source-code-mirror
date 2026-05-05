@@ -100,10 +100,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <Link
-            to="/contatti"
-            className="hidden sm:inline-flex items-center gap-2 bg-brand-midnight text-brand-ivory px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] hover:bg-brand-midnight/90 transition btn-transition"
-          >
+          <Link to="/contatti" className="hidden sm:inline-flex btn-primary-sm">
             Consulenza Riservata
           </Link>
 
@@ -174,7 +171,7 @@ const Header = () => {
               <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
               <Link
                 to="/contatti"
-                className="block mt-3 bg-brand-midnight text-brand-ivory text-center px-6 py-3 text-xs font-medium uppercase tracking-[0.18em]"
+                className="btn-primary mt-3 w-full"
                 onClick={() => setMobileOpen(false)}
               >
                 Consulenza Riservata
