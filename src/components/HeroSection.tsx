@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import donatellaImg from "@/assets/donatella-hero.png";
 import monogramMark from "@/assets/monogram-mark.svg";
 
@@ -8,15 +9,53 @@ const stats = [
   { value: "5", label: "Aree di Competenza" },
 ];
 
-const HeroSection = () => (
-  <section className="relative bg-brand-ivory overflow-hidden">
+const HeroSection = () => {
+  // Mouse parallax for hero monogram
+  const heroRef = useRef<HTMLElement>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const sx = useSpring(mx, { stiffness: 60, damping: 20, mass: 0.5 });
+  const sy = useSpring(my, { stiffness: 60, damping: 20, mass: 0.5 });
+  const heroX = useTransform(sx, (v) => v * 18);
+  const heroY = useTransform(sy, (v) => v * 18);
+
+  // Mouse parallax for stats strip monogram
+  const stripRef = useRef<HTMLDivElement>(null);
+  const smx = useMotionValue(0);
+  const smy = useMotionValue(0);
+  const ssx = useSpring(smx, { stiffness: 50, damping: 18, mass: 0.6 });
+  const ssy = useSpring(smy, { stiffness: 50, damping: 18, mass: 0.6 });
+  const stripX = useTransform(ssx, (v) => v * 24);
+  const stripY = useTransform(ssy, (v) => v * 12);
+  const gridX = useTransform(ssx, (v) => v * 8);
+  const gridY = useTransform(ssy, (v) => v * 8);
+
+  const handleHeroMove = (e: React.MouseEvent<HTMLElement>) => {
+    const r = heroRef.current?.getBoundingClientRect();
+    if (!r) return;
+    mx.set((e.clientX - r.left) / r.width - 0.5);
+    my.set((e.clientY - r.top) / r.height - 0.5);
+  };
+  const handleStripMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = stripRef.current?.getBoundingClientRect();
+    if (!r) return;
+    smx.set((e.clientX - r.left) / r.width - 0.5);
+    smy.set((e.clientY - r.top) / r.height - 0.5);
+  };
+
+  return (
+  <section
+    ref={heroRef}
+    onMouseMove={handleHeroMove}
+    className="relative bg-brand-ivory overflow-hidden"
+  >
     {/* Editorial monogram watermark — just the D mark, no background */}
-    <img
+    <motion.img
       src={monogramMark}
       alt=""
       aria-hidden
-      className="absolute -right-32 -top-20 w-[640px] opacity-[0.06] pointer-events-none select-none text-brand-midnight"
-      style={{ filter: "none" }}
+      className="absolute -right-32 -top-20 w-[640px] opacity-[0.06] pointer-events-none select-none text-brand-midnight will-change-transform"
+      style={{ x: heroX, y: heroY }}
     />
 
     <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-36 pb-20 md:pb-28 relative">
@@ -118,12 +157,18 @@ const HeroSection = () => (
     </div>
 
     {/* Stats — editorial strip on midnight */}
-    <div className="bg-brand-midnight relative overflow-hidden">
+    <div
+      ref={stripRef}
+      onMouseMove={handleStripMove}
+      className="bg-brand-midnight relative overflow-hidden"
+    >
       {/* Diagonal hairline grid pattern */}
-      <div
+      <motion.div
         aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-[0.07]"
+        className="absolute inset-0 pointer-events-none opacity-[0.07] will-change-transform"
         style={{
+          x: gridX,
+          y: gridY,
           backgroundImage:
             "repeating-linear-gradient(45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px), repeating-linear-gradient(-45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px)",
         }}
@@ -138,21 +183,25 @@ const HeroSection = () => (
         }}
       />
       {/* Centered large D monogram mark */}
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.06]"
-        style={{
-          backgroundColor: "hsl(var(--brand-ivory))",
-          WebkitMaskImage: `url(${monogramMark})`,
-          maskImage: `url(${monogramMark})`,
-          WebkitMaskRepeat: "no-repeat",
-          maskRepeat: "no-repeat",
-          WebkitMaskSize: "contain",
-          maskSize: "contain",
-          WebkitMaskPosition: "center",
-          maskPosition: "center",
-        }}
-      />
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <motion.div
+          aria-hidden
+          className="w-[420px] h-[420px] opacity-[0.06] will-change-transform"
+          style={{
+            x: stripX,
+            y: stripY,
+            backgroundColor: "hsl(var(--brand-ivory))",
+            WebkitMaskImage: `url(${monogramMark})`,
+            maskImage: `url(${monogramMark})`,
+            WebkitMaskRepeat: "no-repeat",
+            maskRepeat: "no-repeat",
+            WebkitMaskSize: "contain",
+            maskSize: "contain",
+            WebkitMaskPosition: "center",
+            maskPosition: "center",
+          }}
+        />
+      </div>
       {/* Film grain overlay */}
       <div
         aria-hidden
@@ -187,6 +236,7 @@ const HeroSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default HeroSection;
