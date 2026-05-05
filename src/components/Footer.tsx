@@ -23,7 +23,7 @@ const reviews = [
 const Footer = () => (
   <footer className="relative overflow-hidden" id="contatti">
     {/* Top accent bar */}
-    <div className="h-1 bg-gradient-to-r from-brand-accent-red via-brand-midnight to-brand-accent-red" />
+    <div className="h-px bg-brand-midnight/15" />
 
     {/* Reviews band */}
     <div className="bg-brand-garden/40 py-20 md:py-24 border-b border-brand-midnight/15">
