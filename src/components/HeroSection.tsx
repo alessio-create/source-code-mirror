@@ -119,29 +119,46 @@ const HeroSection = () => (
 
     {/* Stats — editorial strip on midnight */}
     <div className="bg-brand-midnight relative overflow-hidden">
-      {/* Monogram pattern background */}
+      {/* Subtle radial vignette for depth */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url(${monogramPattern})`,
-          backgroundSize: "180px 180px",
-          backgroundRepeat: "repeat",
+          background:
+            "radial-gradient(ellipse at center, hsl(var(--brand-midnight) / 0) 0%, hsl(var(--brand-midnight) / 0.5) 100%)",
         }}
       />
+      {/* Oversized monogram watermarks — left & right */}
+      <img
+        src={monogram}
+        alt=""
+        aria-hidden
+        className="absolute -left-24 top-1/2 -translate-y-1/2 w-[420px] md:w-[520px] opacity-[0.05] pointer-events-none select-none"
+      />
+      <img
+        src={monogram}
+        alt=""
+        aria-hidden
+        className="absolute -right-24 top-1/2 -translate-y-1/2 w-[420px] md:w-[520px] opacity-[0.05] pointer-events-none select-none scale-x-[-1]"
+      />
+      {/* Top & bottom hairlines */}
+      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/20 to-transparent" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/20 to-transparent" />
+
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="grid grid-cols-3 divide-x divide-brand-ivory/10">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
-              className="py-10 md:py-14 text-center px-2"
+              className="py-12 md:py-16 text-center px-2 relative group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
             >
-              <p className="display-numeral text-5xl md:text-7xl text-brand-ivory">{s.value}</p>
-              <p className="text-brand-ivory/60 text-[11px] sm:text-xs mt-3 uppercase tracking-[0.28em] font-medium">{s.label}</p>
+              <p className="display-numeral text-5xl md:text-7xl text-brand-ivory leading-none">{s.value}</p>
+              <span aria-hidden className="block w-8 h-px bg-brand-ivory/30 mx-auto mt-5 mb-4" />
+              <p className="text-brand-ivory/60 text-[11px] sm:text-xs uppercase tracking-[0.28em] font-medium">{s.label}</p>
             </motion.div>
           ))}
         </div>
