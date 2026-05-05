@@ -62,7 +62,7 @@ const BlogPost = () => {
               className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brand-midnight/70 hover:text-brand-midnight transition-colors mb-12"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
-              Torna al journal
+              Torna al blog
             </Link>
 
             <p className="eyebrow mb-8">{post.category}</p>

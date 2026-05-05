@@ -14,7 +14,7 @@ const BlogSection = () => (
         transition={{ duration: 0.6 }}
       >
         <div className="lg:col-span-8">
-          <p className="eyebrow mb-6">Journal</p>
+          <p className="eyebrow mb-6">Blog</p>
           <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
             Approfondimenti per orientarti con <em className="not-italic font-semibold text-brand-midnight">consapevolezza</em>.
           </h2>
