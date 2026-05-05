@@ -34,8 +34,8 @@ const ProblemsSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="eyebrow mb-6">Ti Riconosci?</p>
-        <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
-          I momenti in cui <em className="italic font-normal text-brand-midnight/70">serve davvero</em> qualcuno al tuo fianco.
+        <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+          I momenti in cui <em className="not-italic font-semibold text-brand-midnight">serve davvero</em> qualcuno al tuo fianco.
         </h2>
       </motion.div>
 
@@ -50,7 +50,7 @@ const ProblemsSection = () => (
             transition={{ duration: 0.5, delay: i * 0.08 }}
           >
             <p className="display-numeral text-3xl text-brand-midnight/50 mb-6">{p.n}</p>
-            <h3 className="font-serif font-medium text-2xl md:text-3xl text-brand-midnight mb-4 tracking-[-0.02em] leading-tight">
+            <h3 className="font-serif font-semibold text-2xl md:text-3xl text-brand-midnight mb-4 tracking-[-0.02em] leading-tight">
               {p.title}
             </h3>
             <p className="text-brand-midnight/70 leading-[1.8] text-base">{p.description}</p>

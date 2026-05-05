@@ -20,8 +20,8 @@ const CTASection = () => (
         <p className="eyebrow eyebrow-center mb-8 text-brand-ivory/70 [&::before]:bg-brand-ivory/40 [&::after]:bg-brand-ivory/40">
           Iniziamo Insieme
         </p>
-        <h2 className="font-serif font-medium text-4xl md:text-6xl lg:text-7xl text-brand-ivory leading-[1.02] tracking-[-0.025em] mb-8 text-balance max-w-4xl mx-auto">
-          Proteggi la tua famiglia. <em className="italic font-normal text-brand-ivory/70">Preserva</em> il tuo futuro.
+        <h2 className="font-serif font-semibold text-4xl md:text-6xl lg:text-7xl text-brand-ivory leading-[1.02] tracking-[-0.025em] mb-8 text-balance max-w-4xl mx-auto">
+          Proteggi la tua famiglia. <em className="not-italic font-semibold text-brand-ivory">Preserva</em> il tuo futuro.
         </h2>
         <p className="text-brand-ivory/70 text-base md:text-lg mb-14 max-w-xl mx-auto leading-[1.8]">
           Prenota un colloquio riservato per valutare insieme la tua situazione, con la massima professionalità e discrezione.

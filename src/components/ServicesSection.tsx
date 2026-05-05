@@ -22,8 +22,8 @@ const ServicesSection = () => (
       >
         <div className="lg:col-span-8">
           <p className="eyebrow mb-6">Aree di Competenza</p>
-          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-brand-midnight tracking-[-0.02em] text-balance">
-            Una pratica legale dedicata <em className="italic font-normal text-brand-midnight/70">esclusivamente</em> alla famiglia.
+          <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-brand-midnight tracking-[-0.02em] text-balance">
+            Una pratica legale dedicata <em className="not-italic font-semibold text-brand-midnight">esclusivamente</em> alla famiglia.
           </h2>
         </div>
         <div className="lg:col-span-4 lg:text-right">
@@ -50,7 +50,7 @@ const ServicesSection = () => (
                 {s.num}
               </div>
               <div className="col-span-10 md:col-span-5">
-                <h3 className="font-serif font-medium text-2xl md:text-3xl text-brand-midnight tracking-[-0.02em] group-hover:translate-x-1 transition-transform duration-500">
+                <h3 className="font-serif font-semibold text-2xl md:text-3xl text-brand-midnight tracking-[-0.02em] group-hover:translate-x-1 transition-transform duration-500">
                   {s.title}
                 </h3>
               </div>

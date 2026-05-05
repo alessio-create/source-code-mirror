@@ -42,7 +42,7 @@ const AboutSection = () => (
           transition={{ duration: 0.8, delay: 0.15 }}
         >
           <p className="eyebrow mb-6">Chi Sono</p>
-          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight leading-[1.05] tracking-[-0.02em] mb-3 text-balance">
+          <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-midnight leading-[1.05] tracking-[-0.02em] mb-3 text-balance">
             Avv. Donatella Di Vietro
           </h2>
           <p className="font-serif italic text-brand-midnight/60 text-xl md:text-2xl mb-10">

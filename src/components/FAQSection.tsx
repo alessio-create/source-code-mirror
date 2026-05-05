@@ -30,8 +30,8 @@ const FAQSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-4">
             <p className="eyebrow mb-6">Domande Frequenti</p>
-            <h2 className="font-serif font-medium text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] mb-6 text-balance">
-              Risposte ai tuoi <em className="italic font-normal text-brand-midnight/70">dubbi</em>.
+            <h2 className="font-serif font-semibold text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] mb-6 text-balance">
+              Risposte ai tuoi <em className="not-italic font-semibold text-brand-midnight">dubbi</em>.
             </h2>
             <p className="text-brand-midnight/70 leading-[1.8]">
               Le domande che riceviamo più spesso, raccolte per offrirti subito un primo orientamento.

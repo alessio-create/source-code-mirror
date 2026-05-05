@@ -30,8 +30,8 @@ const Footer = () => (
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-3xl mb-14">
           <p className="eyebrow mb-6">Recensioni Google</p>
-          <h3 className="font-serif font-medium text-3xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
-            Le parole di chi <em className="italic font-normal text-brand-midnight/70">si è fidato</em>.
+          <h3 className="font-serif font-semibold text-3xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+            Le parole di chi <em className="not-italic font-semibold text-brand-midnight">si è fidato</em>.
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">

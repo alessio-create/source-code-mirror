@@ -37,8 +37,8 @@ const WhatICanDoSection = () => (
           transition={{ duration: 0.6 }}
         >
           <p className="eyebrow mb-6">Cosa Posso Fare per Te</p>
-          <h2 className="font-serif font-medium text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.1] mb-8 text-balance">
-            Un supporto legale <em className="italic font-normal text-brand-midnight/70">completo</em> per la tua famiglia.
+          <h2 className="font-serif font-semibold text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.1] mb-8 text-balance">
+            Un supporto legale <em className="not-italic font-semibold text-brand-midnight">completo</em> per la tua famiglia.
           </h2>
           <p className="text-brand-midnight/70 text-base leading-[1.8] mb-10 max-w-md">
             Ogni situazione è unica. Ti seguo personalmente dalla prima consulenza fino alla risoluzione, senza deleghe e senza compromessi.

@@ -29,8 +29,8 @@ const MethodSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="eyebrow eyebrow-center mb-6">Il Metodo</p>
-        <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] mb-6 text-balance">
-          Un percorso chiaro, in <em className="italic font-normal text-brand-midnight/70">tre tempi</em>.
+        <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] mb-6 text-balance">
+          Un percorso chiaro, in <em className="not-italic font-semibold text-brand-midnight">tre tempi</em>.
         </h2>
         <p className="text-brand-midnight/70 text-base md:text-lg leading-[1.7]">
           Senza sorprese, senza tecnicismi inutili: solo la strada più lineare per arrivare alla soluzione.
@@ -48,7 +48,7 @@ const MethodSection = () => (
             transition={{ duration: 0.6, delay: i * 0.15 }}
           >
             <p className="display-numeral text-6xl md:text-7xl text-brand-midnight/40 mb-6">{step.number}</p>
-            <h3 className="font-serif font-medium text-2xl md:text-3xl text-brand-midnight tracking-[-0.02em] mb-4 leading-tight">
+            <h3 className="font-serif font-semibold text-2xl md:text-3xl text-brand-midnight tracking-[-0.02em] mb-4 leading-tight">
               {step.title}
             </h3>
             <p className="text-brand-midnight/70 leading-[1.8] text-base">{step.description}</p>
