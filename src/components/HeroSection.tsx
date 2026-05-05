@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import donatellaImg from "@/assets/donatella-hero.png";
-import monogram from "@/assets/logo-monogram.svg";
-import monogramPattern from "@/assets/monogram-pattern.svg";
+import monogramMark from "@/assets/monogram-mark.svg";
 
 const stats = [
   { value: "20+", label: "Anni di Esperienza" },
@@ -11,12 +10,13 @@ const stats = [
 
 const HeroSection = () => (
   <section className="relative bg-brand-ivory overflow-hidden">
-    {/* Editorial monogram watermark */}
+    {/* Editorial monogram watermark — just the D mark, no background */}
     <img
-      src={monogram}
+      src={monogramMark}
       alt=""
       aria-hidden
-      className="absolute -right-32 -top-20 w-[640px] opacity-[0.04] pointer-events-none select-none"
+      className="absolute -right-32 -top-20 w-[640px] opacity-[0.06] pointer-events-none select-none text-brand-midnight"
+      style={{ filter: "none" }}
     />
 
     <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-36 pb-20 md:pb-28 relative">
@@ -119,31 +119,43 @@ const HeroSection = () => (
 
     {/* Stats — editorial strip on midnight */}
     <div className="bg-brand-midnight relative overflow-hidden">
-      {/* Subtle radial vignette for depth */}
+      {/* Diagonal hairline grid pattern */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px), repeating-linear-gradient(-45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px)",
+        }}
+      />
+      {/* Soft radial glow */}
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, hsl(var(--brand-midnight) / 0) 0%, hsl(var(--brand-midnight) / 0.5) 100%)",
+            "radial-gradient(ellipse at 50% 50%, hsl(var(--brand-ivory) / 0.08) 0%, transparent 60%)",
         }}
       />
-      {/* Oversized monogram watermarks — left & right */}
-      <img
-        src={monogram}
-        alt=""
+      {/* Centered large D monogram mark */}
+      <div
         aria-hidden
-        className="absolute -left-24 top-1/2 -translate-y-1/2 w-[420px] md:w-[520px] opacity-[0.05] pointer-events-none select-none"
-      />
-      <img
-        src={monogram}
-        alt=""
-        aria-hidden
-        className="absolute -right-24 top-1/2 -translate-y-1/2 w-[420px] md:w-[520px] opacity-[0.05] pointer-events-none select-none scale-x-[-1]"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.06]"
+        style={{
+          backgroundColor: "hsl(var(--brand-ivory))",
+          WebkitMaskImage: `url(${monogramMark})`,
+          maskImage: `url(${monogramMark})`,
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          maskSize: "contain",
+          WebkitMaskPosition: "center",
+          maskPosition: "center",
+        }}
       />
       {/* Top & bottom hairlines */}
-      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/20 to-transparent" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/20 to-transparent" />
+      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/25 to-transparent" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-brand-ivory/25 to-transparent" />
 
       <div className="container mx-auto px-4 md:px-8 relative">
         <div className="grid grid-cols-3 divide-x divide-brand-ivory/10">

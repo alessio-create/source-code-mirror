@@ -100,22 +100,15 @@ const Footer = () => (
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Studio</h4>
-            <div className="space-y-4 text-brand-smoke/80 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-brand-midnight" strokeWidth={1.5} />
-                <div>
-                  <p>Via Guglielmo Marconi, 70/C</p>
-                  <p>20813 Bovisio Masciago (MB)</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 shrink-0 text-brand-midnight" strokeWidth={1.5} />
+            <div className="space-y-3 text-brand-smoke/80 text-sm">
+              <p>Via Guglielmo Marconi, 70/C</p>
+              <p>20813 Bovisio Masciago (MB)</p>
+              <p className="pt-3">
                 <a href="tel:+390362590859" className="hover:text-primary-foreground transition">+39 0362 590859</a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 shrink-0 text-brand-midnight" strokeWidth={1.5} />
+              </p>
+              <p>
                 <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
-              </div>
+              </p>
             </div>
           </div>
 

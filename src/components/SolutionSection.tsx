@@ -74,6 +74,29 @@ const SolutionSection = () => (
               <p className="text-brand-ivory/60 text-xs mt-2 uppercase tracking-[0.2em]">Diritto di Famiglia</p>
             </div>
           </div>
+
+          {/* Credentials card */}
+          <div className="mt-10 grid grid-cols-2 gap-px bg-brand-ivory/15 border border-brand-ivory/15">
+            {[
+              { value: "20+", label: "Anni di Esperienza" },
+              { value: "500+", label: "Famiglie Assistite" },
+              { value: "100%", label: "Casi Personali" },
+              { value: "5", label: "Aree di Diritto" },
+            ].map((item) => (
+              <div key={item.label} className="bg-brand-midnight p-6 text-center">
+                <p className="display-numeral text-3xl md:text-4xl text-brand-ivory leading-none mb-3">{item.value}</p>
+                <span aria-hidden className="block w-6 h-px bg-brand-ivory/30 mx-auto mb-3" />
+                <p className="text-brand-ivory/60 text-[10px] uppercase tracking-[0.2em] font-medium">{item.label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Signature flourish */}
+          <div className="mt-8 flex items-center gap-4 text-brand-ivory/50">
+            <span className="h-px flex-1 bg-brand-ivory/15" />
+            <span className="font-serif italic text-sm">Studio Di Vietro · Bovisio Masciago</span>
+            <span className="h-px flex-1 bg-brand-ivory/15" />
+          </div>
         </motion.div>
       </div>
     </div>
