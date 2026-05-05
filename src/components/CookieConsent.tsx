@@ -48,7 +48,7 @@ const CookieConsent = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-28 left-8 z-[60] w-[min(360px,calc(100vw-4rem))] bg-brand-ivory border border-brand-midnight/15 p-6 shadow-[0_24px_60px_-20px_hsl(var(--brand-midnight)/0.35)]"
+            className="fixed bottom-24 left-4 z-[60] w-[min(360px,calc(100vw-2rem))] bg-brand-ivory border border-brand-midnight/15 p-6 shadow-[0_24px_60px_-20px_hsl(var(--brand-midnight)/0.35)]"
             role="dialog"
             aria-label="Informativa cookie"
           >
