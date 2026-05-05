@@ -22,10 +22,10 @@ interface PageHeroProps {
 const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProps) => (
   <section className="pt-36 md:pt-44 pb-20 md:pb-28 bg-brand-ivory relative overflow-hidden border-b border-brand-midnight/10">
     <img
-      src={monogram}
+      src={monogramMark}
       alt=""
       aria-hidden
-      className="absolute -right-24 -bottom-24 w-[480px] opacity-[0.05] pointer-events-none select-none"
+      className="absolute -right-24 -bottom-24 w-[480px] opacity-[0.06] pointer-events-none select-none [filter:brightness(0)_saturate(100%)] text-brand-midnight"
     />
 
     <div className="container mx-auto px-4 md:px-8 relative z-10">
