@@ -44,7 +44,7 @@ const ServicesSection = () => (
           >
             <Link
               to={s.href}
-              className="group grid grid-cols-12 gap-4 md:gap-8 items-center py-8 md:py-10 border-b border-brand-midnight/15 hover:bg-brand-garden/30 transition-colors duration-500 px-2 md:px-4 -mx-2 md:-mx-4"
+              className="group grid grid-cols-12 gap-4 md:gap-8 items-center py-8 md:py-10 border-b border-brand-midnight/15 hover:bg-brand-garden/30 transition-colors duration-500 px-2 md:px-4 -mx-2 md:-mx-4 lift-hover"
             >
               <div className="col-span-2 md:col-span-1 display-numeral text-3xl md:text-5xl text-brand-midnight/40 group-hover:text-brand-midnight transition-colors duration-500">
                 {s.num}
