@@ -229,6 +229,15 @@ const HelpFloatingButton = () => {
               )}
             </AnimatePresence>
           </span>
+          {!open && (
+            <span
+              role="tooltip"
+              className="pointer-events-none absolute right-[88px] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-brand-midnight text-brand-ivory text-xs px-3.5 py-2 shadow-lg opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 transition-all duration-300"
+            >
+              Serve aiuto? Prenota un colloquio
+              <span className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 rotate-45 bg-brand-midnight" />
+            </span>
+          )}
         </button>
           </motion.div>
         )}
