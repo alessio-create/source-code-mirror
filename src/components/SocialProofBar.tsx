@@ -31,7 +31,7 @@ const CountUp = ({ target, suffix }: { target: number; suffix: string }) => {
 };
 
 const SocialProofBar = () => (
-  <section className="bg-brand-garden/40 py-20 md:py-24 border-y border-brand-midnight/10">
+  <section id="numeri-studio" className="bg-brand-garden/40 py-20 md:py-24 border-y border-brand-midnight/10">
     <div className="container mx-auto px-4 md:px-8">
       <motion.div
         className="text-center max-w-3xl mx-auto mb-16"
