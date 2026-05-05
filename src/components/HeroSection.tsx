@@ -92,8 +92,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            La tua famiglia merita un avvocato che{" "}
-            <em className="not-italic font-semibold text-brand-midnight">ascolta davvero.</em>
+            La tua famiglia merita un avvocato che ascolta davvero.
           </motion.h1>
 
           <motion.p
