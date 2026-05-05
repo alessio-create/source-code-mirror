@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import BrandIcon from "@/components/BrandIcon";
 
 const contactInfo = [
-  { icon: Phone, label: "Telefono", value: "0362 590859", href: "tel:+390362590859" },
-  { icon: Mail, label: "Email", value: "info@divietroavvocato.it", href: "mailto:info@divietroavvocato.it" },
-  { icon: MapPin, label: "Studio", value: "Bovisio Masciago (MB)", href: "#" },
-  { icon: Clock, label: "Orari", value: "Lun-Ven 9:00 - 18:00", href: "#" },
+  { icon: "telefono" as const, label: "Telefono", value: "0362 590859", href: "tel:+390362590859" },
+  { icon: "email" as const, label: "Email", value: "info@divietroavvocato.it", href: "mailto:info@divietroavvocato.it" },
+  { icon: "studio" as const, label: "Studio", value: "Bovisio Masciago (MB)", href: "#" },
+  { icon: "aggiornamento" as const, label: "Orari", value: "Lun-Ven 9:00 - 18:00", href: "#" },
 ];
 
 const ContattiPage = () => (
@@ -47,8 +47,8 @@ const ContattiPage = () => (
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <div className="w-14 h-14 bg-brand-midnight/10 flex items-center justify-center rounded-xl group-hover:bg-brand-midnight transition-colors duration-300">
-                    <c.icon className="w-6 h-6 text-brand-midnight group-hover:text-card transition-colors duration-300" strokeWidth={1.5} />
+                  <div className="w-14 h-14 bg-brand-garden/60 flex items-center justify-center rounded-xl group-hover:bg-brand-midnight transition-colors duration-300 text-brand-midnight group-hover:text-brand-ivory shrink-0">
+                    <BrandIcon name={c.icon} size={32} />
                   </div>
                   <div>
                     <p className="text-sm text-brand-smoke">{c.label}</p>
@@ -77,8 +77,8 @@ const ContattiPage = () => (
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <div className="bg-card border border-border rounded-2xl overflow-hidden h-full min-h-[400px] flex flex-col">
               <div className="p-8 flex-1 flex flex-col justify-center text-center">
-                <div className="w-20 h-20 bg-brand-midnight/10 flex items-center justify-center rounded-full mx-auto mb-6">
-                  <MapPin className="w-10 h-10 text-brand-midnight" strokeWidth={1.5} />
+                <div className="text-brand-midnight mx-auto mb-6 flex justify-center">
+                  <BrandIcon name="studio" size={64} />
                 </div>
                 <h3 className="text-xl mb-3">Studio Legale Di Vietro</h3>
                 <p className="text-brand-smoke leading-relaxed mb-2">Bovisio Masciago (MB)</p>
