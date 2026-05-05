@@ -165,10 +165,18 @@
 
   /* Premium primary button — midnight, generous padding */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 bg-brand-midnight text-brand-ivory px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] hover:bg-brand-midnight/90 transition btn-transition;
+    @apply inline-flex items-center justify-center gap-3 bg-brand-midnight text-brand-ivory px-8 py-4 text-sm font-medium uppercase tracking-[0.18em];
+    @apply hover:bg-brand-midnight/90 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_hsl(var(--brand-midnight)/0.45)];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-midnight/40 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory;
+    @apply active:translate-y-0 active:shadow-none;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-3 border border-brand-midnight/30 text-brand-midnight px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] hover:bg-brand-midnight hover:text-brand-ivory transition btn-transition;
+    @apply inline-flex items-center justify-center gap-3 border border-brand-midnight/30 text-brand-midnight px-8 py-4 text-sm font-medium uppercase tracking-[0.18em];
+    @apply hover:bg-brand-midnight hover:text-brand-ivory hover:border-brand-midnight hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_hsl(var(--brand-midnight)/0.35)];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-midnight/40 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory;
+    @apply active:translate-y-0 active:shadow-none;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   /* Card with subtle hairline */
