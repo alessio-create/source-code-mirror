@@ -36,13 +36,24 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
     />
 
     <div className="container mx-auto px-4 md:px-8 relative z-10">
-      <Link
-        to="/"
-        className="inline-flex items-center gap-2 text-brand-midnight/60 hover:text-brand-midnight transition-colors mb-12 text-[11px] font-medium uppercase tracking-[0.28em]"
+      <nav
+        aria-label="Breadcrumb"
+        className="flex items-center justify-between gap-4 mb-10 pb-5 border-b border-brand-midnight/10"
       >
-        <ArrowLeft className="w-3.5 h-3.5" strokeWidth={1.5} />
-        Torna alla home
-      </Link>
+        <ol className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brand-midnight/60">
+          <li>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 hover:text-brand-midnight transition-colors"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" strokeWidth={1.5} />
+              Home
+            </Link>
+          </li>
+          <li aria-hidden className="text-brand-midnight/30">/</li>
+          <li className="text-brand-midnight" aria-current="page">{label}</li>
+        </ol>
+      </nav>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
         <motion.div
