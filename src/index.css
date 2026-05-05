@@ -6,53 +6,56 @@
 
 @layer base {
   :root {
-    --background: 60 19% 93%;
-    --foreground: 230 9% 26%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 230 9% 26%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 9% 26%;
-
-    --primary: 230 9% 26%;
-    --primary-foreground: 60 19% 93%;
-
-    --secondary: 47 17% 85%;
-    --secondary-foreground: 230 9% 26%;
-
-    --muted: 47 17% 85%;
-    --muted-foreground: 220 7% 65%;
-
-    --accent: 220 7% 65%;
-    --accent-foreground: 230 9% 26%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 60 19% 93%;
-
-    --border: 47 17% 85%;
-    --input: 47 17% 85%;
-    --ring: 230 9% 26%;
-
-    --radius: 0.5rem;
-
+    /* Brand palette — single source of truth */
     --brand-midnight: 230 9% 26%;       /* #3D3F4A */
     --brand-ivory: 60 19% 93%;          /* #F2F2EB */
     --brand-smoke: 220 9% 65%;          /* #9FA3AE */
     --brand-garden: 44 22% 85%;         /* #E1DFD2 */
     --brand-moss: 64 6% 70%;            /* #B7B8AC */
-    --brand-warm: 44 22% 85%;           /* alias of garden */
-    --brand-accent-red: 230 9% 26%;     /* remapped to midnight — no red in brand */
+    --brand-warm: 44 22% 85%;           /* alias → garden (legacy) */
+    --brand-accent-red: 230 9% 26%;     /* alias → midnight (legacy, no red) */
+
+    /* Semantic tokens mapped onto the brand palette */
+    --background: var(--brand-ivory);
+    --foreground: var(--brand-midnight);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--brand-midnight);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--brand-midnight);
+
+    --primary: var(--brand-midnight);
+    --primary-foreground: var(--brand-ivory);
+
+    --secondary: var(--brand-garden);
+    --secondary-foreground: var(--brand-midnight);
+
+    --muted: var(--brand-garden);
+    --muted-foreground: var(--brand-smoke);
+
+    --accent: var(--brand-moss);
+    --accent-foreground: var(--brand-midnight);
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: var(--brand-ivory);
+
+    --border: var(--brand-garden);
+    --input: var(--brand-garden);
+    --ring: var(--brand-midnight);
+
+    --radius: 0.5rem;
+
     --whatsapp: 142 70% 49%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 230 9% 26%;
-    --sidebar-primary: 230 9% 26%;
-    --sidebar-primary-foreground: 60 19% 93%;
-    --sidebar-accent: 47 17% 85%;
-    --sidebar-accent-foreground: 230 9% 26%;
-    --sidebar-border: 47 17% 85%;
-    --sidebar-ring: 230 9% 26%;
+    --sidebar-background: var(--brand-ivory);
+    --sidebar-foreground: var(--brand-midnight);
+    --sidebar-primary: var(--brand-midnight);
+    --sidebar-primary-foreground: var(--brand-ivory);
+    --sidebar-accent: var(--brand-garden);
+    --sidebar-accent-foreground: var(--brand-midnight);
+    --sidebar-border: var(--brand-garden);
+    --sidebar-ring: var(--brand-midnight);
   }
 }
 

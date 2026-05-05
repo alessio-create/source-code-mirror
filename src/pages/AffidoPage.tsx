@@ -55,7 +55,7 @@ const AffidoPage = () => (
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-midnight mt-0.5 shrink-0" />
                   <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
@@ -68,14 +68,14 @@ const AffidoPage = () => (
     <section className="section-padding bg-card">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">I principi guida</p>
+          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-midnight mb-3">I principi guida</p>
           <h2 className="text-3xl md:text-4xl">Il superiore interesse del minore</h2>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {principles.map((p, i) => (
             <motion.div key={p.title} className="bg-brand-ivory p-8 rounded-2xl border border-border text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <div className="w-14 h-14 bg-brand-accent-red/10 flex items-center justify-center rounded-xl mx-auto mb-5">
-                <p.icon className="w-6 h-6 text-brand-accent-red" strokeWidth={1.5} />
+              <div className="w-14 h-14 bg-brand-midnight/10 flex items-center justify-center rounded-xl mx-auto mb-5">
+                <p.icon className="w-6 h-6 text-brand-midnight" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl mb-3">{p.title}</h3>
               <p className="text-brand-smoke leading-relaxed text-sm">{p.desc}</p>

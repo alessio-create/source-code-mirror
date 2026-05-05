@@ -37,9 +37,9 @@ const BlogPage = () => (
                 to={`/blog/${post.slug}`}
                 className="group bg-card border border-border rounded-2xl p-8 hover:premium-shadow-lg transition-all duration-500 relative overflow-hidden block"
               >
-                <div className="absolute top-0 left-0 w-full h-1 bg-brand-accent-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-brand-midnight scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-brand-accent-red bg-brand-accent-red/10 px-3 py-1 rounded-full">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-brand-midnight bg-brand-midnight/10 px-3 py-1 rounded-full">
                     {post.category}
                   </span>
                   <span className="flex items-center gap-1 text-brand-smoke text-xs">
@@ -47,11 +47,11 @@ const BlogPage = () => (
                     {post.readTime}
                   </span>
                 </div>
-                <h3 className="text-lg md:text-xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
+                <h3 className="text-lg md:text-xl mb-3 group-hover:text-brand-midnight transition-colors duration-300">{post.title}</h3>
                 <p className="text-brand-smoke leading-relaxed mb-6">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-brand-smoke text-sm">{post.date}</span>
-                  <span className="flex items-center gap-1 text-brand-midnight font-semibold text-sm group-hover:text-brand-accent-red transition-colors">
+                  <span className="flex items-center gap-1 text-brand-midnight font-semibold text-sm group-hover:text-brand-midnight transition-colors">
                     Leggi <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>

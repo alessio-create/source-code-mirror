@@ -48,7 +48,7 @@ const DivorziPage = () => (
             <div className="space-y-4">
               {features.map((f, i) => (
                 <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <CheckCircle2 className="w-5 h-5 text-brand-accent-red mt-0.5 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-brand-midnight mt-0.5 shrink-0" />
                   <span className="text-brand-smoke text-base">{f}</span>
                 </motion.div>
               ))}
@@ -69,7 +69,7 @@ const DivorziPage = () => (
             { value: "100%", label: "Riservatezza" },
           ].map((stat, i) => (
             <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <p className="text-3xl md:text-4xl font-bold text-brand-accent-red mb-2">{stat.value}</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand-midnight mb-2">{stat.value}</p>
               <p className="text-brand-smoke text-sm">{stat.label}</p>
             </motion.div>
           ))}

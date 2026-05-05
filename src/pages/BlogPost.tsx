@@ -25,14 +25,14 @@ const BlogPost = () => {
           >
             <Link
               to="/#blog"
-              className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-accent-red transition-colors mb-10 text-sm font-medium"
+              className="inline-flex items-center gap-2 text-brand-smoke hover:text-brand-midnight transition-colors mb-10 text-sm font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Torna al blog
             </Link>
 
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-xs font-semibold uppercase tracking-wider text-brand-accent-red bg-brand-accent-red/10 px-3 py-1 rounded-full">
+              <span className="text-xs font-semibold uppercase tracking-wider text-brand-midnight bg-brand-midnight/10 px-3 py-1 rounded-full">
                 {post.category}
               </span>
               <span className="flex items-center gap-1 text-brand-smoke text-sm">
@@ -49,7 +49,7 @@ const BlogPost = () => {
               {post.title}
             </h1>
 
-            <div className="w-16 h-1 bg-brand-accent-red rounded-full mb-10" />
+            <div className="w-16 h-1 bg-brand-midnight rounded-full mb-10" />
           </motion.div>
 
           <motion.div
@@ -80,7 +80,7 @@ const BlogPost = () => {
             </p>
             <a
               href="/#contatti"
-              className="inline-block bg-brand-accent-red text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-accent-red/90 transition-colors"
+              className="inline-block bg-brand-midnight text-brand-ivory px-8 py-3 rounded-full font-semibold hover:bg-brand-midnight/90 transition-colors"
             >
               Prenota una consulenza
             </a>

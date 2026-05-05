@@ -47,12 +47,12 @@ const ContattiPage = () => (
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <div className="w-14 h-14 bg-brand-accent-red/10 flex items-center justify-center rounded-xl group-hover:bg-brand-accent-red transition-colors duration-300">
-                    <c.icon className="w-6 h-6 text-brand-accent-red group-hover:text-card transition-colors duration-300" strokeWidth={1.5} />
+                  <div className="w-14 h-14 bg-brand-midnight/10 flex items-center justify-center rounded-xl group-hover:bg-brand-midnight transition-colors duration-300">
+                    <c.icon className="w-6 h-6 text-brand-midnight group-hover:text-card transition-colors duration-300" strokeWidth={1.5} />
                   </div>
                   <div>
                     <p className="text-sm text-brand-smoke">{c.label}</p>
-                    <p className="text-lg font-semibold text-brand-midnight group-hover:text-brand-accent-red transition-colors">{c.value}</p>
+                    <p className="text-lg font-semibold text-brand-midnight group-hover:text-brand-midnight transition-colors">{c.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -77,8 +77,8 @@ const ContattiPage = () => (
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <div className="bg-card border border-border rounded-2xl overflow-hidden h-full min-h-[400px] flex flex-col">
               <div className="p-8 flex-1 flex flex-col justify-center text-center">
-                <div className="w-20 h-20 bg-brand-accent-red/10 flex items-center justify-center rounded-full mx-auto mb-6">
-                  <MapPin className="w-10 h-10 text-brand-accent-red" strokeWidth={1.5} />
+                <div className="w-20 h-20 bg-brand-midnight/10 flex items-center justify-center rounded-full mx-auto mb-6">
+                  <MapPin className="w-10 h-10 text-brand-midnight" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl mb-3">Studio Legale Di Vietro</h3>
                 <p className="text-brand-smoke leading-relaxed mb-2">Bovisio Masciago (MB)</p>
