@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Heart, Shield, Users, BookOpen } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import PageHero from "@/components/PageHero";
+import BrandIcon from "@/components/BrandIcon";
 
 const features = [
   "Affidamento condiviso e esclusivo",
@@ -17,10 +17,10 @@ const features = [
 ];
 
 const principles = [
-  { icon: Heart, title: "Interesse del minore", desc: "Ogni decisione è guidata dal superiore interesse del bambino, il principio cardine del diritto minorile." },
-  { icon: Users, title: "Bigenitorialità", desc: "Il diritto del minore a mantenere un rapporto equilibrato e continuativo con entrambi i genitori." },
-  { icon: Shield, title: "Protezione", desc: "Tutela dei minori in situazioni di conflitto, violenza o inadempimento degli obblighi genitoriali." },
-  { icon: BookOpen, title: "Ascolto", desc: "Il minore ha diritto di essere ascoltato in tutte le questioni che lo riguardano, nel rispetto della sua età." },
+  { icon: "futuro-figli" as const, title: "Interesse del minore", desc: "Ogni decisione è guidata dal superiore interesse del bambino, il principio cardine del diritto minorile." },
+  { icon: "minori" as const, title: "Bigenitorialità", desc: "Il diritto del minore a mantenere un rapporto equilibrato e continuativo con entrambi i genitori." },
+  { icon: "riservatezza" as const, title: "Protezione", desc: "Tutela dei minori in situazioni di conflitto, violenza o inadempimento degli obblighi genitoriali." },
+  { icon: "aggiornamento" as const, title: "Ascolto", desc: "Il minore ha diritto di essere ascoltato in tutte le questioni che lo riguardano, nel rispetto della sua età." },
 ];
 
 const AffidoPage = () => (
@@ -54,9 +54,9 @@ const AffidoPage = () => (
             <h3 className="text-xl mb-6">Servizi di tutela minorile</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
-                <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <CheckCircle2 className="w-5 h-5 text-brand-midnight mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-base">{f}</span>
+                <motion.div key={f} className="flex items-baseline gap-4 border-b border-brand-midnight/15 py-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
+                  <span className="display-numeral text-sm text-brand-midnight/40 not-italic font-normal tracking-normal w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-brand-midnight text-base">{f}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,12 +73,12 @@ const AffidoPage = () => (
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {principles.map((p, i) => (
-            <motion.div key={p.title} className="bg-brand-ivory p-8 rounded-2xl border border-border text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <div className="w-14 h-14 bg-brand-midnight/10 flex items-center justify-center rounded-xl mx-auto mb-5">
-                <p.icon className="w-6 h-6 text-brand-midnight" strokeWidth={1.5} />
+            <motion.div key={p.title} className="bg-brand-ivory p-8 border border-brand-midnight/15 text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+              <div className="text-brand-midnight mx-auto mb-6 flex justify-center">
+                <BrandIcon name={p.icon} size={56} />
               </div>
-              <h3 className="text-xl mb-3">{p.title}</h3>
-              <p className="text-brand-smoke leading-relaxed text-sm">{p.desc}</p>
+              <h3 className="text-xl mb-3 font-serif">{p.title}</h3>
+              <p className="text-brand-midnight/70 leading-relaxed text-sm">{p.desc}</p>
             </motion.div>
           ))}
         </div>

@@ -1,40 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Users, CreditCard, Heart, Scale, ShieldCheck, Briefcase } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoHorizontal from "@/assets/logo-horizontal.svg";
+import BrandIcon from "@/components/BrandIcon";
 
 const serviceItems = [
-  {
-    icon: Users,
-    title: "Separazioni e Divorzi",
-    description: "Procedure consensuali e giudiziali, negoziazione assistita",
-    href: "/separazioni",
-  },
-  {
-    icon: Heart,
-    title: "Diritto dei Minori",
-    description: "Affidamento, collocamento e tutela dei figli",
-    href: "/affido-figli",
-  },
-  {
-    icon: Scale,
-    title: "Diritto di Famiglia",
-    description: "Consulenza completa sui rapporti familiari",
-    href: "/divorzi",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Diritto delle Persone",
-    description: "Amministrazione di sostegno e tutela dei diritti",
-    href: "/diritto-persone",
-  },
-  {
-    icon: Briefcase,
-    title: "Diritto Civile",
-    description: "Questioni patrimoniali e successorie",
-    href: "/diritto-civile",
-  },
+  { icon: "separazioni" as const, title: "Separazioni e Divorzi", description: "Procedure consensuali e giudiziali, negoziazione assistita", href: "/separazioni" },
+  { icon: "minori" as const, title: "Diritto dei Minori", description: "Affidamento, collocamento e tutela dei figli", href: "/affido-figli" },
+  { icon: "famiglia" as const, title: "Diritto di Famiglia", description: "Consulenza completa sui rapporti familiari", href: "/divorzi" },
+  { icon: "persone" as const, title: "Diritto delle Persone", description: "Amministrazione di sostegno e tutela dei diritti", href: "/diritto-persone" },
+  { icon: "civile" as const, title: "Diritto Civile", description: "Questioni patrimoniali e successorie", href: "/diritto-civile" },
 ];
 
 const megaMenuVariants = {
@@ -101,8 +77,8 @@ const Header = () => {
                             className="flex items-start gap-4 p-3 rounded-lg hover:bg-brand-garden transition group"
                             onClick={() => setMegaOpen(false)}
                           >
-                            <div className="w-10 h-10 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition">
-                              <item.icon className="w-5 h-5 text-brand-midnight group-hover:text-primary-foreground transition" strokeWidth={1.5} />
+                            <div className="w-12 h-12 bg-brand-garden group-hover:bg-brand-midnight flex items-center justify-center rounded-lg shrink-0 transition text-brand-midnight group-hover:text-brand-ivory">
+                              <BrandIcon name={item.icon} size={28} />
                             </div>
                             <div>
                               <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
@@ -184,7 +160,7 @@ const Header = () => {
                             className="flex items-center gap-3 py-2 text-sm text-brand-smoke hover:text-brand-midnight transition"
                             onClick={() => setMobileOpen(false)}
                           >
-                            <item.icon className="w-4 h-4" strokeWidth={1.5} />
+                            <BrandIcon name={item.icon} size={20} />
                             {item.title}
                           </Link>
                         </motion.div>

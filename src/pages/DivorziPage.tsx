@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
@@ -47,9 +47,9 @@ const DivorziPage = () => (
             <h3 className="text-xl mb-6">I miei servizi per il divorzio</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
-                <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <CheckCircle2 className="w-5 h-5 text-brand-midnight mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-base">{f}</span>
+                <motion.div key={f} className="flex items-baseline gap-4 border-b border-brand-midnight/15 py-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
+                  <span className="display-numeral text-sm text-brand-midnight/40 not-italic font-normal tracking-normal w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-brand-midnight text-base">{f}</span>
                 </motion.div>
               ))}
             </div>

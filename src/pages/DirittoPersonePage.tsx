@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Heart, Users, FileText } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import PageHero from "@/components/PageHero";
+import BrandIcon from "@/components/BrandIcon";
 
 const features = [
   "Amministrazione di sostegno",
@@ -17,10 +17,10 @@ const features = [
 ];
 
 const cases = [
-  { icon: Heart, title: "Persone anziane", desc: "Tutela di genitori o nonni che non riescono più a gestire autonomamente i propri affari quotidiani e patrimoniali." },
-  { icon: Users, title: "Disabilità e fragilità", desc: "Protezione giuridica per persone con disabilità fisiche o psichiche che necessitano di assistenza nelle decisioni." },
-  { icon: ShieldCheck, title: "Dipendenze e vulnerabilità", desc: "Supporto legale per soggetti in situazioni di dipendenza o vulnerabilità che rischiano di compromettere il proprio patrimonio." },
-  { icon: FileText, title: "Gestione patrimoniale", desc: "Quando un familiare non è più in grado di amministrare i propri beni, conti correnti o immobili in sicurezza." },
+  { icon: "umanita" as const, title: "Persone anziane", desc: "Tutela di genitori o nonni che non riescono più a gestire autonomamente i propri affari quotidiani e patrimoniali." },
+  { icon: "persone" as const, title: "Disabilità e fragilità", desc: "Protezione giuridica per persone con disabilità fisiche o psichiche che necessitano di assistenza nelle decisioni." },
+  { icon: "riservatezza" as const, title: "Dipendenze e vulnerabilità", desc: "Supporto legale per soggetti in situazioni di dipendenza o vulnerabilità che rischiano di compromettere il proprio patrimonio." },
+  { icon: "civile" as const, title: "Gestione patrimoniale", desc: "Quando un familiare non è più in grado di amministrare i propri beni, conti correnti o immobili in sicurezza." },
 ];
 
 const DirittoPersonePage = () => (
@@ -54,9 +54,9 @@ const DirittoPersonePage = () => (
             <h3 className="text-xl mb-6">I miei servizi</h3>
             <div className="space-y-4">
               {features.map((f, i) => (
-                <motion.div key={f} className="flex items-start gap-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
-                  <CheckCircle2 className="w-5 h-5 text-brand-midnight mt-0.5 shrink-0" />
-                  <span className="text-brand-smoke text-base">{f}</span>
+                <motion.div key={f} className="flex items-baseline gap-4 border-b border-brand-midnight/15 py-3" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}>
+                  <span className="display-numeral text-sm text-brand-midnight/40 not-italic font-normal tracking-normal w-8 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="text-brand-midnight text-base">{f}</span>
                 </motion.div>
               ))}
             </div>
@@ -73,12 +73,12 @@ const DirittoPersonePage = () => (
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cases.map((c, i) => (
-            <motion.div key={c.title} className="bg-brand-ivory p-8 rounded-2xl border border-border text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <div className="w-14 h-14 bg-brand-midnight/10 flex items-center justify-center rounded-xl mx-auto mb-5">
-                <c.icon className="w-6 h-6 text-brand-midnight" strokeWidth={1.5} />
+            <motion.div key={c.title} className="bg-brand-ivory p-8 border border-brand-midnight/15 text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+              <div className="text-brand-midnight mx-auto mb-6 flex justify-center">
+                <BrandIcon name={c.icon} size={56} />
               </div>
-              <h3 className="text-xl mb-3">{c.title}</h3>
-              <p className="text-brand-smoke leading-relaxed text-sm">{c.desc}</p>
+              <h3 className="text-xl mb-3 font-serif">{c.title}</h3>
+              <p className="text-brand-midnight/70 leading-relaxed text-sm">{c.desc}</p>
             </motion.div>
           ))}
         </div>
