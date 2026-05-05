@@ -157,12 +157,18 @@ const HeroSection = () => {
     </div>
 
     {/* Stats — editorial strip on midnight */}
-    <div className="bg-brand-midnight relative overflow-hidden">
+    <div
+      ref={stripRef}
+      onMouseMove={handleStripMove}
+      className="bg-brand-midnight relative overflow-hidden"
+    >
       {/* Diagonal hairline grid pattern */}
-      <div
+      <motion.div
         aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-[0.07]"
+        className="absolute inset-0 pointer-events-none opacity-[0.07] will-change-transform"
         style={{
+          x: gridX,
+          y: gridY,
           backgroundImage:
             "repeating-linear-gradient(45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px), repeating-linear-gradient(-45deg, hsl(var(--brand-ivory)) 0 1px, transparent 1px 22px)",
         }}
@@ -177,10 +183,14 @@ const HeroSection = () => {
         }}
       />
       {/* Centered large D monogram mark */}
-      <div
+      <motion.div
         aria-hidden
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.06]"
+        className="absolute left-1/2 top-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.06] will-change-transform"
         style={{
+          x: stripX,
+          y: stripY,
+          translateX: "-50%",
+          translateY: "-50%",
           backgroundColor: "hsl(var(--brand-ivory))",
           WebkitMaskImage: `url(${monogramMark})`,
           maskImage: `url(${monogramMark})`,
