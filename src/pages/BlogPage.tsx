@@ -14,7 +14,7 @@ const BlogPage = () => {
       <Header />
       <PageHero
         label="Approfondimenti"
-        title="Journal"
+        title="Blog"
         description="Articoli e guide per orientarti nel diritto di famiglia con consapevolezza, scritti dall'Avv. Donatella Di Vietro."
         stat={{ value: `${blogPosts.length}`, label: "Articoli\npubblicati" }}
         testimonial={{
