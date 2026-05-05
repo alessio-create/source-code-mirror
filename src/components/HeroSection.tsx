@@ -10,12 +10,13 @@ const stats = [
 
 const HeroSection = () => (
   <section className="relative bg-brand-ivory overflow-hidden">
-    {/* Editorial monogram watermark */}
+    {/* Editorial monogram watermark — just the D mark, no background */}
     <img
-      src={monogram}
+      src={monogramMark}
       alt=""
       aria-hidden
-      className="absolute -right-32 -top-20 w-[640px] opacity-[0.04] pointer-events-none select-none"
+      className="absolute -right-32 -top-20 w-[640px] opacity-[0.06] pointer-events-none select-none text-brand-midnight"
+      style={{ filter: "none" }}
     />
 
     <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-36 pb-20 md:pb-28 relative">
