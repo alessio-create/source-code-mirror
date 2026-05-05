@@ -25,18 +25,20 @@ const CookieConsent = () => {
 
   return (
     <>
-      {/* Floating cookie button (always visible bottom-left) */}
-      <motion.button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-label="Preferenze cookie"
-        initial={{ opacity: 0, scale: 0.6, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed bottom-8 left-8 z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-brand-ivory border border-brand-midnight/20 text-brand-midnight shadow-[0_10px_24px_-10px_hsl(var(--brand-midnight)/0.35)] hover:bg-brand-midnight hover:text-brand-ivory hover:-translate-y-0.5 transition-all duration-500"
-      >
-        <Cookie className="w-5 h-5" strokeWidth={1.5} />
-      </motion.button>
+      {/* Floating cookie button - hidden once accepted */}
+      {decision !== "accepted" && (
+        <motion.button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Preferenze cookie"
+          initial={{ opacity: 0, scale: 0.6, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="fixed bottom-4 left-4 z-[60] flex items-center justify-center w-14 h-14 rounded-full bg-brand-ivory border border-brand-midnight/20 text-brand-midnight shadow-[0_10px_24px_-10px_hsl(var(--brand-midnight)/0.35)] hover:bg-brand-midnight hover:text-brand-ivory hover:-translate-y-0.5 transition-all duration-500"
+        >
+          <Cookie className="w-5 h-5" strokeWidth={1.5} />
+        </motion.button>
+      )}
 
       {/* Pop-up */}
       <AnimatePresence>
