@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 import donatellaImg from "@/assets/donatella-hero.png";
 import monogramMark from "@/assets/monogram-mark.svg";
 
