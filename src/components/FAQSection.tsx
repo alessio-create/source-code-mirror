@@ -71,7 +71,7 @@ const FAQSection = () => {
                         transition={{ duration: 0.3, ease: "easeOut" }}
                         className="overflow-hidden"
                       >
-                        <p className="pb-7 pl-13 ml-13 text-brand-midnight/75 leading-[1.8] text-base md:text-lg max-w-2xl" style={{ paddingLeft: "3.25rem" }}>
+                        <p className="pb-7 text-brand-midnight/75 leading-[1.8] text-base md:text-lg max-w-2xl" style={{ paddingLeft: "3.25rem" }}>
                           {faq.a}
                         </p>
                       </motion.div>
