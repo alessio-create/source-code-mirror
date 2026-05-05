@@ -170,11 +170,18 @@ const HelpFloatingButton = () => {
         className="fixed bottom-4 right-4 z-[60] w-[120px] h-[120px]"
       >
         <button
+          ref={buttonRef}
           onClick={() => setOpen((o) => !o)}
           aria-label="Apri chat assistente"
           className="relative flex items-center justify-center w-full h-full group"
         >
-          <span className="relative flex items-center justify-center w-[72px] h-[72px] rounded-full bg-brand-midnight text-brand-ivory shadow-[0_14px_30px_-12px_hsl(var(--brand-midnight)/0.55)] transition-transform duration-500 group-hover:scale-105">
+          <span
+            className="relative flex items-center justify-center w-[72px] h-[72px] rounded-full shadow-[0_14px_30px_-12px_hsl(var(--brand-midnight)/0.55)] transition-[background-color,color] duration-500 group-hover:scale-105"
+            style={{
+              backgroundColor: isDark && !open ? "hsl(var(--brand-ivory))" : "hsl(var(--brand-midnight))",
+              color: isDark && !open ? "hsl(var(--brand-smoke))" : "hsl(var(--brand-ivory))",
+            }}
+          >
             <AnimatePresence mode="wait" initial={false}>
               {open ? (
                 <motion.span
