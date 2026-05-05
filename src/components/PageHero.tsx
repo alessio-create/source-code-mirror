@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Star, ArrowLeft } from "lucide-react";
-import monogram from "@/assets/logo-monogram.svg";
+import monogramMark from "@/assets/monogram-mark.svg";
 
 interface PageHeroProps {
   label: string;
