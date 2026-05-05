@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Clock } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -7,55 +7,47 @@ const BlogSection = () => (
   <section className="section-padding bg-card" id="blog">
     <div className="container mx-auto px-4 md:px-8">
       <motion.div
-        className="flex flex-col md:flex-row md:items-end md:justify-between mb-14"
+        className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 md:mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div>
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Blog</p>
-          <h2 className="text-3xl md:text-4xl">Approfondimenti legali</h2>
-          <p className="text-brand-smoke text-base mt-3 max-w-lg">
-            Articoli e guide per orientarti nel diritto di famiglia con consapevolezza.
-          </p>
+        <div className="lg:col-span-8">
+          <p className="eyebrow mb-6">Journal</p>
+          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+            Approfondimenti per orientarti con <em className="italic font-normal text-brand-midnight/70">consapevolezza</em>.
+          </h2>
+        </div>
+        <div className="lg:col-span-4 lg:text-right">
+          <Link to="/blog" className="btn-ghost">Tutti gli articoli</Link>
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {blogPosts.map((post, i) => (
+      <div className="border-t border-brand-midnight/15">
+        {blogPosts.slice(0, 4).map((post, i) => (
           <motion.div
             key={post.slug}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
           >
             <Link
               to={`/blog/${post.slug}`}
-              className="group bg-brand-ivory border border-border rounded-2xl p-8 hover:premium-shadow-lg transition-all duration-500 relative overflow-hidden block"
+              className="group grid grid-cols-12 gap-4 md:gap-8 items-center py-8 md:py-10 border-b border-brand-midnight/15 hover:bg-brand-garden/20 transition-colors duration-500 px-2 md:px-4 -mx-2 md:-mx-4"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-brand-accent-red scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-brand-accent-red bg-brand-accent-red/10 px-3 py-1 rounded-full">
-                  {post.category}
-                </span>
-                <span className="flex items-center gap-1 text-brand-smoke text-xs">
-                  <Clock className="w-3 h-3" />
-                  {post.readTime}
-                </span>
+              <div className="col-span-3 md:col-span-2 text-[11px] uppercase tracking-[0.2em] text-brand-midnight/60 font-medium">
+                {post.date}
               </div>
-
-              <h3 className="text-lg md:text-xl mb-3 group-hover:text-brand-accent-red transition-colors duration-300">{post.title}</h3>
-              <p className="text-brand-smoke leading-relaxed mb-6">{post.excerpt}</p>
-
-              <div className="flex items-center justify-between">
-                <span className="text-brand-smoke text-sm">{post.date}</span>
-                <span className="flex items-center gap-1 text-brand-midnight font-semibold text-sm group-hover:text-brand-accent-red transition-colors">
-                  Leggi
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
+              <div className="col-span-9 md:col-span-3 text-[11px] uppercase tracking-[0.2em] text-brand-midnight font-medium">
+                {post.category}
+              </div>
+              <h3 className="col-span-12 md:col-span-6 font-serif font-medium text-xl md:text-2xl text-brand-midnight tracking-[-0.01em] group-hover:translate-x-1 transition-transform duration-500 leading-snug">
+                {post.title}
+              </h3>
+              <div className="col-span-12 md:col-span-1 flex md:justify-end">
+                <ArrowUpRight className="w-5 h-5 text-brand-midnight/40 group-hover:text-brand-midnight group-hover:rotate-45 transition-all duration-500" strokeWidth={1.25} />
               </div>
             </Link>
           </motion.div>

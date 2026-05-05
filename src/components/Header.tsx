@@ -126,9 +126,9 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <Link
             to="/contatti"
-            className="hidden sm:flex items-center gap-2 bg-brand-accent-red text-card px-5 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition btn-transition"
+            className="hidden sm:inline-flex items-center gap-2 bg-brand-midnight text-brand-ivory px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] hover:bg-brand-midnight/90 transition btn-transition"
           >
-            Consulenza Gratuita
+            Consulenza Riservata
           </Link>
 
           {/* Mobile hamburger */}
@@ -198,10 +198,10 @@ const Header = () => {
               <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
               <Link
                 to="/contatti"
-                className="block mt-3 bg-brand-accent-red text-card text-center px-6 py-3 rounded-md text-sm font-semibold"
+                className="block mt-3 bg-brand-midnight text-brand-ivory text-center px-6 py-3 text-xs font-medium uppercase tracking-[0.18em]"
                 onClick={() => setMobileOpen(false)}
               >
-                Consulenza Gratuita
+                Consulenza Riservata
               </Link>
             </div>
           </motion.div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import donatellaImg from "@/assets/donatella.png";
-import brandPattern from "@/assets/brand-pattern.png";
+import monogram from "@/assets/logo-monogram.svg";
 
 const stats = [
   { value: "20+", label: "Anni di Esperienza" },
@@ -10,116 +10,122 @@ const stats = [
 
 const HeroSection = () => (
   <section className="relative bg-brand-ivory overflow-hidden">
-    {/* Brand pattern overlay */}
-    <div
-      className="absolute inset-0 opacity-[0.07] pointer-events-none"
-      style={{ backgroundImage: `url(${brandPattern})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
+    {/* Editorial monogram watermark */}
+    <img
+      src={monogram}
+      alt=""
+      aria-hidden
+      className="absolute -right-32 -top-20 w-[640px] opacity-[0.04] pointer-events-none select-none"
     />
-    <div className="container mx-auto px-4 md:px-8 pt-24 md:pt-28 pb-0">
-      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+
+    <div className="container mx-auto px-4 md:px-8 pt-32 md:pt-36 pb-20 md:pb-28 relative">
+      {/* Top meta line */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex items-center justify-between border-b border-brand-midnight/15 pb-5 mb-12 md:mb-16"
+      >
+        <span className="text-[11px] uppercase tracking-[0.28em] text-brand-midnight/70 font-medium">
+          Studio Legale — Bovisio Masciago (MB)
+        </span>
+        <span className="hidden md:inline text-[11px] uppercase tracking-[0.28em] text-brand-midnight/70 font-medium">
+          Diritto di Famiglia · Minori · Persone
+        </span>
+      </motion.div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* Text */}
-        <div className="lg:w-1/2 pb-8 md:pb-12 lg:pb-16">
-          <motion.div
-            className="inline-flex items-center gap-2 border border-brand-midnight/20 px-4 py-1.5 rounded-full mb-5"
-            initial={{ opacity: 0, y: 20 }}
+        <div className="lg:col-span-7">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="eyebrow mb-8"
           >
-            <span className="w-2 h-2 bg-brand-accent-red rounded-full" />
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-brand-midnight">Avvocato Divorzista</span>
-          </motion.div>
+            Avv. Donatella Di Vietro
+          </motion.p>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl leading-[1.05] mb-5 font-serif font-extrabold"
+            className="font-serif font-medium text-[2.75rem] sm:text-6xl lg:text-[5rem] leading-[1.02] tracking-[-0.025em] text-brand-midnight mb-8 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
           >
-            La tua famiglia merita<br />
-            un avvocato che<br />
-            <motion.em 
-              className="italic text-brand-accent-red inline-block"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              ascolta davvero.
-            </motion.em>
+            La tua famiglia merita un avvocato che{" "}
+            <em className="italic font-normal text-brand-midnight/80">ascolta davvero.</em>
           </motion.h1>
 
           <motion.p
-            className="text-base md:text-lg text-brand-smoke mb-6 max-w-lg leading-relaxed"
+            className="text-base md:text-lg text-brand-midnight/70 mb-10 max-w-xl leading-[1.7]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Studio Legale Di Vietro — specializzato in diritto di famiglia, 
-            separazioni e tutela dei minori. Ci prendiamo cura di ogni caso 
-            con competenza e umanità.
+            Studio specializzato in diritto di famiglia, separazioni e tutela dei minori.
+            Ogni caso seguito personalmente, con competenza tecnica e profonda umanità.
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <a
-              className="bg-brand-accent-red text-card px-7 py-3 rounded-md text-base font-semibold text-center hover:opacity-90 transition btn-transition tracking-wide inline-flex items-center justify-center gap-2"
-              href="#contatti"
-            >
-              Consulenza Gratuita
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            <a className="btn-primary" href="#contatti">
+              Consulenza Riservata
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
-            <a
-              className="border-2 border-brand-midnight text-brand-midnight px-7 py-3 rounded-md text-base font-semibold text-center hover:bg-brand-midnight hover:text-primary-foreground transition btn-transition tracking-wide"
-              href="#servizi"
-            >
-              I nostri servizi
-            </a>
+            <a className="btn-ghost" href="#servizi">Aree di Competenza</a>
           </motion.div>
         </div>
 
         {/* Photo */}
         <motion.div
-          className="lg:w-1/2 relative flex justify-center"
-          initial={{ opacity: 0, scale: 0.95 }}
+          className="lg:col-span-5 relative"
+          initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
-          <div className="relative w-full max-w-xs lg:max-w-sm mx-auto">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-brand-warm">
+          <div className="relative max-w-md mx-auto">
+            {/* Hairline frame */}
+            <div className="absolute -inset-4 border border-brand-midnight/15 hidden md:block" />
+            <div className="aspect-[4/5] overflow-hidden bg-brand-garden relative">
               <img
                 alt="Avv. Donatella Di Vietro"
                 className="w-full h-full object-cover object-top"
                 src={donatellaImg}
               />
             </div>
-            {/* Floating badge */}
-            <div className="absolute -left-4 bottom-24 bg-card p-4 rounded-xl premium-shadow hidden md:block">
-              <p className="text-brand-midnight font-serif italic text-lg leading-snug max-w-[200px]">
-                "Ogni famiglia merita rispetto e tutela."
-              </p>
+            {/* Editorial caption */}
+            <div className="mt-5 flex items-baseline justify-between border-t border-brand-midnight/15 pt-3">
+              <span className="text-[11px] uppercase tracking-[0.28em] text-brand-midnight/70 font-medium">
+                Ritratto · 2026
+              </span>
+              <span className="font-serif italic text-brand-midnight text-sm">
+                Studio Di Vietro
+              </span>
             </div>
           </div>
         </motion.div>
       </div>
     </div>
 
-    {/* Stats bar */}
+    {/* Stats — editorial strip on midnight */}
     <div className="bg-brand-midnight">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-3 divide-x divide-primary-foreground/10">
+        <div className="grid grid-cols-3 divide-x divide-brand-ivory/10">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
-              className="py-6 md:py-8 text-center"
+              className="py-10 md:py-14 text-center px-2"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
             >
-              <p className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-primary-foreground">{s.value}</p>
-              <p className="text-primary-foreground/60 text-xs sm:text-sm mt-1">{s.label}</p>
+              <p className="display-numeral text-5xl md:text-7xl text-brand-ivory">{s.value}</p>
+              <p className="text-brand-ivory/60 text-[11px] sm:text-xs mt-3 uppercase tracking-[0.28em] font-medium">{s.label}</p>
             </motion.div>
           ))}
         </div>

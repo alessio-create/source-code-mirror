@@ -2,57 +2,56 @@ import { motion } from "framer-motion";
 
 const steps = [
   {
-    number: "1",
+    number: "I.",
     title: "Consulenza Personalizzata",
-    description: "Un incontro conoscitivo gratuito e riservato per ascoltare la tua storia e valutare le opzioni disponibili.",
+    description: "Un incontro conoscitivo riservato per ascoltare la tua storia e valutare con calma le opzioni disponibili.",
   },
   {
-    number: "2",
+    number: "II.",
     title: "Strategia su Misura",
-    description: "Studio approfondito del caso e definizione di un piano legale personalizzato con preventivo chiaro e trasparente.",
+    description: "Studio approfondito del caso e definizione di un piano legale chiaro, con preventivo trasparente.",
   },
   {
-    number: "3",
+    number: "III.",
     title: "Passi Successivi Chiari",
     description: "Avvio della procedura con determinazione, privilegiando la soluzione più rapida nell'interesse tuo e dei tuoi figli.",
   },
 ];
 
 const MethodSection = () => (
-  <section className="section-padding bg-brand-warm">
+  <section className="section-padding bg-brand-ivory">
     <div className="container mx-auto px-4 md:px-8">
       <motion.div
-        className="text-center mb-16"
+        className="text-center max-w-2xl mx-auto mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-3">Come Funziona</p>
-        <h2 className="text-3xl md:text-4xl mb-4">Inizia Adesso</h2>
-        <p className="text-brand-smoke text-base max-w-2xl mx-auto">
-          Un percorso semplice e chiaro in tre passaggi per risolvere la tua situazione legale.
+        <p className="eyebrow eyebrow-center mb-6">Il Metodo</p>
+        <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] mb-6 text-balance">
+          Un percorso chiaro, in <em className="italic font-normal text-brand-midnight/70">tre tempi</em>.
+        </h2>
+        <p className="text-brand-midnight/70 text-base md:text-lg leading-[1.7]">
+          Senza sorprese, senza tecnicismi inutili: solo la strada più lineare per arrivare alla soluzione.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto border-t border-brand-midnight/15 mb-16">
         {steps.map((step, i) => (
           <motion.div
             key={step.number}
-            className="relative text-center"
-            initial={{ opacity: 0, y: 40 }}
+            className={`py-12 px-6 md:px-10 ${i < steps.length - 1 ? "md:border-r border-brand-midnight/15" : ""} border-b border-brand-midnight/15 md:border-b`}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
+            transition={{ duration: 0.6, delay: i * 0.15 }}
           >
-            <div className="w-16 h-16 bg-brand-accent-red rounded-full flex items-center justify-center mx-auto mb-6 text-card font-serif font-bold text-2xl">
-              {step.number}
-            </div>
-            <h3 className="text-lg md:text-xl mb-3">{step.title}</h3>
-            <p className="text-brand-smoke leading-relaxed">{step.description}</p>
-            {i < steps.length - 1 && (
-              <div className="hidden md:block absolute top-8 left-[60%] w-[80%] h-px border-t-2 border-dashed border-brand-smoke/30" />
-            )}
+            <p className="display-numeral text-6xl md:text-7xl text-brand-midnight/40 mb-6">{step.number}</p>
+            <h3 className="font-serif font-medium text-2xl md:text-3xl text-brand-midnight tracking-[-0.02em] mb-4 leading-tight">
+              {step.title}
+            </h3>
+            <p className="text-brand-midnight/70 leading-[1.8] text-base">{step.description}</p>
           </motion.div>
         ))}
       </div>
@@ -62,14 +61,10 @@ const MethodSection = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
       >
-        <a
-          href="#contatti"
-          className="inline-flex items-center gap-2 bg-brand-accent-red text-card px-8 py-4 rounded-md text-base font-semibold hover:opacity-90 transition btn-transition"
-        >
-          Consulenza Gratuita
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        <a href="#contatti" className="btn-primary">
+          Consulenza Riservata
         </a>
       </motion.div>
     </div>
