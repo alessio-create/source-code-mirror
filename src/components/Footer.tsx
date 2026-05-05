@@ -26,34 +26,33 @@ const Footer = () => (
     <div className="h-1 bg-gradient-to-r from-brand-accent-red via-brand-midnight to-brand-accent-red" />
 
     {/* Reviews band */}
-    <div className="bg-brand-warm py-16">
+    <div className="bg-brand-garden/40 py-20 md:py-24 border-b border-brand-midnight/15">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold tracking-[0.2em] uppercase text-brand-accent-red mb-2">Recensioni</p>
-          <h3 className="text-lg md:text-xl font-serif font-bold text-brand-midnight">Cosa Dicono i Nostri Clienti</h3>
+        <div className="max-w-3xl mb-14">
+          <p className="eyebrow mb-6">Recensioni Google</p>
+          <h3 className="font-serif font-medium text-3xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+            Le parole di chi <em className="italic font-normal text-brand-midnight/70">si è fidato</em>.
+          </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           {reviews.map((r) => (
-            <div
-              key={r.name}
-              className="bg-card rounded-2xl p-6 premium-shadow hover:premium-shadow-lg transition-shadow duration-300"
-            >
-              <div className="flex gap-0.5 mb-3">
+            <div key={r.name} className="border-l-2 border-brand-midnight/20 pl-6 md:pl-8">
+              <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: r.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-brand-accent-red text-brand-accent-red" />
+                  <Star key={i} className="w-3.5 h-3.5 fill-brand-midnight text-brand-midnight" />
                 ))}
               </div>
-              <p className="text-foreground text-sm leading-relaxed mb-4 italic">"{r.text}"</p>
-              <p className="text-brand-midnight font-semibold text-sm">— {r.name}</p>
+              <p className="font-serif text-brand-midnight text-lg italic leading-[1.6] mb-6">"{r.text}"</p>
+              <p className="text-brand-midnight font-medium text-xs uppercase tracking-[0.2em] border-t border-brand-midnight/15 pt-4">— {r.name}</p>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8">
+        <div className="mt-12">
           <a
             href="https://g.page/r/studiolegaledivietro/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-brand-accent-red hover:underline transition"
+            className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brand-midnight border-b border-brand-midnight/30 hover:border-brand-midnight pb-1 transition"
           >
             Lascia una recensione su Google
             <span aria-hidden>→</span>
