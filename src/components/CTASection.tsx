@@ -28,10 +28,7 @@ const CTASection = () => (
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <a
-            href="tel:+390362590859"
-            className="inline-flex items-center justify-center gap-3 bg-brand-ivory text-brand-midnight px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] hover:bg-brand-ivory/90 transition btn-transition"
-          >
+          <a href="tel:+390362590859" className="btn-primary-light">
             Consulenza Riservata
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>

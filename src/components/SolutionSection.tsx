@@ -51,7 +51,7 @@ const SolutionSection = () => (
               </motion.li>
             ))}
           </ul>
-          <a href="#contatti" className="inline-flex items-center justify-center gap-3 bg-brand-ivory text-brand-midnight px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] hover:bg-brand-ivory/90 transition btn-transition">
+          <a href="#contatti" className="btn-primary-light">
             Consulenza Riservata
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
