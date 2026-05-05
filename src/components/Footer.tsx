@@ -52,7 +52,7 @@ const Footer = () => (
             href="https://g.page/r/studiolegaledivietro/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] text-brand-midnight border-b border-brand-midnight/30 hover:border-brand-midnight pb-1 transition"
+            className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] link-editorial"
           >
             Lascia una recensione su Google
             <span aria-hidden>→</span>
