@@ -104,10 +104,10 @@ const Footer = () => (
               <p>Via Guglielmo Marconi, 70/C</p>
               <p>20813 Bovisio Masciago (MB)</p>
               <p className="pt-3">
-                <a href="tel:+390362590859" className="link-editorial-light">+39 0362 590859</a>
+                <a href="tel:+390362590859" className="hover:text-primary-foreground transition">+39 0362 590859</a>
               </p>
               <p>
-                <a href="mailto:info@studiolegaledivietro.it" className="link-editorial-light break-all">info@studiolegaledivietro.it</a>
+                <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
               </p>
             </div>
           </div>
@@ -116,11 +116,11 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Servizi</h4>
             <nav className="space-y-3 text-brand-smoke/80 text-sm">
-              <Link className="link-editorial-light" to="/separazioni">Separazioni</Link>
-              <Link className="link-editorial-light" to="/divorzi">Divorzi</Link>
-              <Link className="link-editorial-light" to="/affido-figli">Affido Figli</Link>
-              <Link className="link-editorial-light" to="/diritto-persone">Diritto delle Persone</Link>
-              <Link className="link-editorial-light" to="/diritto-civile">Diritto Civile</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/separazioni">Separazioni</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/divorzi">Divorzi</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/affido-figli">Affido Figli</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/diritto-persone">Diritto delle Persone</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/diritto-civile">Diritto Civile</Link>
             </nav>
           </div>
 
@@ -128,9 +128,9 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Info</h4>
             <nav className="space-y-3 text-brand-smoke/80 text-sm">
-              <Link className="link-editorial-light" to="/chi-sono">Chi Sono</Link>
-              <Link className="link-editorial-light" to="/blog">Blog</Link>
-              <Link className="link-editorial-light" to="/contatti">Contatti</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/chi-sono">Chi Sono</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/blog">Blog</Link>
+              <Link className="block hover:text-primary-foreground transition" to="/contatti">Contatti</Link>
             </nav>
             <p className="text-brand-smoke/50 text-xs mt-6">P.IVA: 04755410968</p>
           </div>
@@ -140,8 +140,8 @@ const Footer = () => (
         <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-brand-smoke/60 gap-4">
           <p>© {new Date().getFullYear()} Studio Legale Di Vietro. Tutti i diritti riservati.</p>
           <div className="flex gap-6">
-            <a className="link-editorial-light" href="#">Privacy Policy</a>
-            <a className="link-editorial-light" href="#">Cookie Policy</a>
+            <a className="hover:text-primary-foreground transition" href="#">Privacy Policy</a>
+            <a className="hover:text-primary-foreground transition" href="#">Cookie Policy</a>
           </div>
         </div>
       </div>

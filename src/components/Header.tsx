@@ -81,7 +81,7 @@ const Header = () => {
                               <BrandIcon name={item.icon} size={28} />
                             </div>
                             <div>
-                              <span className="text-sm font-semibold text-brand-midnight link-editorial">{item.title}</span>
+                              <span className="text-sm font-semibold text-brand-midnight">{item.title}</span>
                               <p className="text-xs text-brand-smoke mt-0.5">{item.description}</p>
                             </div>
                           </Link>
@@ -94,9 +94,9 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
-          <Link className="text-sm font-medium link-editorial" to="/chi-sono">Chi Sono</Link>
-          <Link className="text-sm font-medium link-editorial" to="/blog">Blog</Link>
-          <Link className="text-sm font-medium link-editorial" to="/contatti">Contatti</Link>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/chi-sono">Chi Sono</Link>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/blog">Blog</Link>
+          <Link className="text-sm font-medium hover:text-brand-smoke transition" to="/contatti">Contatti</Link>
         </nav>
 
         <div className="flex items-center space-x-4">
@@ -161,7 +161,7 @@ const Header = () => {
                             onClick={() => setMobileOpen(false)}
                           >
                             <BrandIcon name={item.icon} size={20} />
-                            <span className="link-editorial">{item.title}</span>
+                            {item.title}
                           </Link>
                         </motion.div>
                       ))}
@@ -169,9 +169,9 @@ const Header = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <Link className="block py-3 text-sm font-medium text-brand-midnight link-editorial" to="/chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</Link>
-              <Link className="block py-3 text-sm font-medium text-brand-midnight link-editorial" to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
-              <Link className="block py-3 text-sm font-medium text-brand-midnight link-editorial" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/chi-sono" onClick={() => setMobileOpen(false)}>Chi Sono</Link>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/blog" onClick={() => setMobileOpen(false)}>Blog</Link>
+              <Link className="block py-3 text-sm font-medium text-brand-midnight" to="/contatti" onClick={() => setMobileOpen(false)}>Contatti</Link>
               <Link
                 to="/contatti"
                 className="block mt-3 bg-brand-midnight text-brand-ivory text-center px-6 py-3 text-xs font-medium uppercase tracking-[0.18em]"
