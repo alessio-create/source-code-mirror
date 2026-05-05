@@ -160,15 +160,38 @@ const HelpFloatingButton = () => {
     }
   };
 
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const check = () => {
+      const el = document.getElementById("numeri-studio");
+      if (!el) {
+        setVisible(true);
+        return;
+      }
+      const rect = el.getBoundingClientRect();
+      setVisible(rect.bottom < 0);
+    };
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
   return (
     <>
-      <motion.div
-        data-floating-help
-        initial={{ opacity: 0, scale: 0.6, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed bottom-4 right-4 z-[60] w-[120px] h-[120px]"
-      >
+      <AnimatePresence>
+        {visible && (
+          <motion.div
+            data-floating-help
+            initial={{ opacity: 0, scale: 0.6, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.6, y: 20 }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed bottom-4 right-4 z-[60] w-[120px] h-[120px]"
+          >
         <button
           ref={buttonRef}
           onClick={() => setOpen((o) => !o)}
