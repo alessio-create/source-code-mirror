@@ -220,6 +220,20 @@
     background-position: 100% 100%;
   }
 
+  /* Editorial link for dark backgrounds */
+  .link-editorial-light {
+    @apply relative inline-block text-brand-ivory;
+    background-image: linear-gradient(hsl(var(--brand-ivory) / 0.5), hsl(var(--brand-ivory) / 0.5));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    transition: background-size 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .link-editorial-light:hover {
+    background-size: 0% 1px;
+    background-position: 100% 100%;
+  }
+
   /* Subtle lift on hover for cards/imagery */
   .lift-hover {
     transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
