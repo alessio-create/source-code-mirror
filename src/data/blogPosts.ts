@@ -32,14 +32,14 @@ const rawPosts: Omit<BlogPost, "content">[] = [
     date: "10 Aprile 2026",
     readTime: "8 min",
     intro:
-      "Affrontare una separazione significa prendere decisioni importanti in un momento di grande fragilità emotiva. La prima scelta — spesso decisiva per i mesi successivi — riguarda la procedura: consensuale o giudiziale. In questa guida ti accompagno tra le differenze concrete, i tempi reali, i costi e i criteri che, nella mia esperienza, fanno davvero la differenza per te e per i tuoi figli.",
+      "Affrontare una separazione significa prendere decisioni importanti in un momento di grande fragilità emotiva. La prima scelta, spesso decisiva per i mesi successivi, riguarda la procedura: consensuale o giudiziale. In questa guida ti accompagno tra le differenze concrete, i tempi reali, i costi e i criteri che, nella mia esperienza, fanno davvero la differenza per te e per i tuoi figli.",
     sections: [
       {
         id: "differenze",
         heading: "Le differenze tra consensuale e giudiziale",
         paragraphs: [
           "La separazione consensuale presuppone un accordo completo tra i coniugi su tutti i temi rilevanti: affidamento e collocamento dei figli, assegno di mantenimento per coniuge e figli, assegnazione della casa coniugale e regolamentazione dei beni comuni. L'accordo viene poi sottoposto al tribunale per l'omologa.",
-          "La separazione giudiziale, invece, si apre quando il dialogo è ormai impossibile o quando uno dei coniugi non intende sottoscrivere alcun accordo. In questo caso è il giudice a decidere — dopo udienze, memorie, prove documentali e talvolta consulenze tecniche — ogni singolo aspetto controverso.",
+          "La separazione giudiziale, invece, si apre quando il dialogo è ormai impossibile o quando uno dei coniugi non intende sottoscrivere alcun accordo. In questo caso è il giudice a decidere, dopo udienze, memorie, prove documentali e talvolta consulenze tecniche, ogni singolo aspetto controverso.",
           "Si tratta, in entrambi i casi, di percorsi pienamente legittimi: la scelta non è una questione di principio, ma di concreta possibilità di trovare un terreno comune con l'altra parte.",
         ],
       },
@@ -57,7 +57,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         heading: "La negoziazione assistita come alternativa",
         paragraphs: [
           "La negoziazione assistita da avvocati, introdotta dalla Legge 162/2014, è oggi uno degli strumenti più efficaci per definire la separazione fuori dalle aule di tribunale. Coniugi e legali sottoscrivono una convenzione che, una volta autorizzata o nulla osta dalla Procura, ha la stessa efficacia di un provvedimento giudiziale.",
-          "Il vantaggio è duplice: si conservano i benefici della via consensuale (rapidità, costi contenuti, riservatezza) e si lavora in un contesto strutturato, con i legali a presidio degli interessi di ciascun coniuge e — soprattutto — dei figli.",
+          "Il vantaggio è duplice: si conservano i benefici della via consensuale (rapidità, costi contenuti, riservatezza) e si lavora in un contesto strutturato, con i legali a presidio degli interessi di ciascun coniuge e, soprattutto, dei figli.",
         ],
       },
       {
@@ -94,7 +94,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         id: "decisioni",
         heading: "Decisioni importanti e quotidiane",
         paragraphs: [
-          "Le decisioni di maggiore interesse — istruzione, salute, educazione religiosa, scelte di vita rilevanti — vanno assunte di comune accordo. In caso di disaccordo non risolvibile, ciascun genitore può rivolgersi al giudice.",
+          "Le decisioni di maggiore interesse, istruzione, salute, educazione religiosa, scelte di vita rilevanti, vanno assunte di comune accordo. In caso di disaccordo non risolvibile, ciascun genitore può rivolgersi al giudice.",
           "Le decisioni di ordinaria amministrazione, invece, vengono assunte autonomamente dal genitore che si trova con il figlio in quel momento: orari, attività quotidiane, pasti, piccole scelte organizzative.",
           "Comprendere questa distinzione è essenziale per evitare conflitti su questioni che non li meritano e per portare davanti al giudice solo ciò che davvero richiede una decisione condivisa.",
         ],
@@ -113,7 +113,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         paragraphs: [
           "Il problema più frequente nella pratica è la mancata cooperazione: violazioni reiterate del calendario, decisioni prese unilateralmente, ostacoli al rapporto con l'altro genitore. La legge offre strumenti precisi per intervenire.",
           "Il primo passo è sempre documentare: messaggi, e-mail, comunicazioni della scuola, certificazioni mediche. Senza prove concrete è molto difficile far valere le proprie ragioni davanti al giudice.",
-          "Quando il dialogo è impossibile, si può ricorrere all'art. 709-ter c.p.c. per chiedere ammonimento, sanzioni pecuniarie, risarcimento del danno e — nei casi più gravi — la modifica del regime di affidamento.",
+          "Quando il dialogo è impossibile, si può ricorrere all'art. 709-ter c.p.c. per chiedere ammonimento, sanzioni pecuniarie, risarcimento del danno e, nei casi più gravi, la modifica del regime di affidamento.",
         ],
       },
       {
@@ -167,7 +167,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         id: "modifica",
         heading: "Quando si può modificare l'assegno",
         paragraphs: [
-          "L'assegno può essere modificato — in aumento o in diminuzione — quando intervengono mutamenti rilevanti e non transitori delle condizioni economiche: perdita del lavoro, malattia invalidante, nuovo impiego stabile del beneficiario, nascita di nuovi figli da altra unione.",
+          "L'assegno può essere modificato, in aumento o in diminuzione, quando intervengono mutamenti rilevanti e non transitori delle condizioni economiche: perdita del lavoro, malattia invalidante, nuovo impiego stabile del beneficiario, nascita di nuovi figli da altra unione.",
           "La domanda di revisione si propone allo stesso tribunale che ha emesso il provvedimento. È fondamentale documentare con precisione la modifica delle condizioni: senza prove, la richiesta viene rigettata.",
         ],
       },
@@ -190,14 +190,14 @@ const rawPosts: Omit<BlogPost, "content">[] = [
     date: "18 Marzo 2026",
     readTime: "10 min",
     intro:
-      "Quando una persona cara non è più in grado di gestire da sola i propri interessi — per malattia, età avanzata, disabilità — la famiglia si trova spesso disorientata. L'amministrazione di sostegno è lo strumento più moderno e flessibile previsto dal nostro ordinamento per proteggere senza umiliare. In questa guida ti spiego come funziona, chi può richiederla, come si svolge il procedimento e quali sono i compiti dell'amministratore.",
+      "Quando una persona cara non è più in grado di gestire da sola i propri interessi, per malattia, età avanzata, disabilità, la famiglia si trova spesso disorientata. L'amministrazione di sostegno è lo strumento più moderno e flessibile previsto dal nostro ordinamento per proteggere senza umiliare. In questa guida ti spiego come funziona, chi può richiederla, come si svolge il procedimento e quali sono i compiti dell'amministratore.",
     sections: [
       {
         id: "cos-e",
         heading: "Cos'è e perché è preferibile all'interdizione",
         paragraphs: [
           "L'amministrazione di sostegno è stata introdotta dalla Legge 6/2004 con l'obiettivo di tutelare le persone prive in tutto o in parte di autonomia, comprimendo il meno possibile la loro capacità di agire.",
-          "A differenza dell'interdizione e dell'inabilitazione — istituti più rigidi e residuali — l'amministrazione di sostegno è ritagliata sulla persona: i poteri dell'amministratore sono definiti dal giudice in modo puntuale, su misura delle reali esigenze del beneficiario.",
+          "A differenza dell'interdizione e dell'inabilitazione, istituti più rigidi e residuali, l'amministrazione di sostegno è ritagliata sulla persona: i poteri dell'amministratore sono definiti dal giudice in modo puntuale, su misura delle reali esigenze del beneficiario.",
           "Questo principio di proporzionalità è centrale: l'obiettivo è sostenere, non sostituire. Il beneficiario conserva tutti i diritti che non sono espressamente attribuiti all'amministratore.",
         ],
       },
@@ -206,7 +206,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         heading: "Quando richiederla",
         paragraphs: [
           "La misura è indicata in presenza di infermità o menomazione fisica o psichica che rendano impossibile o difficoltoso provvedere ai propri interessi: anziani con decadimento cognitivo, persone con gravi disabilità, soggetti con dipendenze o disturbi psichici, malati in fase avanzata.",
-          "Non è necessaria una totale incapacità: anche difficoltà parziali — gestire conti, firmare contratti, seguire le pratiche sanitarie — possono giustificare la richiesta. Spesso è meglio intervenire per tempo, prima che si presentino atti pregiudizievoli.",
+          "Non è necessaria una totale incapacità: anche difficoltà parziali, gestire conti, firmare contratti, seguire le pratiche sanitarie, possono giustificare la richiesta. Spesso è meglio intervenire per tempo, prima che si presentino atti pregiudizievoli.",
         ],
       },
       {

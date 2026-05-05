@@ -85,8 +85,8 @@ const ContattiPage = () => {
 
     setSubmitting(true);
     try {
-      // No backend connected yet — open the user's mail client as a graceful fallback.
-      const subject = encodeURIComponent(`Richiesta di consulenza — ${result.data.name}`);
+      // No backend connected yet, open the user's mail client as a graceful fallback.
+      const subject = encodeURIComponent(`Richiesta di consulenza, ${result.data.name}`);
       const body = encodeURIComponent(
         `Nome: ${result.data.name}\nEmail: ${result.data.email}\nTelefono: ${result.data.phone}\n\n${result.data.message}`,
       );
@@ -117,7 +117,7 @@ const ContattiPage = () => {
         testimonial={{
           text: "Ho scritto di lunedì e il mercoledì ero già in studio per la consulenza. Efficienza e disponibilità che non mi aspettavo da un avvocato.",
           author: "Paolo T.",
-          role: "Primo contatto — Cesano Maderno",
+          role: "Primo contatto, Cesano Maderno",
           rating: 5,
         }}
       />
@@ -311,7 +311,7 @@ const ContattiPage = () => {
                 Bovisio Masciago, <em className="not-italic font-semibold">Monza Brianza</em>.
               </h2>
               <p className="text-brand-midnight/75 text-base leading-relaxed mt-6 max-w-xl">
-                Via Guglielmo Marconi, 70/C — facilmente raggiungibile da Monza, Milano e tutta la Brianza.
+                Via Guglielmo Marconi, 70/C, facilmente raggiungibile da Monza, Milano e tutta la Brianza.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">

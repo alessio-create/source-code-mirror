@@ -20,7 +20,7 @@ const BlogPage = () => {
         testimonial={{
           text: "Gli articoli dell'Avv. Di Vietro mi hanno aiutato a capire i miei diritti prima ancora della prima consulenza. Informazione chiara e accessibile.",
           author: "Andrea B.",
-          role: "Lettore — Milano",
+          role: "Lettore, Milano",
           rating: 5,
         }}
       />

@@ -27,7 +27,7 @@ const DivorziPage = () => (
       testimonial={{
         text: "Dopo anni di conflitto, l'Avv. Di Vietro ha trovato una soluzione equa in tempi rapidissimi. Non avrei potuto chiedere di meglio.",
         author: "Laura S.",
-        role: "Divorzio consensuale — Desio",
+        role: "Divorzio consensuale, Desio",
         rating: 5,
       }}
     />

@@ -67,7 +67,7 @@ const SolutionSection = () => (
           <div className="border-l-2 border-brand-ivory/30 pl-8 md:pl-10 py-2">
             <p className="display-numeral text-7xl text-brand-ivory/30 leading-none mb-4">"</p>
             <p className="text-brand-ivory text-xl md:text-2xl italic leading-[1.5] mb-8 font-serif font-normal">
-              Ogni famiglia ha una storia che merita rispetto e tutela. Il mio compito è guidarti attraverso la complessità legale con competenza e umanità — proteggendo ciò che conta di più.
+              Ogni famiglia ha una storia che merita rispetto e tutela. Il mio compito è guidarti attraverso la complessità legale con competenza e umanità, proteggendo ciò che conta di più.
             </p>
             <div className="border-t border-brand-ivory/15 pt-5">
               <p className="text-brand-ivory font-medium text-sm uppercase tracking-[0.2em]">Avv. Donatella Di Vietro</p>

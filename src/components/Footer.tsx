@@ -43,7 +43,7 @@ const Footer = () => (
                 ))}
               </div>
               <p className="font-serif text-brand-midnight text-lg italic leading-[1.6] mb-6">"{r.text}"</p>
-              <p className="text-brand-midnight font-medium text-xs uppercase tracking-[0.2em] border-t border-brand-midnight/15 pt-4">— {r.name}</p>
+              <p className="text-brand-midnight font-medium text-xs uppercase tracking-[0.2em] border-t border-brand-midnight/15 pt-4">{r.name}</p>
             </div>
           ))}
         </div>

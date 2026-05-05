@@ -49,7 +49,7 @@ const HeroSection = () => {
     onMouseMove={handleHeroMove}
     className="relative bg-brand-ivory overflow-hidden"
   >
-    {/* Editorial monogram watermark — just the D mark, no background */}
+    {/* Editorial monogram watermark, just the D mark, no background */}
     <motion.img
       src={monogramMark}
       alt=""
@@ -67,7 +67,7 @@ const HeroSection = () => {
         className="flex items-center justify-between border-b border-brand-midnight/15 pb-5 mb-12 md:mb-16"
       >
         <span className="text-[11px] uppercase tracking-[0.28em] text-brand-midnight/70 font-medium">
-          Studio Legale — Bovisio Masciago (MB)
+          Studio Legale, Bovisio Masciago (MB)
         </span>
         <span className="hidden md:inline text-[11px] uppercase tracking-[0.28em] text-brand-midnight/70 font-medium">
           Diritto di Famiglia · Minori · Persone
@@ -157,7 +157,7 @@ const HeroSection = () => {
       </div>
     </div>
 
-    {/* Stats — editorial strip on midnight */}
+    {/* Stats, editorial strip on midnight */}
     <div
       ref={stripRef}
       onMouseMove={handleStripMove}

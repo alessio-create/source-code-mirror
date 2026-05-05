@@ -34,7 +34,7 @@ const DirittoPersonePage = () => (
       testimonial={{
         text: "L'Avv. Di Vietro ha gestito l'amministrazione di sostegno di mio padre con una sensibilità e competenza rare. Ci ha guidati in ogni passaggio burocratico.",
         author: "Elena V.",
-        role: "Amministrazione di sostegno — Limbiate",
+        role: "Amministrazione di sostegno, Limbiate",
         rating: 5,
       }}
     />

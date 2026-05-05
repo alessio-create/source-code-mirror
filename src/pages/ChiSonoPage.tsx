@@ -17,7 +17,7 @@ const ChiSonoPage = () => (
       testimonial={{
         text: "Un'avvocata che unisce competenza e cuore. Mi ha seguita con pazienza in ogni fase della separazione, facendomi sentire sempre tutelata.",
         author: "Giulia P.",
-        role: "Cliente — Lissone",
+        role: "Cliente, Lissone",
         rating: 5,
       }}
     />
