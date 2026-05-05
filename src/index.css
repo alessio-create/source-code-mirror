@@ -155,7 +155,7 @@
 
   /* Display serif numerals (chapter numbers, stats) */
   .display-numeral {
-    font-family: 'Cormorant Garamond', 'Canela', Georgia, serif;
+    font-family: 'Canela', 'Canela Deck', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     font-weight: 500;
     font-style: italic;
     letter-spacing: -0.04em;
