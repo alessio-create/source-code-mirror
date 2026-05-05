@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import donatellaImg from "@/assets/donatella.png";
+import donatellaImg from "@/assets/donatella-hero.png";
 import monogram from "@/assets/logo-monogram.svg";
 
 const stats = [
