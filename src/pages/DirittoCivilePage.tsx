@@ -34,7 +34,7 @@ const DirittoCivilePage = () => (
       testimonial={{
         text: "Una professionista impeccabile. Ha risolto una complessa divisione ereditaria che si trascinava da anni, trovando un accordo equo per tutti gli eredi.",
         author: "Roberto C.",
-        role: "Divisione ereditaria — Varedo",
+        role: "Divisione ereditaria, Varedo",
         rating: 5,
       }}
     />

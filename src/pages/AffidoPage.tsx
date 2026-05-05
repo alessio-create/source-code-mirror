@@ -34,7 +34,7 @@ const AffidoPage = () => (
       testimonial={{
         text: "Grazie all'Avv. Di Vietro, i miei figli hanno potuto mantenere un rapporto sereno con entrambi i genitori. Un'avvocata che mette i bambini al primo posto.",
         author: "Francesca M.",
-        role: "Affidamento condiviso — Seregno",
+        role: "Affidamento condiviso, Seregno",
         rating: 5,
       }}
     />

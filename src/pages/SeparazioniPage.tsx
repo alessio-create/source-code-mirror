@@ -32,7 +32,7 @@ const SeparazioniPage = () => (
       testimonial={{
         text: "La Dott.ssa Di Vietro ci ha guidato in una separazione consensuale in soli 3 mesi. Professionalità e umanità straordinarie.",
         author: "Marco R.",
-        role: "Separazione consensuale — Monza",
+        role: "Separazione consensuale, Monza",
         rating: 5,
       }}
     />
