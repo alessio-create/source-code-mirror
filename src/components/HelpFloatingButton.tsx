@@ -79,6 +79,26 @@ const HelpFloatingButton = () => {
               d="M 60,60 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"
             />
           </defs>
+          {/* Stroke halo for legibility on complex backgrounds */}
+          <text
+            stroke={isDark ? "hsl(var(--brand-midnight) / 0.55)" : "hsl(var(--brand-ivory) / 0.85)"}
+            strokeWidth={3}
+            strokeLinejoin="round"
+            fill="none"
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "10px",
+              letterSpacing: "0.28em",
+              fontWeight: 500,
+              textTransform: "uppercase",
+              paintOrder: "stroke",
+              transition: "stroke 0.4s ease",
+            }}
+          >
+            <textPath href="#help-circle-path">
+              {ROTATING_TEXT.repeat(2)}
+            </textPath>
+          </text>
           <text
             fill={isDark ? "hsl(var(--brand-ivory))" : "hsl(var(--brand-midnight))"}
             style={{
