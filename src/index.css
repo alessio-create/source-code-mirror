@@ -36,13 +36,13 @@
 
     --radius: 0.5rem;
 
-    --brand-midnight: 230 9% 26%;
-    --brand-ivory: 60 19% 93%;
-    --brand-smoke: 220 7% 65%;
-    --brand-garden: 47 17% 85%;
-    --brand-moss: 65 6% 70%;
-    --brand-warm: 25 30% 92%;
-    --brand-accent-red: 4 77% 52%;
+    --brand-midnight: 230 9% 26%;       /* #3D3F4A */
+    --brand-ivory: 60 19% 93%;          /* #F2F2EB */
+    --brand-smoke: 220 9% 65%;          /* #9FA3AE */
+    --brand-garden: 44 22% 85%;         /* #E1DFD2 */
+    --brand-moss: 64 6% 70%;            /* #B7B8AC */
+    --brand-warm: 44 22% 85%;           /* alias of garden */
+    --brand-accent-red: 230 9% 26%;     /* remapped to midnight — no red in brand */
     --whatsapp: 142 70% 49%;
 
     --sidebar-background: 0 0% 98%;
