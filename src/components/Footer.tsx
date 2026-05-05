@@ -104,10 +104,10 @@ const Footer = () => (
               <p>Via Guglielmo Marconi, 70/C</p>
               <p>20813 Bovisio Masciago (MB)</p>
               <p className="pt-3">
-                <a href="tel:+390362590859" className="hover:text-primary-foreground transition">+39 0362 590859</a>
+                <a href="tel:+390362590859" className="link-editorial-light">+39 0362 590859</a>
               </p>
               <p>
-                <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
+                <a href="mailto:info@studiolegaledivietro.it" className="link-editorial-light break-all">info@studiolegaledivietro.it</a>
               </p>
             </div>
           </div>
