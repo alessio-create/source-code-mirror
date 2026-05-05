@@ -232,10 +232,17 @@ const HelpFloatingButton = () => {
           {!open && (
             <span
               role="tooltip"
-              className="pointer-events-none absolute right-[88px] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-brand-midnight text-brand-ivory text-xs px-3.5 py-2 shadow-lg opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 transition-all duration-300"
+              className="pointer-events-none absolute right-[88px] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-full text-xs px-3.5 py-2 shadow-lg opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 group-focus-visible:opacity-100 group-focus-visible:translate-x-0 transition-all duration-300"
+              style={{
+                backgroundColor: isDark ? "hsl(var(--brand-ivory))" : "hsl(var(--brand-midnight))",
+                color: isDark ? "hsl(var(--brand-midnight))" : "hsl(var(--brand-ivory))",
+              }}
             >
               Serve aiuto? Prenota un colloquio
-              <span className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 rotate-45 bg-brand-midnight" />
+              <span
+                className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 rotate-45"
+                style={{ backgroundColor: isDark ? "hsl(var(--brand-ivory))" : "hsl(var(--brand-midnight))" }}
+              />
             </span>
           )}
         </button>
