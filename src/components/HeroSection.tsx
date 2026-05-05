@@ -48,13 +48,13 @@ const HeroSection = () => (
           </motion.p>
 
           <motion.h1
-            className="font-serif font-medium text-[2.75rem] sm:text-6xl lg:text-[5rem] leading-[0.95] tracking-[-0.025em] text-brand-midnight mb-8 text-balance"
+            className="font-serif font-semibold text-[2.75rem] sm:text-6xl lg:text-[5rem] leading-[0.95] tracking-[-0.025em] text-brand-midnight mb-8 text-balance"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             La tua famiglia merita un avvocato che{" "}
-            <em className="italic font-normal text-brand-midnight/80">ascolta davvero.</em>
+            <em className="not-italic font-semibold text-brand-midnight">ascolta davvero.</em>
           </motion.h1>
 
           <motion.p

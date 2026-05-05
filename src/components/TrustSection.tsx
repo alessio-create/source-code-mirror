@@ -39,8 +39,8 @@ const TrustSection = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="eyebrow mb-6">Fiducia &amp; Competenza</p>
-        <h2 className="font-serif font-medium text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
-          Le ragioni per cui i clienti <em className="italic font-normal text-brand-midnight/70">tornano</em>.
+        <h2 className="font-serif font-semibold text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+          Le ragioni per cui i clienti <em className="not-italic font-semibold text-brand-midnight">tornano</em>.
         </h2>
       </motion.div>
 
@@ -57,7 +57,7 @@ const TrustSection = () => (
             <span className="display-numeral text-2xl text-brand-midnight/40 not-italic font-normal tracking-normal block mb-6">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h4 className="font-serif font-medium text-xl text-brand-midnight mb-2 tracking-[-0.01em]">{t.title}</h4>
+            <h4 className="font-serif font-semibold text-xl text-brand-midnight mb-2 tracking-[-0.01em]">{t.title}</h4>
             <p className="text-brand-midnight/70 text-sm leading-relaxed">{t.desc}</p>
           </motion.div>
         ))}
@@ -72,8 +72,8 @@ const TrustSection = () => (
         transition={{ duration: 0.5 }}
       >
         <p className="eyebrow mb-6">Testimonianze</p>
-        <h2 className="font-serif font-medium text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
-          Storie di chi si è <em className="italic font-normal text-brand-midnight/70">affidato</em> a noi.
+        <h2 className="font-serif font-semibold text-4xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+          Storie di chi si è <em className="not-italic font-semibold text-brand-midnight">affidato</em> a noi.
         </h2>
       </motion.div>
 

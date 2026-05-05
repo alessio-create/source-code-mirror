@@ -15,8 +15,8 @@ const BlogSection = () => (
       >
         <div className="lg:col-span-8">
           <p className="eyebrow mb-6">Journal</p>
-          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
-            Approfondimenti per orientarti con <em className="italic font-normal text-brand-midnight/70">consapevolezza</em>.
+          <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-midnight tracking-[-0.02em] leading-[1.05] text-balance">
+            Approfondimenti per orientarti con <em className="not-italic font-semibold text-brand-midnight">consapevolezza</em>.
           </h2>
         </div>
         <div className="lg:col-span-4 lg:text-right">
@@ -43,7 +43,7 @@ const BlogSection = () => (
               <div className="col-span-9 md:col-span-3 text-[11px] uppercase tracking-[0.2em] text-brand-midnight font-medium">
                 {post.category}
               </div>
-              <h3 className="col-span-12 md:col-span-6 font-serif font-medium text-xl md:text-2xl text-brand-midnight tracking-[-0.01em] group-hover:translate-x-1 transition-transform duration-500 leading-snug">
+              <h3 className="col-span-12 md:col-span-6 font-serif font-semibold text-xl md:text-2xl text-brand-midnight tracking-[-0.01em] group-hover:translate-x-1 transition-transform duration-500 leading-snug">
                 {post.title}
               </h3>
               <div className="col-span-12 md:col-span-1 flex md:justify-end">

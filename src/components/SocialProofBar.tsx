@@ -41,8 +41,8 @@ const SocialProofBar = () => (
         transition={{ duration: 0.6 }}
       >
         <p className="eyebrow eyebrow-center mb-6">Numeri dello Studio</p>
-        <h2 className="font-serif font-medium text-3xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.1] text-balance">
-          Vent'anni di pratica esclusiva, una sola priorità: <em className="italic font-normal text-brand-midnight/70">la persona</em>.
+        <h2 className="font-serif font-semibold text-3xl md:text-5xl text-brand-midnight tracking-[-0.02em] leading-[1.1] text-balance">
+          Vent'anni di pratica esclusiva, una sola priorità: <em className="not-italic font-semibold text-brand-midnight">la persona</em>.
         </h2>
       </motion.div>
 

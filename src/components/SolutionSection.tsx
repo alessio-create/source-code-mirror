@@ -28,8 +28,8 @@ const SolutionSection = () => (
           transition={{ duration: 0.7 }}
         >
           <p className="eyebrow mb-8 text-brand-ivory/70 [&::before]:bg-brand-ivory/40">La Soluzione</p>
-          <h2 className="font-serif font-medium text-4xl md:text-5xl lg:text-6xl text-brand-ivory leading-[1.05] tracking-[-0.02em] mb-10 text-balance">
-            Un avvocato che <em className="italic font-normal text-brand-ivory/70">capisce</em> davvero la tua situazione.
+          <h2 className="font-serif font-semibold text-4xl md:text-5xl lg:text-6xl text-brand-ivory leading-[1.05] tracking-[-0.02em] mb-10 text-balance">
+            Un avvocato che <em className="not-italic font-semibold text-brand-ivory">capisce</em> davvero la tua situazione.
           </h2>
           <p className="text-brand-ivory/70 text-base md:text-lg leading-[1.8] mb-12 max-w-2xl">
             Non sei un numero di pratica. Con oltre vent'anni di esperienza esclusiva nel diritto di famiglia, costruisco un percorso legale pensato intorno a te.

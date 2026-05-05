@@ -45,7 +45,7 @@ const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProp
           transition={{ duration: 0.7 }}
         >
           <p className="eyebrow mb-6">{label}</p>
-          <h1 className="font-serif font-medium text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.025em] text-brand-midnight mb-8 text-balance">
+          <h1 className="font-serif font-semibold text-4xl md:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.025em] text-brand-midnight mb-8 text-balance">
             {title}
           </h1>
           <p className="text-brand-midnight/70 text-base md:text-xl max-w-2xl leading-[1.7] mb-10">
