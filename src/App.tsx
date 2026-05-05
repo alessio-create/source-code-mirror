@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import SmoothScroll from "./components/SmoothScroll.tsx";
 import ScrollProgress from "./components/ScrollProgress.tsx";
+import HelpFloatingButton from "./components/HelpFloatingButton.tsx";
+import CookieConsent from "./components/CookieConsent.tsx";
 import Index from "./pages/Index.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import BlogPage from "./pages/BlogPage.tsx";
@@ -42,6 +44,8 @@ const App = () => (
           <Route path="/contatti" element={<ContattiPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <HelpFloatingButton />
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
