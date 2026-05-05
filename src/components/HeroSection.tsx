@@ -91,10 +91,11 @@ const HeroSection = () => (
           <div className="relative max-w-md mx-auto">
             {/* Hairline frame */}
             <div className="absolute -inset-4 border border-brand-midnight/15 hidden md:block" />
-            <div className="aspect-[4/5] overflow-hidden bg-brand-garden relative">
+            <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden bg-brand-garden relative">
               <img
                 alt="Avv. Donatella Di Vietro"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-[center_20%]"
+                loading="eager"
                 src={donatellaImg}
               />
             </div>
