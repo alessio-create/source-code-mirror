@@ -9,10 +9,48 @@ const stats = [
   { value: "5", label: "Aree di Competenza" },
 ];
 
-const HeroSection = () => (
-  <section className="relative bg-brand-ivory overflow-hidden">
+const HeroSection = () => {
+  // Mouse parallax for hero monogram
+  const heroRef = useRef<HTMLElement>(null);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const sx = useSpring(mx, { stiffness: 60, damping: 20, mass: 0.5 });
+  const sy = useSpring(my, { stiffness: 60, damping: 20, mass: 0.5 });
+  const heroX = useTransform(sx, (v) => v * 18);
+  const heroY = useTransform(sy, (v) => v * 18);
+
+  // Mouse parallax for stats strip monogram
+  const stripRef = useRef<HTMLDivElement>(null);
+  const smx = useMotionValue(0);
+  const smy = useMotionValue(0);
+  const ssx = useSpring(smx, { stiffness: 50, damping: 18, mass: 0.6 });
+  const ssy = useSpring(smy, { stiffness: 50, damping: 18, mass: 0.6 });
+  const stripX = useTransform(ssx, (v) => v * 24);
+  const stripY = useTransform(ssy, (v) => v * 12);
+  const gridX = useTransform(ssx, (v) => v * 8);
+  const gridY = useTransform(ssy, (v) => v * 8);
+
+  const handleHeroMove = (e: React.MouseEvent<HTMLElement>) => {
+    const r = heroRef.current?.getBoundingClientRect();
+    if (!r) return;
+    mx.set((e.clientX - r.left) / r.width - 0.5);
+    my.set((e.clientY - r.top) / r.height - 0.5);
+  };
+  const handleStripMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const r = stripRef.current?.getBoundingClientRect();
+    if (!r) return;
+    smx.set((e.clientX - r.left) / r.width - 0.5);
+    smy.set((e.clientY - r.top) / r.height - 0.5);
+  };
+
+  return (
+  <section
+    ref={heroRef}
+    onMouseMove={handleHeroMove}
+    className="relative bg-brand-ivory overflow-hidden"
+  >
     {/* Editorial monogram watermark — just the D mark, no background */}
-    <img
+    <motion.img
       src={monogramMark}
       alt=""
       aria-hidden
