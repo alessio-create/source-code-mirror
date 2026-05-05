@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import donatellaImg from "@/assets/donatella-hero.png";
-import monogram from "@/assets/logo-monogram.svg";
-import monogramPattern from "@/assets/monogram-pattern.svg";
+import monogramMark from "@/assets/monogram-mark.svg";
 
 const stats = [
   { value: "20+", label: "Anni di Esperienza" },
