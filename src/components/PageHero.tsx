@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Star, ArrowLeft } from "lucide-react";
-import monogram from "@/assets/logo-monogram.svg";
+import monogramMark from "@/assets/monogram-mark.svg";
 
 interface PageHeroProps {
   label: string;
@@ -21,11 +21,18 @@ interface PageHeroProps {
 
 const PageHero = ({ label, title, description, testimonial, stat }: PageHeroProps) => (
   <section className="pt-36 md:pt-44 pb-20 md:pb-28 bg-brand-ivory relative overflow-hidden border-b border-brand-midnight/10">
-    <img
-      src={monogram}
-      alt=""
+    <div
       aria-hidden
-      className="absolute -right-24 -bottom-24 w-[480px] opacity-[0.05] pointer-events-none select-none"
+      className="absolute -right-24 -bottom-24 w-[480px] h-[480px] opacity-[0.06] pointer-events-none select-none"
+      style={{
+        backgroundColor: "hsl(var(--brand-midnight))",
+        WebkitMaskImage: `url(${monogramMark})`,
+        maskImage: `url(${monogramMark})`,
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+      }}
     />
 
     <div className="container mx-auto px-4 md:px-8 relative z-10">
