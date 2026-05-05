@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Users, CreditCard, Heart, Scale, ShieldCheck, Briefcase } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoDDV from "@/assets/logo-ddv.png";
+import logoHorizontal from "@/assets/logo-horizontal.svg";
 
 const serviceItems = [
   {
@@ -62,9 +62,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 glass-effect border-b border-border">
       <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-        <Link className="flex items-center gap-2.5" to="/">
-          <img src={logoDDV} alt="DDV" className="h-8 w-8" width={32} height={32} />
-          <span className="text-base md:text-lg font-serif font-semibold text-brand-midnight tracking-tight">Donatella Di Vietro</span>
+        <Link className="flex items-center" to="/" aria-label="Studio Legale Avv. Donatella Di Vietro">
+          <img src={logoHorizontal} alt="Avv. Donatella Di Vietro" className="h-9 md:h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

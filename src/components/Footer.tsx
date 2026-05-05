@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Star, Facebook, Instagram, Linkedin } from "lucide-react";
-import logoDDV from "@/assets/logo-ddv.png";
+import logoMonogram from "@/assets/logo-monogram.svg";
 
 const reviews = [
   {
@@ -68,8 +68,8 @@ const Footer = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <img src={logoDDV} alt="DDV" className="h-10 w-10 brightness-0 invert" width={40} height={40} loading="lazy" />
+            <div className="flex items-center gap-4 mb-6">
+              <img src={logoMonogram} alt="Monogramma Studio Legale Di Vietro" className="h-14 w-14 rounded-md" width={56} height={56} loading="lazy" />
               <h3 className="text-xl font-serif font-bold text-primary-foreground leading-tight">
                 Studio Legale<br />Di Vietro
               </h3>
