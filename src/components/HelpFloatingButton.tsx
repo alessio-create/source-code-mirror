@@ -266,7 +266,7 @@ const HelpFloatingButton = () => {
               </div>
             </div>
 
-            <div ref={scrollRef} className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+            <div ref={scrollRef} data-lenis-prevent className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 space-y-3">
               {messages.map((m, i) => (
                 <div
                   key={i}
