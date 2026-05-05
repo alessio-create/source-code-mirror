@@ -73,7 +73,7 @@ const AffidoPage = () => (
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {principles.map((p, i) => (
-            <motion.div key={p.title} className="bg-brand-ivory p-8 border border-brand-midnight/15 text-center" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+            <motion.div key={p.title} className="bg-brand-ivory p-8 border border-brand-midnight/15 text-center lift-hover" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
               <div className="text-brand-midnight mx-auto mb-6 flex justify-center">
                 <BrandIcon name={p.icon} size={56} />
               </div>
