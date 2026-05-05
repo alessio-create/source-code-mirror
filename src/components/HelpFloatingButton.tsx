@@ -13,12 +13,12 @@ const INITIAL_MESSAGE: Msg = {
     "Buongiorno, sono l'assistente virtuale dello Studio Legale Di Vietro. Come posso aiutarla? Posso rispondere a domande su separazioni, divorzi, affidamento e altri ambiti del diritto di famiglia.",
 };
 
-const parseRgb = (s: string): [number, number, number] | null => {
+const parseRgb = (s: string): { r: number; g: number; b: number; a: number } | null => {
   const m = s.match(/rgba?\(([^)]+)\)/);
   if (!m) return null;
   const p = m[1].split(",").map((v) => parseFloat(v.trim()));
   if (p.length < 3 || p.some((n) => Number.isNaN(n))) return null;
-  return [p[0], p[1], p[2]];
+  return { r: p[0], g: p[1], b: p[2], a: p.length >= 4 ? p[3] : 1 };
 };
 
 const luminance = (r: number, g: number, b: number) =>
@@ -54,8 +54,8 @@ const HelpFloatingButton = () => {
           break;
         }
         const rgb = parseRgb(cs.backgroundColor);
-        if (rgb) {
-          lum = luminance(rgb[0], rgb[1], rgb[2]);
+        if (rgb && rgb.a > 0.1) {
+          lum = luminance(rgb.r, rgb.g, rgb.b);
           break;
         }
       }
