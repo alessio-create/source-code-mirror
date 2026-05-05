@@ -43,7 +43,7 @@ const ProblemsSection = () => (
         {problems.map((p, i) => (
           <motion.div
             key={p.title}
-            className="bg-card p-8 md:p-12 hover:bg-brand-garden/30 transition-colors duration-500 group"
+            className="bg-card p-8 md:p-12 hover:bg-brand-garden/30 transition-colors duration-500 group lift-hover"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}

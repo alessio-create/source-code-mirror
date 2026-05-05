@@ -35,7 +35,7 @@ const BlogSection = () => (
           >
             <Link
               to={`/blog/${post.slug}`}
-              className="group grid grid-cols-12 gap-4 md:gap-8 items-center py-8 md:py-10 border-b border-brand-midnight/15 hover:bg-brand-garden/20 transition-colors duration-500 px-2 md:px-4 -mx-2 md:-mx-4"
+              className="group grid grid-cols-12 gap-4 md:gap-8 items-center py-8 md:py-10 border-b border-brand-midnight/15 hover:bg-brand-garden/20 transition-colors duration-500 px-2 md:px-4 -mx-2 md:-mx-4 lift-hover"
             >
               <div className="col-span-3 md:col-span-2 text-[11px] uppercase tracking-[0.2em] text-brand-midnight/60 font-medium">
                 {post.date}
