@@ -27,6 +27,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <SmoothScroll />
+        <ScrollProgress />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
