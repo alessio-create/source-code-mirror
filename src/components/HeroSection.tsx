@@ -93,10 +93,14 @@ const HeroSection = () => (
             <div className="absolute -inset-4 border border-brand-midnight/15 hidden md:block" />
             <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden bg-brand-garden relative">
               <img
-                alt="Avv. Donatella Di Vietro"
+                alt="Ritratto dell'Avv. Donatella Di Vietro, avvocata specializzata in diritto di famiglia, minori e persone, presso il suo studio di Bovisio Masciago"
                 className="w-full h-full object-cover object-[center_20%]"
-                loading="eager"
                 src={donatellaImg}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                width={800}
+                height={1000}
               />
             </div>
             {/* Editorial caption */}
