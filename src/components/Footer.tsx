@@ -115,7 +115,7 @@ const Footer = () => (
           {/* Quick links */}
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Servizi</h4>
-            <nav className="space-y-3 text-brand-smoke/80 text-sm">
+            <nav className="space-y-3 text-brand-smoke/80 text-sm leading-relaxed">
               <Link className="block hover:text-primary-foreground transition" to="/separazioni">Separazioni</Link>
               <Link className="block hover:text-primary-foreground transition" to="/divorzi">Divorzi</Link>
               <Link className="block hover:text-primary-foreground transition" to="/affido-figli">Affido Figli</Link>
@@ -127,7 +127,7 @@ const Footer = () => (
           {/* More links */}
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Info</h4>
-            <nav className="space-y-3 text-brand-smoke/80 text-sm">
+            <nav className="space-y-3 text-brand-smoke/80 text-sm leading-relaxed">
               <Link className="block hover:text-primary-foreground transition" to="/chi-sono">Chi Sono</Link>
               <Link className="block hover:text-primary-foreground transition" to="/blog">Blog</Link>
               <Link className="block hover:text-primary-foreground transition" to="/contatti">Contatti</Link>
