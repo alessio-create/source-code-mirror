@@ -5,12 +5,26 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Use Lenis if available so behavior is consistent with the rest of the site
-    if (typeof window !== "undefined" && window.__lenis) {
-      window.__lenis.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
+    if (typeof window === "undefined") return;
+
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
     }
+
+    const scrollTop = () => {
+      if (window.__lenis) {
+        window.__lenis.scrollTo(0, { immediate: true, force: true });
+      }
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    scrollTop();
+    requestAnimationFrame(scrollTop);
+    const t = setTimeout(scrollTop, 80);
+
+    return () => clearTimeout(t);
   }, [pathname]);
 
   return null;
