@@ -23,8 +23,15 @@ const areas = [
   { icon: "civile" as const, title: "Contenzioso civile", desc: "Assistenza in giudizio per controversie patrimoniali, recupero crediti e risarcimento danni." },
 ];
 
+import SEO from "@/components/SEO";
+
 const DirittoCivilePage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Diritto Civile — Successioni e Patrimonio | Avv. Di Vietro"
+      description="Controversie patrimoniali, successioni e divisioni ereditarie. Assistenza legale civile connessa alla famiglia in Brianza e Milano."
+      path="/diritto-civile"
+    />
     <Header />
     <PageHero
       label="Servizi"

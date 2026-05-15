@@ -5,12 +5,18 @@ import { blogPosts } from "@/data/blogPosts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
+import SEO from "@/components/SEO";
 
 const BlogPage = () => {
   const [featured, ...rest] = blogPosts;
 
   return (
     <div className="bg-brand-ivory min-h-screen">
+      <SEO
+        title="Blog — Diritto di Famiglia | Avv. Di Vietro"
+        description="Articoli e guide su separazioni, divorzi, affido figli e diritto di famiglia, scritti dall'Avv. Donatella Di Vietro."
+        path="/blog"
+      />
       <Header />
       <PageHero
         label="Approfondimenti"

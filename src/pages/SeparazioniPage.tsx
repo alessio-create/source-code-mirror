@@ -21,8 +21,15 @@ const steps = [
   { icon: "specializzazione" as const, title: "Risoluzione", desc: "Definiamo accordi chiari e duraturi, omologati dal tribunale per garantire certezza giuridica." },
 ];
 
+import SEO from "@/components/SEO";
+
 const SeparazioniPage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Separazioni — Avv. Di Vietro | Diritto di Famiglia"
+      description="Separazione consensuale o giudiziale, negoziazione assistita. Assistenza legale completa a Milano e in Brianza per tutelare te e la tua famiglia."
+      path="/separazioni"
+    />
     <Header />
     <PageHero
       label="Servizi"

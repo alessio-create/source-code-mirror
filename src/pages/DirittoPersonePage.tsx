@@ -23,8 +23,15 @@ const cases = [
   { icon: "civile" as const, title: "Gestione patrimoniale", desc: "Quando un familiare non è più in grado di amministrare i propri beni, conti correnti o immobili in sicurezza." },
 ];
 
+import SEO from "@/components/SEO";
+
 const DirittoPersonePage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Diritto delle Persone — Amministrazione di Sostegno"
+      description="Amministrazione di sostegno, interdizione e tutela delle persone fragili. Assistenza legale a Milano e in Brianza."
+      path="/diritto-persone"
+    />
     <Header />
     <PageHero
       label="Servizi"

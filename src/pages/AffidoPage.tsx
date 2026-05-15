@@ -23,8 +23,15 @@ const principles = [
   { icon: "aggiornamento" as const, title: "Ascolto", desc: "Il minore ha diritto di essere ascoltato in tutte le questioni che lo riguardano, nel rispetto della sua età." },
 ];
 
+import SEO from "@/components/SEO";
+
 const AffidoPage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Affido Figli — Tutela dei Minori | Avv. Di Vietro"
+      description="Affidamento condiviso ed esclusivo, collocamento e tutela dei minori. Assistenza legale specializzata per il benessere dei tuoi figli."
+      path="/affido-figli"
+    />
     <Header />
     <PageHero
       label="Servizi"
