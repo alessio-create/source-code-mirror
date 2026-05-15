@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import NotFound from "./NotFound";
 
 const BlogPost = () => {
@@ -47,6 +48,26 @@ const BlogPost = () => {
 
   return (
     <div className="bg-brand-ivory min-h-screen">
+      <SEO
+        title={`${post.title} — Blog Avv. Di Vietro`}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        type="article"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          articleSection: post.category,
+          author: { "@type": "Person", name: "Donatella Di Vietro" },
+          publisher: {
+            "@type": "Organization",
+            name: "Studio Legale Avv. Donatella Di Vietro",
+          },
+          mainEntityOfPage: `https://studiolegaledivietro.it/blog/${post.slug}`,
+        }}
+      />
       <Header />
 
       {/* Editorial hero */}
