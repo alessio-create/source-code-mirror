@@ -1,0 +1,15 @@
+# Studio Legale Avv. Donatella Di Vietro
+
+> Studio legale specializzato in diritto di famiglia, separazioni, divorzi e tutela dei minori. Sede a Bovisio-Masciago (MB), opera a Milano e in tutta la Brianza con oltre 20 anni di esperienza.
+
+## Pages
+
+- [Home](/): Presentazione dello studio, aree di competenza e metodo di lavoro.
+- [Chi Sono](/chi-sono): Profilo, formazione ed esperienza dell'Avv. Donatella Di Vietro.
+- [Separazioni](/separazioni): Separazioni consensuali e giudiziali, negoziazione assistita.
+- [Divorzi](/divorzi): Procedure di divorzio e diritto di famiglia.
+- [Affidamento Figli](/affido-figli): Affidamento, collocamento e tutela dei minori.
+- [Diritto delle Persone](/diritto-persone): Amministrazione di sostegno e tutela dei diritti.
+- [Diritto Civile](/diritto-civile): Questioni patrimoniali e successorie.
+- [Blog](/blog): Articoli e guide su separazioni, divorzi e diritto di famiglia.
+- [Contatti](/contatti): Prenota una consulenza riservata.
