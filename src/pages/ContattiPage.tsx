@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import BrandIcon from "@/components/BrandIcon";
+import SEO from "@/components/SEO";
 
 const contactInfo = [
   { icon: "telefono" as const, label: "Telefono", value: "0362 590859", href: "tel:+390362590859" },
@@ -108,6 +109,11 @@ const ContattiPage = () => {
 
   return (
     <div className="bg-brand-ivory min-h-screen">
+      <SEO
+        title="Contatti — Prenota una Consulenza | Avv. Di Vietro"
+        description="Prenota una consulenza riservata con l'Avv. Donatella Di Vietro. Studio a Bovisio-Masciago (MB), risposta entro 24h."
+        path="/contatti"
+      />
       <Header />
       <PageHero
         label="Contattaci"

@@ -5,9 +5,15 @@ import AboutSection from "@/components/AboutSection";
 import CTASection from "@/components/CTASection";
 import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
+import SEO from "@/components/SEO";
 
 const ChiSonoPage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Chi Sono — Avv. Donatella Di Vietro"
+      description="Oltre 20 anni di esperienza nel diritto di famiglia. Profilo, formazione e percorso professionale dell'Avv. Donatella Di Vietro."
+      path="/chi-sono"
+    />
     <Header />
     <PageHero
       label="Lo Studio"

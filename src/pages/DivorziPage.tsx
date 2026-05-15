@@ -16,8 +16,15 @@ const features = [
   "Accordi sui figli maggiorenni non autosufficienti",
 ];
 
+import SEO from "@/components/SEO";
+
 const DivorziPage = () => (
   <div className="bg-brand-ivory min-h-screen">
+    <SEO
+      title="Divorzi — Avv. Di Vietro | Diritto di Famiglia"
+      description="Divorzio consensuale, giudiziale e divorzio breve. Definizione dei rapporti patrimoniali e personali tra coniugi con competenza e riservatezza."
+      path="/divorzi"
+    />
     <Header />
     <PageHero
       label="Servizi"
