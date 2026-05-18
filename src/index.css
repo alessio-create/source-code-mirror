@@ -32,7 +32,7 @@
     --secondary-foreground: var(--brand-midnight);
 
     --muted: var(--brand-garden);
-    --muted-foreground: var(--brand-smoke);
+    --muted-foreground: 230 9% 38%;     /* darker for WCAG AA contrast on ivory */
 
     --accent: var(--brand-moss);
     --accent-foreground: var(--brand-midnight);
