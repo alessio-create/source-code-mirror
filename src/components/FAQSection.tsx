@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Come scegliere un buon avvocato divorzista?",
-    a: "È importante cercare un professionista specializzato esclusivamente in diritto di famiglia, che dimostri non solo competenza tecnica ma anche capacità di ascolto ed empatia. Lo studio legale Di Vietro opera dal proprio studio di Bovisio Masciago con una gestione agevole delle pratiche presso i tribunali competenti.",
+    a: "È importante affidarsi a un professionista con consolidata esperienza in diritto di famiglia, che dimostri non solo competenza tecnica ma anche capacità di ascolto ed empatia. Lo studio legale Di Vietro opera dalla sede principale di Milano e dalla sede di Bovisio Masciago, con una gestione agevole delle pratiche presso i tribunali competenti.",
   },
   {
     q: "Quali sono i costi per una separazione o un divorzio?",
