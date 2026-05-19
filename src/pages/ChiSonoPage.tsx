@@ -40,9 +40,9 @@ const ChiSonoPage = () => (
         <div className="space-y-8">
           {[
             { year: "2003", title: "Laurea in Giurisprudenza", desc: "Università Cattolica del Sacro Cuore di Milano, con tesi in diritto di famiglia." },
-            { year: "2005", title: "Abilitazione all'esercizio della professione", desc: "Iscrizione all'Albo degli Avvocati di Monza e della Brianza." },
-            { year: "2010", title: "Specializzazione in diritto di famiglia", desc: "Formazione avanzata in mediazione familiare e diritto minorile." },
-            { year: "2015", title: "Studio Legale Di Vietro", desc: "Apertura dello studio a Bovisio Masciago, punto di riferimento per il diritto di famiglia in Brianza." },
+            { year: "2005", title: "Abilitazione e Foro di Milano", desc: "Iscrizione all'Albo degli Avvocati di Milano, sede principale dell'attività professionale." },
+            { year: "2010", title: "Studio di Bovisio Masciago", desc: "Apertura della sede in Brianza, accanto allo studio di Milano, per essere vicina ai clienti del territorio." },
+            { year: "Formazione continua", title: "Scuola di Alta Formazione AIAF", desc: "Frequenza della Scuola di Alta Formazione dell'Associazione Italiana Avvocati per la Famiglia e per i Minori, oltre ad aggiornamento costante in mediazione familiare e diritto minorile." },
           ].map((item, i) => (
             <motion.div key={item.year} className="flex gap-6" initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
               <div className="shrink-0 w-16 text-right">

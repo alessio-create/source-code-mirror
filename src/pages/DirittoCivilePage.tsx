@@ -13,13 +13,14 @@ const features = [
   "Contratti e accordi prematrimoniali",
   "Recupero crediti in ambito familiare",
   "Risarcimento danni in ambito familiare",
+  "Problematiche lavorative e diritto del lavoro",
   "Mediazione civile e negoziazione assistita",
 ];
 
 const areas = [
   { icon: "famiglia" as const, title: "Patrimonio e immobili", desc: "Divisione di beni immobili, assegnazione della casa coniugale e risoluzione di controversie sulla proprietà." },
   { icon: "aggiornamento" as const, title: "Successioni", desc: "Gestione delle eredità, impugnazione di testamenti, divisioni ereditarie e tutela della quota di legittima." },
-  { icon: "specializzazione" as const, title: "Contrattualistica", desc: "Redazione e revisione di accordi prematrimoniali, patti di famiglia e contratti tra familiari." },
+  { icon: "specializzazione" as const, title: "Lavoro e contrattualistica", desc: "Problematiche lavorative trattate con la collega della sede di Milano, accordi prematrimoniali, patti di famiglia e contratti tra familiari." },
   { icon: "civile" as const, title: "Contenzioso civile", desc: "Assistenza in giudizio per controversie patrimoniali, recupero crediti e risarcimento danni." },
 ];
 
@@ -53,6 +54,7 @@ const DirittoCivilePage = () => (
             <h2 className="text-3xl md:text-4xl mb-6">Tutela del patrimonio familiare</h2>
             <div className="space-y-5 text-brand-smoke text-base leading-relaxed">
               <p>Le questioni patrimoniali e successorie sono spesso strettamente legate al diritto di famiglia. La mia esperienza ventennale mi consente di affrontare queste problematiche con una visione d'insieme che integra gli aspetti familiari e civilistici.</p>
+              <p>Mi occupo inoltre di <strong>problematiche lavorative e di diritto del lavoro</strong>, materia che seguo insieme alla collega della sede di Milano: dalle vertenze sui rapporti di lavoro alle implicazioni economiche e contributive che si intrecciano spesso con la vita familiare.</p>
               <p>Che si tratti di una divisione ereditaria contestata, di un accordo prematrimoniale da redigere o di una controversia sulla proprietà dopo una separazione, il mio approccio privilegia sempre la ricerca di soluzioni negoziali prima di ricorrere al contenzioso.</p>
               <p>Quando il tribunale diventa inevitabile, ti garantisco un'assistenza rigorosa e determinata per la tutela dei tuoi diritti patrimoniali.</p>
             </div>

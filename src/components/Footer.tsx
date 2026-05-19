@@ -101,6 +101,8 @@ const Footer = () => (
           <div>
             <h4 className="font-semibold text-primary-foreground mb-6 uppercase text-sm tracking-[0.15em]">Studio</h4>
             <div className="space-y-3 text-brand-smoke/80 text-sm">
+              <p className="text-brand-smoke/60 text-[11px] uppercase tracking-[0.18em]">Sede principale · Milano</p>
+              <p className="text-brand-smoke/60 text-[11px] uppercase tracking-[0.18em] pt-2">Sede di Brianza (dal 2010)</p>
               <p>Via Guglielmo Marconi, 70/C</p>
               <p>20813 Bovisio Masciago (MB)</p>
               <p className="pt-3">

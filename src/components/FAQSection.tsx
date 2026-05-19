@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "Quando è opportuno rivolgersi a un avvocato?",
-    a: "È consigliabile contattare un avvocato specializzato in diritto di famiglia non appena si presenta una situazione di conflitto o incertezza nei rapporti familiari. Una consulenza tempestiva permette di valutare le opzioni disponibili e di agire nel modo più efficace per tutelare i propri diritti e quelli dei minori coinvolti.",
+    a: "È consigliabile contattare un avvocato con esperienza in diritto di famiglia non appena si presenta una situazione di conflitto o incertezza nei rapporti familiari. Una consulenza tempestiva permette di valutare le opzioni disponibili e di agire nel modo più efficace per tutelare i propri diritti e quelli dei minori coinvolti.",
   },
   {
     q: "Come scegliere un buon avvocato divorzista?",
-    a: "È importante cercare un professionista specializzato esclusivamente in diritto di famiglia, che dimostri non solo competenza tecnica ma anche capacità di ascolto ed empatia. Lo studio legale Di Vietro opera dal proprio studio di Bovisio Masciago con una gestione agevole delle pratiche presso i tribunali competenti.",
+    a: "È importante affidarsi a un professionista con consolidata esperienza in diritto di famiglia, che dimostri non solo competenza tecnica ma anche capacità di ascolto ed empatia. Lo studio legale Di Vietro opera dalla sede principale di Milano e dalla sede di Bovisio Masciago, con una gestione agevole delle pratiche presso i tribunali competenti.",
   },
   {
     q: "Quali sono i costi per una separazione o un divorzio?",
