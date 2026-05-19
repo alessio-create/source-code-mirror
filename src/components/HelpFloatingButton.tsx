@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Send, X, Loader2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
