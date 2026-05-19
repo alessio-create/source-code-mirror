@@ -49,7 +49,7 @@ const Footer = () => (
         </div>
         <div className="mt-12">
           <a
-            href="https://g.page/r/studiolegaledivietro/review"
+            href="https://www.google.com/search?client=safari&hs=OcuU&sca_esv=9151e0e90600ee3c&hl=it-it&kgmid=/g/1vgw_mgq&q=Avv.+Donatella+Di+Vietro&shndl=30&source=sh/x/loc/act/m1/3&kgs=ebd0b770e61a496b&shem=shrtsdl&utm_source=shrtsdl,sh/x/loc/act/m1/3"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.28em] link-editorial"
