@@ -10,7 +10,7 @@ const AUTH = `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`;
 const INITIAL_MESSAGE: Msg = {
   role: "assistant",
   content:
-    "Buongiorno, sono l'assistente virtuale dello Studio Legale Di Vietro. Come posso aiutarla? Posso rispondere a domande su separazioni, divorzi, affidamento e altri ambiti del diritto di famiglia.",
+    "Scrivi un messaggio",
 };
 
 const parseRgb = (s: string): { r: number; g: number; b: number; a: number } | null => {
