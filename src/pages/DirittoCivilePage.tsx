@@ -13,13 +13,14 @@ const features = [
   "Contratti e accordi prematrimoniali",
   "Recupero crediti in ambito familiare",
   "Risarcimento danni in ambito familiare",
+  "Problematiche lavorative e diritto del lavoro",
   "Mediazione civile e negoziazione assistita",
 ];
 
 const areas = [
   { icon: "famiglia" as const, title: "Patrimonio e immobili", desc: "Divisione di beni immobili, assegnazione della casa coniugale e risoluzione di controversie sulla proprietà." },
   { icon: "aggiornamento" as const, title: "Successioni", desc: "Gestione delle eredità, impugnazione di testamenti, divisioni ereditarie e tutela della quota di legittima." },
-  { icon: "specializzazione" as const, title: "Contrattualistica", desc: "Redazione e revisione di accordi prematrimoniali, patti di famiglia e contratti tra familiari." },
+  { icon: "specializzazione" as const, title: "Lavoro e contrattualistica", desc: "Problematiche lavorative trattate con la collega della sede di Milano, accordi prematrimoniali, patti di famiglia e contratti tra familiari." },
   { icon: "civile" as const, title: "Contenzioso civile", desc: "Assistenza in giudizio per controversie patrimoniali, recupero crediti e risarcimento danni." },
 ];
 
