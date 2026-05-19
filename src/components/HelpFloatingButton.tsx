@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, Send, X, Loader2 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -273,13 +275,37 @@ const HelpFloatingButton = () => {
                   className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
                 >
                   <div
-                    className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
+                    className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                       m.role === "user"
-                        ? "bg-brand-midnight text-brand-ivory rounded-br-sm"
-                        : "bg-brand-garden/60 text-brand-midnight rounded-bl-sm"
+                        ? "bg-brand-midnight text-brand-ivory rounded-br-sm whitespace-pre-wrap"
+                        : "bg-brand-garden/60 text-brand-midnight rounded-bl-sm [&_p]:m-0 [&_p+p]:mt-2 [&_a]:underline [&_a]:underline-offset-2 [&_a]:font-medium"
                     }`}
                   >
-                    {m.content}
+                    {m.role === "assistant" ? (
+                      <ReactMarkdown
+                        components={{
+                          a: ({ href, children, ...props }) => {
+                            const isInternal = href?.startsWith("/");
+                            if (isInternal) {
+                              return (
+                                <Link to={href!} onClick={() => setOpen(false)}>
+                                  {children}
+                                </Link>
+                              );
+                            }
+                            return (
+                              <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+                                {children}
+                              </a>
+                            );
+                          },
+                        }}
+                      >
+                        {m.content}
+                      </ReactMarkdown>
+                    ) : (
+                      m.content
+                    )}
                   </div>
                 </div>
               ))}
