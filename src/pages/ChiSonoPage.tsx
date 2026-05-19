@@ -7,13 +7,42 @@ import FAQSection from "@/components/FAQSection";
 import PageHero from "@/components/PageHero";
 import SEO from "@/components/SEO";
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Quando è opportuno rivolgersi a un avvocato?",
+      acceptedAnswer: { "@type": "Answer", text: "È consigliabile contattare un avvocato con esperienza in diritto di famiglia non appena si presenta una situazione di conflitto o incertezza nei rapporti familiari. Una consulenza tempestiva permette di valutare le opzioni disponibili e di agire nel modo più efficace per tutelare i propri diritti e quelli dei minori coinvolti." },
+    },
+    {
+      "@type": "Question",
+      name: "Come scegliere un buon avvocato divorzista?",
+      acceptedAnswer: { "@type": "Answer", text: "È importante affidarsi a un professionista con consolidata esperienza in diritto di famiglia, che dimostri non solo competenza tecnica ma anche capacità di ascolto ed empatia. Lo studio legale Di Vietro opera dalla sede principale di Milano e dalla sede di Bovisio Masciago, con una gestione agevole delle pratiche presso i tribunali competenti." },
+    },
+    {
+      "@type": "Question",
+      name: "Quali sono i costi per una separazione o un divorzio?",
+      acceptedAnswer: { "@type": "Answer", text: "I costi variano significativamente a seconda che la procedura sia consensuale o giudiziale. Durante il primo colloquio informativo, forniamo sempre un preventivo dettagliato e trasparente, basato sulla complessità del caso e sulle necessità del cliente." },
+    },
+    {
+      "@type": "Question",
+      name: "Quanto tempo richiede una pratica di divorzio?",
+      acceptedAnswer: { "@type": "Answer", text: "Con le nuove normative (Divorzio Breve), i tempi si sono notevolmente ridotti. Una procedura consensuale può concludersi in pochi mesi, mentre una giudiziale richiede tempi più lunghi dettati dal calendario del tribunale." },
+    },
+  ],
+};
+
 const ChiSonoPage = () => (
   <div className="bg-brand-ivory min-h-screen">
     <SEO
       title="Chi Sono — Avv. Donatella Di Vietro"
       description="Oltre 20 anni di esperienza nel diritto di famiglia. Profilo, formazione e percorso professionale dell'Avv. Donatella Di Vietro."
       path="/chi-sono"
+      jsonLd={faqJsonLd}
     />
+
     <Header />
     <PageHero
       label="Lo Studio"
