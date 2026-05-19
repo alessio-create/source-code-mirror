@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "Quando è opportuno rivolgersi a un avvocato?",
-    a: "È consigliabile contattare un avvocato specializzato in diritto di famiglia non appena si presenta una situazione di conflitto o incertezza nei rapporti familiari. Una consulenza tempestiva permette di valutare le opzioni disponibili e di agire nel modo più efficace per tutelare i propri diritti e quelli dei minori coinvolti.",
+    a: "È consigliabile contattare un avvocato con esperienza in diritto di famiglia non appena si presenta una situazione di conflitto o incertezza nei rapporti familiari. Una consulenza tempestiva permette di valutare le opzioni disponibili e di agire nel modo più efficace per tutelare i propri diritti e quelli dei minori coinvolti.",
   },
   {
     q: "Come scegliere un buon avvocato divorzista?",
