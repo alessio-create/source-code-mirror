@@ -86,16 +86,33 @@ const ContattiPage = () => {
 
     setSubmitting(true);
     try {
-      // No backend connected yet, open the user's mail client as a graceful fallback.
-      const subject = encodeURIComponent(`Richiesta di consulenza, ${result.data.name}`);
-      const body = encodeURIComponent(
-        `Nome: ${result.data.name}\nEmail: ${result.data.email}\nTelefono: ${result.data.phone}\n\n${result.data.message}`,
-      );
-      window.location.href = `mailto:info@divietroavvocato.it?subject=${subject}&body=${body}`;
-      toast.success("Apertura del client email…", {
-        description: "Conferma l'invio dal tuo programma di posta.",
+      const response = await fetch("https://hook.eu2.make.com/lcd39z6vfd799apn12hvmemnfpq4jakv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: result.data.name,
+          email: result.data.email,
+          phone: result.data.phone,
+          message: result.data.message,
+          consent: result.data.consent,
+          submittedAt: new Date().toISOString(),
+          source: "studiolegaledivietro.it/contatti",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Errore invio (${response.status})`);
+      }
+
+      toast.success("Richiesta inviata", {
+        description: "Ti ricontatterò entro 24 ore lavorative.",
       });
       setForm({ name: "", email: "", phone: "", message: "", consent: false });
+    } catch (err) {
+      console.error("Contact form submission failed:", err);
+      toast.error("Invio non riuscito", {
+        description: "Riprova tra qualche istante o scrivi a info@divietroavvocato.it.",
+      });
     } finally {
       setSubmitting(false);
     }
