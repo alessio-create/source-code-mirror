@@ -49,7 +49,7 @@ const BlogPost = () => {
   return (
     <div className="bg-brand-ivory min-h-screen">
       <SEO
-        title={`${post.title} — Blog Avv. Di Vietro`}
+        title={`${post.title} | Avv. Di Vietro`}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
         type="article"
@@ -58,16 +58,22 @@ const BlogPost = () => {
           "@type": "Article",
           headline: post.title,
           description: post.excerpt,
+          image: "https://studiolegaledivietro.it/og-image.jpg",
           datePublished: post.date,
           articleSection: post.category,
           author: { "@type": "Person", name: "Donatella Di Vietro" },
           publisher: {
             "@type": "Organization",
             name: "Studio Legale Avv. Donatella Di Vietro",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://studiolegaledivietro.it/logo-monogram.svg",
+            },
           },
           mainEntityOfPage: `https://studiolegaledivietro.it/blog/${post.slug}`,
         }}
       />
+
       <Header />
 
       {/* Editorial hero */}
