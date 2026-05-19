@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Star, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Star, Facebook, Instagram } from "lucide-react";
 import logoMonogram from "@/assets/logo-monogram.svg";
 
 const reviews = [
@@ -79,9 +79,8 @@ const Footer = () => (
             {/* Social icons */}
             <div className="flex gap-3">
               {[
-                { Icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-                { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-                { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                { Icon: Facebook, href: "https://www.facebook.com/studiolegaledivietro", label: "Facebook" },
+                { Icon: Instagram, href: "https://www.instagram.com/avvocatodivietro", label: "Instagram" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
