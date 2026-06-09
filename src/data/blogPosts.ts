@@ -210,7 +210,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         id: "diritti-doveri",
         heading: "Diritti e doveri di ciascun genitore",
         paragraphs: [
-          "I diritti: mantenere con il figlio un rapporto equilibrato e continuativo; essere informato sulle decisioni importanti (scuola, salute, educazione); partecipare attivamente alle scelte di indirizzo; conservare rapporti significativi con i parenti del proprio ramo familiare.",
+          "I diritti: mantenere con il figlio un rapporto equilibrato e continuativo; essere informato sulle decisioni importanti (scuola, salute, educazione); partecipare attivamente alle scelte di indirizzo; conservare rapporti significativi con i parenti di ciascun ramo familiare, paterno e materno.",
           "I doveri: contribuire al mantenimento economico in proporzione al proprio reddito; rispettare le scelte concordate con l'altro genitore; garantire la frequenza scolastica e il rispetto delle attività concordate; non interferire negativamente nel rapporto del figlio con l'altro genitore.",
           "Le decisioni di ordinaria amministrazione (pasti, vestiti, piccoli acquisti) possono essere prese dal genitore con cui il figlio si trova in quel momento. Le decisioni di straordinaria amministrazione (scuola, salute, scelte educative importanti) devono essere prese di comune accordo. In caso di disaccordo, è il giudice a decidere.",
         ],
