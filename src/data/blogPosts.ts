@@ -125,7 +125,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         paragraphs: [
           "Separazione consensuale → 6 mesi (L. 55/2015, art. 1). Separazione giudiziale → 12 mesi (L. 55/2015, art. 1). Negoziazione assistita → 6 mesi (L. 162/2014).",
           "Da quando si contano i 6 o i 12 mesi? È il dettaglio che spesso genera confusione. I termini decorrono dalla data di comparizione dei coniugi davanti al presidente del tribunale (per i procedimenti instaurati prima della Riforma Cartabia) oppure, per i procedimenti più recenti, dal primo atto equivalente previsto dal nuovo rito unificato.",
-          "Una novità importante: il cumulo separazione + divorzio. L'articolo 473-bis.49 c.p.c. consente, nei giudizi contenziosi, di proporre subito anche la domanda di divorzio nello stesso ricorso di separazione. In pratica: un solo ricorso, un solo procedimento, mesi di attesa risparmiati.",
+          "Una novità importante: il cumulo separazione + divorzio. La Riforma Cartabia consente di proporre subito anche la domanda di divorzio nello stesso ricorso di separazione. In pratica: un solo ricorso, un solo procedimento, mesi di attesa risparmiati.",
         ],
       },
       {
