@@ -54,7 +54,7 @@ const AboutSection = () => (
               Laureata presso l'Università Cattolica del Sacro Cuore di Milano e iscritta al Foro di Milano, ho sviluppato da subito una profonda passione per il diritto di famiglia e delle persone.
             </p>
             <p>
-              La sede principale dello studio è a Milano; nel 2010 ho aperto la seconda sede a Bovisio Masciago, per essere vicina ai clienti della Brianza. Ho frequentato la Scuola di Alta Formazione AIAF in diritto di famiglia e dei minori.
+              La sede principale dello studio è a Milano; nel 2010 ho aperto la sede a Bovisio Masciago, per essere vicina ai clienti della Brianza. Ho ottenuto una formazione avanzata in diritto di famiglia e dei minori presso la Scuola di Alta Formazione AIAF – Associazione Italiana degli Avvocati per la Famiglia e per i Minori.
             </p>
             <p>
               Da oltre vent'anni assisto privati e famiglie nei momenti più complessi della loro vita, con un approccio che unisce rigore tecnico e comprensione umana, proteggendo ciò che conta di più: la famiglia, i figli, i diritti fondamentali.
