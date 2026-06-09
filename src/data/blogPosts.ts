@@ -141,7 +141,7 @@ const rawPosts: Omit<BlogPost, "content">[] = [
         id: "documenti",
         heading: "I documenti necessari per chiedere il divorzio",
         paragraphs: [
-          "Estratto integrale dell'atto di matrimonio rilasciato dal Comune; certificato di stato di famiglia di ciascun coniuge; sentenza o decreto di omologa della separazione; documentazione reddituale e patrimoniale degli ultimi tre anni (dichiarazioni dei redditi, buste paga, estratti conto).",
+          "Estratto dell'atto integrale dell'atto di matrimonio rilasciato dal Comune in cui è stato celebrato il matrimonio; certificato di stato di famiglia di ciascun coniuge; sentenza o decreto di omologa della separazione; documentazione reddituale e patrimoniale degli ultimi tre anni (dichiarazioni dei redditi, buste paga, estratti conto).",
           "Quando ci sono figli minori: il piano genitoriale (impegni scolastici, attività, vacanze) ed eventuali provvedimenti già adottati su affidamento e mantenimento.",
           "La documentazione patrimoniale è obbligatoria dopo la Riforma Cartabia e va presentata in modo completo. La preparazione di questo materiale è uno dei momenti in cui l'aiuto dell'avvocato fa davvero la differenza.",
         ],
