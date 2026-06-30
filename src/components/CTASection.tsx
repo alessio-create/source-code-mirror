@@ -38,7 +38,7 @@ const CTASection = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-px bg-brand-ivory/10 border-y border-brand-ivory/15 max-w-4xl mx-auto">
           {[
             { Icon: Phone, label: "Telefono", value: "+39 0362 590859", href: "tel:+390362590859" },
-            { Icon: Mail, label: "Email", value: "info@studiolegaledivietro.it", href: "mailto:info@studiolegaledivietro.it" },
+            { Icon: Mail, label: "Email", value: "info@avvocatodivietro.com", href: "mailto:info@avvocatodivietro.com" },
             { Icon: MapPin, label: "Studio", value: "Bovisio Masciago (MB)", href: "#" },
           ].map(({ Icon, label, value, href }) => (
             <a

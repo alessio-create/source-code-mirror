@@ -10,7 +10,7 @@ import SEO from "@/components/SEO";
 
 const contactInfo = [
   { icon: "telefono" as const, label: "Telefono", value: "0362 590859", href: "tel:+390362590859" },
-  { icon: "email" as const, label: "Email", value: "info@studiolegaledivietro.it", href: "mailto:info@studiolegaledivietro.it" },
+  { icon: "email" as const, label: "Email", value: "info@avvocatodivietro.com", href: "mailto:info@avvocatodivietro.com" },
   { icon: "studio" as const, label: "Studio", value: "Bovisio Masciago (MB)", href: "#" },
   { icon: "aggiornamento" as const, label: "Orari", value: "Lun-Ven 9:00 - 18:00", href: "#" },
 ];
