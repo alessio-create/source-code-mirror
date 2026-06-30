@@ -108,7 +108,7 @@ const Footer = () => (
                 <a href="tel:+390362590859" className="hover:text-primary-foreground transition">+39 0362 590859</a>
               </p>
               <p>
-                <a href="mailto:info@studiolegaledivietro.it" className="hover:text-primary-foreground transition break-all">info@studiolegaledivietro.it</a>
+                <a href="mailto:info@avvocatodivietro.com" className="hover:text-primary-foreground transition break-all">info@avvocatodivietro.com</a>
               </p>
             </div>
           </div>
