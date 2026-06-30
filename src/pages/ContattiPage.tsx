@@ -111,7 +111,7 @@ const ContattiPage = () => {
     } catch (err) {
       console.error("Contact form submission failed:", err);
       toast.error("Invio non riuscito", {
-        description: "Riprova tra qualche istante o scrivi a info@studiolegaledivietro.it.",
+        description: "Riprova tra qualche istante o scrivi a info@avvocatodivietro.com.",
       });
     } finally {
       setSubmitting(false);
